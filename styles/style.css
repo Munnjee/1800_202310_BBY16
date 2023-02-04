@@ -1,1 +1,19 @@
+/* NavBar */
+.navbar-brand{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 5vw;
+}
 
+.container-fluid img{
+  border-radius: 10%;
+  margin: 5px;
+}
+.profile_pic {
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Jumbotron */
+
+/* Call to Action */
