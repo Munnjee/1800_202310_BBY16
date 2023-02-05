@@ -21,6 +21,10 @@ html * {
   top: 0%;
   width: 100%;
 }
+.logo_image{
+  width: 5vw;
+  height:5vw;
+}
 .navbar-brand{
   font-weight: 600;
   font-size: clamp(16px, 3vw, 40px);
@@ -29,6 +33,12 @@ html * {
   border: 2px;
   border-bottom-style:groove;
   background-color: #E8DFE0;
+}
+.profilepic{
+  width: 100px;
+  background-size: cover;
+  border-radius: 50%;
+  position: center;
 }
 /* Jumbotron */
 
