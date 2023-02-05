@@ -1,19 +1,57 @@
-/* NavBar */
-.navbar-brand{
+/* Global Styling */
+html * {
   font-family: 'Montserrat', sans-serif;
+}
+
+/* Background */
+.bg-image{
+  background-image: url('../images/background/background.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(2px);
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+/* NavBar */ 
+.navbar{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+}
+.navbar-brand{
   font-weight: 600;
-  font-size: 5vw;
+  font-size: clamp(16px, 3vw, 40px);
 }
-
-.container-fluid img{
-  border-radius: 10%;
-  margin: 5px;
+.btn {
+  border: 2px;
+  border-bottom-style:groove;
+  background-color: #E8DFE0;
 }
-.profile_pic {
-  width: 100px;
-  border-radius: 50%;
-}
-
 /* Jumbotron */
 
 /* Call to Action */
+
+/* Media Queries */
+
+/* Mobile Size */
+@media only screen and (max-width: 480px) {
+}
+
+/*Tablet Size*/
+@media only screen and (max-width: 768px) {
+}
+
+/*Labtops*/
+@media only screen and (max-width: 1080px) {
+}
+
+/*Large Screen*/
+@media only screen and (max-width: 1600px) {
+}
+
+/*X-large Screen*/
+@media only screen and (min-width: 1601px) {
+}
