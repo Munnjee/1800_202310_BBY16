@@ -62,6 +62,7 @@
 
   <body>
     <div class="bg-image"></div>
+    
     <!--NavBar-->
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">
       <div class="container-fluid">
@@ -125,8 +126,56 @@
     </nav>
 
     <!--Jumbotron-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+<!--This is where you can change the Image for first carousel-->
+          <img src="./images/carousel/help.jpg" class="d-block" alt="...">
+          <div class="carousel-caption d-md-block">
+<!--This is where you can change the Heading for first image-->
+            <h5>Welcome</h5>
+<!--This is where you can change the caption for first image-->
+            <p>Place Text Here.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+<!--This is where you can change the Image for second carousel-->
+          <img src="./images/carousel/fooddonation.jpg" class="d-block" alt="...">
+          <div class="carousel-caption d-md-block">
+<!--This is where you can change the Heading for second image-->
+            <h5>Second slide label</h5>
+<!--This is where you can change the caption for second image-->
+            <p>Place Text Here.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+<!--This is where you can change the Image for third carousel-->
+          <img src="./images/carousel/success.jpg" class="d-block" alt="...">
+          <div class="carousel-caption d-md-block">
+<!--This is where you can change the Heading for third image-->
+            <h5>Third slide label</h5>
+<!--This is where you can change the caption for third image-->
+            <p>Place Text Here.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
     <!--Call to Action-->
+<!--This is where you should place 2 buttons "Sign up" or "Login-->
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
