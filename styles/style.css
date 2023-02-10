@@ -64,6 +64,23 @@ html * {
   font-size: clamp(12px, 2vw, 30px);
 }
 
+.button-container{
+position: absolute;
+bottom:4%;
+justify-content: center;
+align-content: center;
+/* margin: 100PX; */
+margin-left: 48%;
+}
+ .btn-primary{
+  padding:15px;
+  margin-bottom: 10px;
+  background-color: rgb(42, 91, 136);
+ }
+ .btn-secondary{
+  padding:15px;
+  background-color: cornflowerblue;
+ }
 
 /* Call to Action */
 
