@@ -1,11 +1,11 @@
 /* Global Styling */
 html * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Background */
-.bg-image{
-  background-image: url('../images/background/background1.jpg');
+.bg-image {
+  background-image: url("../images/background/background1.jpg");
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,33 +15,33 @@ html * {
   overflow: hidden;
 }
 
-/* NavBar */ 
-.navbar{
+/* NavBar */
+.navbar {
   position: absolute;
   top: 0%;
   width: 100%;
 }
-.logo_image{
+.logo_image {
   width: 5vw;
-  height:5vw;
+  height: 5vw;
 }
-.navbar-brand{
+.navbar-brand {
   font-weight: 600;
   font-size: clamp(16px, 3vw, 40px);
 }
 .btn {
   border: 2px;
-  border-bottom-style:groove;
-  background-color: #E8DFE0;
+  border-bottom-style: groove;
+  background-color: #e8dfe0;
 }
-.profilepic{
+.profilepic {
   width: 100px;
   background-size: cover;
   border-radius: 50%;
   position: center;
 }
 /* Jumbotron */
-.carousel{
+.carousel {
   position: absolute;
   top: 0%;
   left: center;
@@ -52,37 +52,73 @@ html * {
   object-fit: cover;
   object-position: top;
 }
-.carousel-caption{
+.carousel-caption {
   backdrop-filter: blur(15px);
   border-radius: 20px;
 }
-.carousel-caption h5{
+.carousel-caption h5 {
   font-size: clamp(16px, 5vw, 60px);
   font-weight: 600;
 }
-.carousel-caption p{
+.carousel-caption p {
   font-size: clamp(12px, 2vw, 30px);
 }
 
-.button-container{
-position: absolute;
-bottom:4%;
-justify-content: center;
-align-content: center;
-/* margin: 100PX; */
-margin-left: 48%;
+/* Call to Action Buttons*/
+.button-container {
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
- .btn-primary{
-  padding:15px;
-  margin-bottom: 10px;
-  background-color: rgb(42, 91, 136);
- }
- .btn-secondary{
-  padding:15px;
-  background-color: cornflowerblue;
- }
 
-/* Call to Action */
+.calltoaction{
+  font-size: clamp(16px, 3vw, 50px);
+}
+
+.btn-primary {
+  padding: 15px;
+  background-color: #edf6ff;
+  color: #437fc7; 
+  margin: 2vw;
+}
+
+.btn-primary:hover{
+  padding: 15px;
+  background-color: #437fc7;
+  color: #edf6ff; 
+  margin: 2vw;
+}
+
+.btn-primary:active {
+  padding: 15px;
+  background-color: #b9732f;
+  color: #FFFFFF; 
+  margin: 2vw;
+}
+
+.btn-secondary{
+  padding: 15px;
+  background-color: #437fc7;
+  color: #edf6ff; 
+  margin: 2vw;
+}
+
+.btn-secondary:hover {
+  padding: 15px;
+  background-color: #edf6ff;
+  color: #437fc7; 
+  margin: 2vw;
+}
+
+.btn-secondary:active {
+  padding: 15px;
+  background-color: #b9732f;
+  color: #FFFFFF; 
+  margin: 2vw;
+}
 
 /* Media Queries */
 
