@@ -15,6 +15,12 @@ html * {
   overflow: hidden;
 }
 
+.float {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+}
+
 /* NavBar */
 .navbar {
   position: absolute;
@@ -41,10 +47,13 @@ html * {
   position: center;
 }
 
-/*Offset Block*/
-.block{
+.offset {
   height: 10em;
 }
+
+/********************************/
+/********** index.html **********/
+/********************************/
 
 /* Jumbotron */
 .carousel {
@@ -70,7 +79,6 @@ html * {
   font-size: clamp(12px, 2vw, 30px);
 }
 
-
 /* Call to Action Buttons*/
 .button-container {
   width: 100%;
@@ -81,51 +89,64 @@ html * {
   justify-content: center;
 }
 
-.calltoaction{
+.calltoaction {
   font-size: clamp(16px, 3vw, 30px) !important;
 }
 
 .btn-primary {
   padding: 15px;
   background-color: #edf6ff;
-  color: #437fc7; 
+  color: #437fc7;
   margin: 2vw;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   padding: 15px;
   background-color: #437fc7;
-  color: #edf6ff; 
+  color: #edf6ff;
   margin: 2vw;
 }
 
 .btn-primary:active {
   padding: 15px;
   background-color: #b9732f;
-  color: #FFFFFF; 
+  color: #ffffff;
   margin: 2vw;
 }
 
-.btn-secondary{
+.btn-secondary {
   padding: 15px;
   background-color: #437fc7;
-  color: #edf6ff; 
+  color: #edf6ff;
   margin: 2vw;
 }
 
 .btn-secondary:hover {
   padding: 15px;
   background-color: #edf6ff;
-  color: #437fc7; 
+  color: #437fc7;
   margin: 2vw;
 }
 
 .btn-secondary:active {
   padding: 15px;
   background-color: #b9732f;
-  color: #FFFFFF; 
+  color: #ffffff;
   margin: 2vw;
 }
+
+/********************************/
+/********** login.html **********/
+/********************************/
+
+.container_login {
+  text-align: center;
+  width: 100%;
+}
+
+/********************************/
+/********** main.html **********/
+/********************************/
 
 /* Media Queries */
 
