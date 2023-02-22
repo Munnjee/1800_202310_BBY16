@@ -50,6 +50,18 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
+    />
+
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -69,66 +81,8 @@
     <div class="bg-image"></div>
     
     <!--NavBar-->
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="./images/logo/logo.png" alt="Logo" class="logo_image">
-          GIGaNet
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <img src="./images/profilepic.jpg" alt="profilepic" class="profilepic">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Hello John!</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">My Gigs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Notification</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Inbox</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Profile
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                  <li><a class="dropdown-item" href="#">Profile Settings</a></li>
-                  <li><a class="dropdown-item" href="#">Pending Gigs</a></li>
-                  <li><a class="dropdown-item" href="#">Confirmed Gigs</a></li>
-                  <li><a class="dropdown-item" href="#">Past Gigs</a></li>
-                  <li><a class="dropdown-item" href="#">Drafts</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">My Reviews</a></li>
-                  <li><a class="dropdown-item" href="#">Reviews About Me</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Help</a></li>
-                  <li><a class="dropdown-item" href="#">FAQ</a></li>
-                  <li><a class="dropdown-item" href="#">About GIGaNet</a></li>
-                  <li><a class="dropdown-item" href="#">Legal Info</a></li>
-                  <li><a class="dropdown-item" href="#">Contact Us</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <nav id="navbarPlaceholder"></nav>
+
 
     <!--Jumbotron-->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -181,7 +135,10 @@
     <!---------------------------------------------->
 
     <!-- Link to scripts of your own -->
-    <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./scripts/skeleton.js"></script>
+    <script src="./scripts/firebaseAPI_BBY16"></script>
+
+
     </div>
   </body>
 </html>
