@@ -40,6 +40,12 @@ html * {
   border-radius: 50%;
   position: center;
 }
+
+/*Offset Block*/
+.block{
+  height: 10em;
+}
+
 /* Jumbotron */
 .carousel {
   position: absolute;
@@ -63,6 +69,7 @@ html * {
 .carousel-caption p {
   font-size: clamp(12px, 2vw, 30px);
 }
+
 
 /* Call to Action Buttons*/
 .button-container {
