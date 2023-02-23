@@ -14,10 +14,22 @@ html * {
   opacity: 0.5;
   overflow: hidden;
 }
-
 .float {
+  padding-top:10vw;
   position: absolute;
   top: 0%;
+  width: 100%;
+}
+
+/* Null NavBar */
+.offcanvas_null{
+  margin-top: 1rem;
+  text-align: center;
+}
+.offcanvas-header{
+  display:block;
+}
+.logo_image_null{
   width: 100%;
 }
 
@@ -46,9 +58,8 @@ html * {
   border-radius: 50%;
   position: center;
 }
-
-.offset {
-  height: 10em;
+.btn-close{
+  float:right;
 }
 
 /********************************/
@@ -114,26 +125,25 @@ html * {
   margin: 2vw;
 }
 
-.btn-secondary {
+/*Code for Sign-Up Button if we want to add it later*/
+/* .btn-secondary {
   padding: 15px;
   background-color: #437fc7;
   color: #edf6ff;
   margin: 2vw;
 }
-
 .btn-secondary:hover {
   padding: 15px;
   background-color: #edf6ff;
   color: #437fc7;
   margin: 2vw;
 }
-
 .btn-secondary:active {
   padding: 15px;
   background-color: #b9732f;
   color: #ffffff;
   margin: 2vw;
-}
+} */
 
 /********************************/
 /********** login.html **********/
@@ -145,7 +155,22 @@ html * {
 }
 
 /********************************/
-/********** main.html **********/
+/********** main.html ***********/
+/********************************/
+
+
+/********************************/
+/********** inbox.html **********/
+/********************************/
+
+
+/********************************/
+/****** notification.html *******/
+/********************************/
+
+
+/********************************/
+/********** post.html ***********/
 /********************************/
 
 /* Media Queries */

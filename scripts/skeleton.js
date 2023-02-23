@@ -4,5 +4,7 @@
 //---------------------------------------------------
 function loadSkeleton(){
   console.log($('#navbarPlaceholder').load('./text/nav.html'));
+  console.log($('#nullNavbarPlaceholder').load('./text/navNull.html'));
+
 }
 loadSkeleton();  //invoke the function
