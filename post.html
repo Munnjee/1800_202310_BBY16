@@ -84,6 +84,26 @@
     <!--NavBar-->
     <nav id="navbarPlaceholder"></nav>
 
+    <!-- input forms to post gigs-->
+    <form>
+      <fieldset>   <!--groups related data data in form-->
+        <legend>Post gig: </legend>
+      <label for="gig_title" >Gig title: </label><br>
+      <input type="text" id="gig_title" name="gig_title" placeholder="title of your gig" />
+      <br>
+      <p>Give a brief description how your community partner can assist you : </p><textarea name="gig_description" rows="10" cols="30"></textarea>
+      <br>
+      <label for="types">Choose types of service: </label>
+      <select id="inddor_outdoor" name="types_of_service">
+      <option value="outdoor">Outdoor</option>
+      <option value = "indoor">Indoor</option>
+      <input type="submit" id="gig_submit" value="submit">
+    </select>
+      
+
+    </fieldset>
+    </form>
+
     </div>
   </body>
 
