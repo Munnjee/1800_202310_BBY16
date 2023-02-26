@@ -101,16 +101,12 @@
           <br />
           <!--Description-->
           <label for="description" required="required"
-            ><p>
-              A brief description how your community partner can assist you:
-            </p></label
+            >Description:</label
           >
-          <br />
           <textarea
             id="description"
             name="description"
-            rows="5"
-            cols="80"
+            placeholder="A brief description how your community partner can assist you"
           ></textarea>
           <br />
           <br />
@@ -195,13 +191,15 @@
           <br />
           <br />
           <!--Attach file -->
-          <label for="file">Attach File or Picture:</label>
+          <label for="file" class="custom-file-upload">Attach File or Picture:</label>
           <br />
           <input type="file" id="file" name="file" value="file" />
           <br />
           <br />
+          <div class="post_button_container">
           <input type="submit" id="gig_submit" value="Submit" />
           <input type="reset" id="gig_reset" value="Reset" />
+        </div>
         </form>
       </div>
     </div>
