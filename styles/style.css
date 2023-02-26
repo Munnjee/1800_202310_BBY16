@@ -160,6 +160,7 @@ html * {
 /********** main.html ***********/
 /********************************/
 
+/* Grid Layout for Filter and Listings*/
 .container {
   height: 80vh;
   width: 100vw;
@@ -176,6 +177,7 @@ html * {
   margin: 10px
 }
 
+/* CSS for Filter Div */
 .filter {
   grid-area: filter;
   font-size: clamp(12px, 1vw, 30px);;
@@ -187,6 +189,8 @@ html * {
 .filter h1{
   font-size: clamp(20px, 2vw, 40px);
   margin: auto !important;
+  color:#437fc7;
+  font-weight: 500;
 }
 
 .accordion{
@@ -207,8 +211,49 @@ html * {
 .panel {
   display: block;
   padding: 1em;
+  color: #437fc7;
 }
 
+/* CSS for Filter fields */
+#search-bar{
+  opacity: 60%;
+  border-radius: 5px;
+  border: 1px;
+  padding: 0.5em;
+}
+
+#indoor-outdoor-select, #compensation-select, #time-of-day-select, #date-input, #time-input{
+  background-color: #ffffff95;
+  border-radius: 5px;
+  color: #6daffe;
+  border: 1px;
+  padding: 0.5em;
+}
+
+#images-checkbox{
+  margin-left: 10px;
+}
+
+#filter-button {
+  width:100%;
+  background-color: #437fc7;
+  color:#edf6ff;
+  border: 1px;
+  border-radius: 5px;
+  padding:0.5em
+}
+
+#filter-button:hover {
+  background-color: #edf6ff;
+  color: #437fc7;
+}
+
+#filter-button:active {
+  background-color: #b9732f;
+  color: #ffffff;
+}
+
+/* CSS for Listing Div */
 .listing {
   grid-area: listing;
   background-color: #edf6ffbb;
