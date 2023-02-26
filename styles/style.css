@@ -160,10 +160,11 @@ html * {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 0.5fr 2fr;
   grid-template-rows: 1fr;
   grid-template-areas: "filter listing";
   padding: none;
+  margin: 0px;
 }
 
 .container >*{
