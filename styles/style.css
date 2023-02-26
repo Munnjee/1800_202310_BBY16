@@ -170,6 +170,7 @@ html * {
   background-color: #ffffff;
   opacity: 50%;
   border-radius: 10px;
+  margin: 10px
 }
 
 .filter {
