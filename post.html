@@ -57,76 +57,154 @@
       rel="stylesheet"
     />
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon_io/site.webmanifest" />
   </head>
 
   <body>
     <div class="bg-image"></div>
     <div class="float">
-    
-    <!--NavBar-->
-    <nav id="navbarPlaceholder"></nav>
+      <!--NavBar-->
+      <nav id="navbarPlaceholder"></nav>
 
-    <!-- input forms to post gigs-->
-    <form>
-    <h1>Post gig </h1>
-    <label for="gig_title" >Gig title: </label><br>
-    <input type="text" id="gig_title" name="gig_title" placeholder="title of your gig" />
-    <br>
-    <p>provide a brief description how your community partner can assist you : </p><textarea name="gig_description" rows="10" cols="30"></textarea>
-    <br> <br>
-    <!-- set location for the gig -->
+      <!-- input forms to post gigs-->
+      <div class="form-field">
+        <form id="gig-form">
+          <h1>Post a Gig</h1>
 
-    <label for="customerLocation">Where is this Gig located? </label> <br>
-    <input type="text" id="customerLocation" name="customerLocation" placeholder="city,street,postal code" /> <br> <br>
-    
-    <!-- indoor outdoor radio button -->
-    <span>Is this an indoor or outdoor Gig? </span> <br>
-    <input type="radio" id="indoor" name="time" value="indoor">
-    <label for="indoor">Indoor</label> <br>
-    <input type="radio" id="outdoor" name="time" value="outdoor">
-    <label for="outdoor"> Outdoor</label> <br> <br>
-    
-    <!-- input date -->
-    <label for="dateOfService"> Date of Service: </label>
-    <input type="date" id="dateOfService" name="dateOfService" placeholder="Date of Service" />
-    
-    <input type="checkbox" id="flexibleDate" name="dateOfService" value="flexibleDate"> 
-    <label for="flexibleDate"> Flexible Date</label> <br>
-
-    
-    <!-- time of service radio buttons -->
-    <br>
-    <span>Time of service: </span> <br>
-    <input type="radio" id="amTillNoon" name="time" value="amTillNoon">
-    <label for="amTillNoon">AM till Noon</label> <br>
-    <input type="radio" id="NoonTillPm" name="time" value="NoonTillPm">
-    <label for="NoonTillPm"> Noon till 4 PM</label> <br>
-    <input type="radio" id="PmTillPm" name="time" value="PmTillP">
-    <label for="PmTillPm"> 4PM till 8PM</label> <br>
-    <input type="checkbox" id="flexibleTime" name = "time" value="flexibleTime">
-    <label for="flexibleTime"> Flexible Time</label> <br> <br>
-    <!-- compensation box -->
-    <label for ="compensation">Compensation Amount: $</label>
-    <input type="number" id="compensation" name="compensation" value="compensation"> <br><br>
-    <!-- attach file -->
-    <label for="myFile">Attach File or Picture: </label> <br>
-    <input type="file" id="myFile" name="myFile"  value ="myFile"> <br>
-    <br> <input type="submit" id="gig_submit" value="submit">
-    <input type ="reset"> 
-    </form>
-
-    </select>
-      
-
-   
-    
-
+          <!--Title-->
+          <label for="gig_title">Gig Title:</label>
+          <input
+            type="text"
+            id="gig_title"
+            name="gig_title"
+            require="required"
+            placeholder="Name of your Gig"
+          />
+          <br />
+          <br />
+          <!--Description-->
+          <label for="description" required="required"
+            ><p>
+              A brief description how your community partner can assist you:
+            </p></label
+          >
+          <br />
+          <textarea
+            id="description"
+            name="description"
+            rows="5"
+            cols="80"
+          ></textarea>
+          <br />
+          <br />
+          <!--Location-->
+          <label for="location"
+            >Where is this Gig located? Enter postal code without any
+            spaces.</label
+          >
+          <br />
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="V1V1V1"
+          />
+          <br />
+          <br />
+          <!--Indoor/Outdoor-->
+          <label for="indooroutdoor">Is this an Indoor or Outdoor Gig?</label>
+          <br />
+          <input type="radio" id="indoor" name="indooroutdoor" value="indoor" />
+          <label for="indoor">Indoor</label>
+          <br />
+          <input
+            type="radio"
+            id="outdoor"
+            name="indooroutdoor"
+            value="outdoor"
+          />
+          <label for="outdoor">Outdoor</label>
+          <br />
+          <br />
+          <!--Date-->
+          <label for="date">Date of Service:</label>
+          <br />
+          <input type="date" id="date" name="date" />
+          <br />
+          <input
+            type="checkbox"
+            id="flexibleDate"
+            name="flexibleDate"
+            value="flexibleDate"
+          />
+          <label for="flexibleDate">Flexible Date</label>
+          <br />
+          <br />
+          <!--Time-->
+          <label for="time">Time of Service:</label>
+          <br />
+          <input type="radio" id="amToNoon" name="time" value="amToNoon" />
+          <label for="amToNoon">AM till Noon</label>
+          <br />
+          <input type="radio" id="noonToFour" name="time" value="noonToFour" />
+          <label for="noonToFour">Noon till 4PM</label>
+          <br />
+          <input
+            type="radio"
+            id="fourToEight"
+            name="time"
+            value="fourToEight"
+          />
+          <label for="fourToEight">4PM till 8PM</label>
+          <br />
+          <br />
+          <input
+            type="checkbox"
+            id="flexibleTime"
+            name="flexibleTime"
+            value="flexibleTime"
+          />
+          <label for="flexibleTime">Flexible Time</label>
+          <br />
+          <br />
+          <!--Compensation-->
+          <label for="compensation">Compensation Amount:</label><br />
+          $<input
+            type="number"
+            id="compensation"
+            name="compensation"
+            required="required"
+          />
+          <br />
+          <br />
+          <!--Attach file -->
+          <label for="file">Attach File or Picture:</label>
+          <br />
+          <input type="file" id="file" name="file" value="file" />
+          <br />
+          <br />
+          <input type="submit" id="gig_submit" value="Submit" />
+          <input type="reset" id="gig_reset" value="Reset" />
+        </form>
+      </div>
     </div>
-  
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
@@ -134,8 +212,6 @@
 
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/firebaseAPI_BBY16"></script>
-
-
-    </div>
+    <script src="./scripts/post.js"></script>
   </body>
 </html>
