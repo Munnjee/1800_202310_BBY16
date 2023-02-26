@@ -15,21 +15,21 @@ html * {
   overflow: hidden;
 }
 .float {
-  padding-top:10vw;
+  padding-top: 10vw;
   position: absolute;
   top: 0%;
   width: 100%;
 }
 
 /* Null NavBar */
-.offcanvas_null{
+.offcanvas_null {
   margin-top: 1rem;
   text-align: center;
 }
-.offcanvas-header{
-  display:block;
+.offcanvas-header {
+  display: block;
 }
-.logo_image_null{
+.logo_image_null {
   width: 100%;
 }
 
@@ -58,8 +58,8 @@ html * {
   border-radius: 50%;
   position: center;
 }
-.btn-close{
-  float:right;
+.btn-close {
+  float: right;
 }
 
 /********************************/
@@ -158,16 +158,35 @@ html * {
 /********** main.html ***********/
 /********************************/
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "filter listing";
+  padding: none;
+}
+
+.container >*{
+  background-color: #ffffff;
+  opacity: 50%;
+  border-radius: 10px;
+}
+
+.filter {
+  grid-area: filter;
+}
+
+.listing {
+  grid-area: listing;
+}
 
 /********************************/
 /********** inbox.html **********/
 /********************************/
 
-
 /********************************/
 /****** notification.html *******/
 /********************************/
-
 
 /********************************/
 /********** post.html ***********/
