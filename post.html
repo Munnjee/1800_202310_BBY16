@@ -86,26 +86,61 @@
 
     <!-- input forms to post gigs-->
     <form>
-      <fieldset>   <!--groups related data data in form-->
-        <legend>Post gig: </legend>
-      <label for="gig_title" >Gig title: </label><br>
-      <input type="text" id="gig_title" name="gig_title" placeholder="title of your gig" />
-      <br>
-      <p>Give a brief description how your community partner can assist you : </p><textarea name="gig_description" rows="10" cols="30"></textarea>
-      <br>
-      <label for="types">Choose types of service: </label>
-      <select id="inddor_outdoor" name="types_of_service">
-      <option value="outdoor">Outdoor</option>
-      <option value = "indoor">Indoor</option>
-      <input type="submit" id="gig_submit" value="submit">
+    <h1>Post gig </h1>
+    <label for="gig_title" >Gig title: </label><br>
+    <input type="text" id="gig_title" name="gig_title" placeholder="title of your gig" />
+    <br>
+    <p>provide a brief description how your community partner can assist you : </p><textarea name="gig_description" rows="10" cols="30"></textarea>
+    <br> <br>
+    <!-- set location for the gig -->
+
+    <label for="customerLocation">Where is this Gig located? </label> <br>
+    <input type="text" id="customerLocation" name="customerLocation" placeholder="city,street,postal code" /> <br> <br>
+    
+    <!-- indoor outdoor radio button -->
+    <span>Is this an indoor or outdoor Gig? </span> <br>
+    <input type="radio" id="indoor" name="time" value="indoor">
+    <label for="indoor">Indoor</label> <br>
+    <input type="radio" id="outdoor" name="time" value="outdoor">
+    <label for="outdoor"> Outdoor</label> <br> <br>
+    
+    <!-- input date -->
+    <label for="dateOfService"> Date of Service: </label>
+    <input type="date" id="dateOfService" name="dateOfService" placeholder="Date of Service" />
+    
+    <input type="checkbox" id="flexibleDate" name="dateOfService" value="flexibleDate"> 
+    <label for="flexibleDate"> Flexible Date</label> <br>
+
+    
+    <!-- time of service radio buttons -->
+    <br>
+    <span>Time of service: </span> <br>
+    <input type="radio" id="amTillNoon" name="time" value="amTillNoon">
+    <label for="amTillNoon">AM till Noon</label> <br>
+    <input type="radio" id="NoonTillPm" name="time" value="NoonTillPm">
+    <label for="NoonTillPm"> Noon till 4 PM</label> <br>
+    <input type="radio" id="PmTillPm" name="time" value="PmTillP">
+    <label for="PmTillPm"> 4PM till 8PM</label> <br>
+    <input type="checkbox" id="flexibleTime" name = "time" value="flexibleTime">
+    <label for="flexibleTime"> Flexible Time</label> <br> <br>
+    <!-- compensation box -->
+    <label for ="compensation">Compensation Amount: $</label>
+    <input type="number" id="compensation" name="compensation" value="compensation"> <br><br>
+    <!-- attach file -->
+    <label for="myFile">Attach File or Picture: </label> <br>
+    <input type="file" id="myFile" name="myFile"  value ="myFile"> <br>
+    <br> <input type="submit" id="gig_submit" value="submit">
+    <input type ="reset"> 
+    </form>
+
     </select>
       
 
-    </fieldset>
-    </form>
+   
+    
 
     </div>
-  </body>
+  
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
