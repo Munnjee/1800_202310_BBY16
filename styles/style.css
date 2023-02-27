@@ -263,9 +263,8 @@ html * {
   justify-content: center;
 }
 #gig-list > li {
-  display: inline-block;
+  display: block;
   margin: 2em;
-  
 }
 
 /********************************/
@@ -375,6 +374,11 @@ html * {
   .panel{
     display: none;
   }
+  #gig-list {
+    display: block;
+  }
+  #gig-list p {
+    display: inline-block !important;
 }
 
 /*Labtops*/
