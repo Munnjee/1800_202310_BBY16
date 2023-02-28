@@ -271,6 +271,183 @@ html * {
 /********** inbox.html **********/
 /********************************/
 
+#search{
+  margin:0px;
+  width:100%;
+  height:5vh;
+  padding:0;
+  font-size: larger;
+}
+
+    .containerinbox {
+      margin: 0px;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 20vw, 60vw,20vw;
+      grid-template-rows:    10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh;
+      background:none;
+      
+      width: 100%;
+      height:100vh;
+      text-align: center;
+      border-radius: 10px;
+    }
+  
+    .item{
+      border-color: rgb(13, 12, 12);
+      border-style: solid;
+      background-color: #edf6fff5;
+    }
+    .item.content1 { 
+      height: 100%;
+      width: 100%;
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 1;
+       
+      border-radius:10px;
+      
+    }
+    
+
+    .item.content2 { 
+      
+      grid-column: 1 / span 3;
+      grid-row: 2 / span 1;
+       
+      border-radius:10px;
+      
+
+    }
+    
+    .item.content3 { 
+      
+      grid-column: 1 / span 3;
+      grid-row: 3 / span 1;
+       
+      border-radius:10px;
+    }
+    
+    .item.content4 { 
+     
+      grid-column: 1 / span 3;
+      grid-row: 4 / span 1;
+      
+      border-radius:10px;
+    }
+
+    .item.content5 { 
+     
+      grid-column: 1 / span 3;
+      grid-row: 5 / span 1;
+       
+      border-radius:10px;
+    }
+
+    .item.content6 { 
+     
+      grid-column: 1 / span 3;
+      grid-row: 6 / span 1;
+       
+      border-radius:10px;
+    }
+
+    .item.content7 { 
+     
+      grid-column: 1 / span 3;
+      grid-row: 7 / span 1;
+       
+      border-radius:10px;
+    }
+     
+   
+    .item.content8 { 
+     
+      grid-column: 1 / span 3;
+      grid-row: 8 / span 1;
+       
+      border-radius:10px;
+    }
+
+
+    .item.content9 { 
+     
+      grid-column: 1 / span 3;
+      grid-row: 9 / span 1;
+      
+      border-radius:10px;
+    }
+
+    .item.content10 { 
+     
+      grid-column: 1 / span 3;
+      grid-row: 10 / span 1;
+       
+      border-radius:10px;
+    }
+
+/********************************/
+/****** application.html *******/
+/********************************/
+.applicationcontainer {
+  margin: 20vw;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 20vw, 60vw,20vw;
+  grid-template-rows:    10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh;
+  background:none;
+  
+  width: 50%;
+  height:50vh;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.item.application1 { 
+  
+  font-size: 20pt;
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 7;
+  background-color: #bfcddbf0; 
+ border-radius:10px;
+}
+
+#experience{
+height:7vh;
+width: 30vw;
+}
+
+#questions{
+  height:7vh;
+  width: 30vw;
+  }
+
+/********************************/
+/****** confirmation.html *******/
+/********************************/
+.confirmationcontainer {
+  margin: 20vw;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 20vw, 60vw,20vw;
+  grid-template-rows:    10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh;
+  background:none;
+  
+  width: 50%;
+  height:50vh;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.item.confirmation1 { 
+  
+  font-size: 20pt;
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 7;
+  background-color: #bfcddbf8; 
+ border-radius:10px;
+}
+
+
 /********************************/
 /****** notification.html *******/
 /********************************/
@@ -391,4 +568,5 @@ html * {
 
 /*X-large Screen*/
 @media only screen and (min-width: 1601px) {
+}
 }
