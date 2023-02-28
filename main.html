@@ -155,57 +155,37 @@
         <div class="listing">
           <h1>Active Gigs</h1>
           <p>
-            Welcome to our digital community bulletin board where you can find the
-            latest gig postings in our community. Below you will find a list of
-            current gig openings.
+            Welcome to our digital community bulletin board where you can find
+            the latest gig postings in our community. Below you will find a list
+            of current gig openings.
           </p>
-          <ul id="gig-list">
-            <li>
-              <h3>Gig Title</h3>
-              <p>Description</p>
-              <p>Compensation</p>
-              <p>Indoor or Outdoor?</p>
-              <p>Date of Service</p>
-              <p>Flexible Date?</p>
-              <p>Time of Service</p>
-              <p>Flexible Time?</p>
-              <a href="#">Pick-Up Gig</a>
-            </li>
-            <li>
-              <h3>Gig Title</h3>
-              <p>Description</p>
-              <p>Compensation</p>
-              <p>Indoor or Outdoor?</p>
-              <p>Date of Service</p>
-              <p>Flexible Date?</p>
-              <p>Time of Service</p>
-              <p>Flexible Time?</p>
-              <a href="#">Pick-Up Gig</a>
-            </li>
-            <li>
-              <h3>Gig Title</h3>
-              <p>Description</p>
-              <p>Compensation</p>
-              <p>Indoor or Outdoor?</p>
-              <p>Date of Service</p>
-              <p>Flexible Date?</p>
-              <p>Time of Service</p>
-              <p>Flexible Time?</p>
-              <a href="#">Pick-Up Gig</a>
-            </li>
-            <li>
-              <h3>Gig Title</h3>
-              <p>Description</p>
-              <p>Compensation</p>
-              <p>Indoor or Outdoor?</p>
-              <p>Date of Service</p>
-              <p>Flexible Date?</p>
-              <p>Time of Service</p>
-              <p>Flexible Time?</p>
-              <a href="#">Pick-Up Gig</a>
-            </li>
-            <!-- Add more job postings as needed -->
-          </ul>
+
+          <div class="container">
+            <div id="giglisting-go-here" class="row row-cols-auto"></div>
+          </div>
+
+          <!-- Templates for general use, not displayed -->
+          <template id="gigCardTemplate">
+            <div class="gigCard" style="width: 100%">
+              <img class="card-image card-img-left" src=" ..." alt="..." />
+              <div class="card-body">
+                <ul id="gig-list">
+                  <li>
+                    <h3 class="title"></h3>
+                    <p class="description"></p>
+                    <p class="compensation"></p>
+                    <p class="indooroutdoor"></p>
+                    <p class="date"></p>
+                    <p class="flexDate"></p>
+                    <p class="time"></p>
+                    <p class="flexTime"></p>
+                    <a href="#"></a>
+                  </li>
+                  <button><a href="#">Pick-Up Gig</a></button>
+              </div>
+            </div>
+          </template>
+          
         </div>
       </div>
     </div>
@@ -216,7 +196,6 @@
 
     <script src="./scripts/firebaseAPI_BBY16.js"></script>
     <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/authentication.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/filter.js"></script>
   </body>
