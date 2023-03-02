@@ -48,16 +48,19 @@ function displayCardsDynamically(collection) {
         var flexTime = doc.data().flexTime;
         let newcard = gigCardTemplate.content.cloneNode(true);
 
+        let CADDollar = new Intl.NumberFormat('en-CA', {
+          style: 'currency',
+          currency: 'CAD',
+        });
+
         //update title and text
         newcard.querySelector(".title").innerHTML = title;
-        newcard.querySelector(".compensation").innerHTML = compensation.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+        newcard.querySelector(".compensation").innerHTML = CADDollar.format(compensation);
         newcard.querySelector(".indooroutdoor").innerHTML = indooroutdoor;
         newcard.querySelector(".date").innerHTML = date;
         newcard.querySelector(".flexDate").innerHTML = flexDate;
         newcard.querySelector(".time").innerHTML = time;
         newcard.querySelector(".flexTime").innerHTML = flexTime;
-
-
 
         document.getElementById(collection + "-go-here").appendChild(newcard);
       });
