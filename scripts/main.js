@@ -50,7 +50,7 @@ function displayCardsDynamically(collection) {
 
         //update title and text
         newcard.querySelector(".title").innerHTML = title;
-        newcard.querySelector(".compensation").innerHTML = compensation;
+        newcard.querySelector(".compensation").innerHTML = compensation.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
         newcard.querySelector(".indooroutdoor").innerHTML = indooroutdoor;
         newcard.querySelector(".date").innerHTML = date;
         newcard.querySelector(".flexDate").innerHTML = flexDate;
