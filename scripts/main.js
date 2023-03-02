@@ -40,9 +40,7 @@ function displayCardsDynamically(collection) {
       var i = 1; // Allows unique id for each gig post
       allGigs.forEach((doc) => {
         var title = doc.data().jobTitle;
-        var description = doc.data().description;
         var compensation = doc.data().compensation;
-        var location = doc.data().location;
         var indooroutdoor = doc.data().indooroutdoor;
         var date = doc.data().date;
         var flexDate = doc.data().flexDate;
@@ -52,7 +50,6 @@ function displayCardsDynamically(collection) {
 
         //update title and text
         newcard.querySelector(".title").innerHTML = title;
-        newcard.querySelector(".description").innerHTML = description;
         newcard.querySelector(".compensation").innerHTML = compensation;
         newcard.querySelector(".indooroutdoor").innerHTML = indooroutdoor;
         newcard.querySelector(".date").innerHTML = date;

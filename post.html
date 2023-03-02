@@ -100,9 +100,7 @@
           <br />
           <br />
           <!--Description-->
-          <label for="description" required="required"
-            >Description:</label
-          >
+          <label for="description" required="required">Description:</label>
           <textarea
             id="description"
             name="description"
@@ -127,14 +125,14 @@
           <!--Indoor/Outdoor-->
           <label for="indooroutdoor">Is this an Indoor or Outdoor Gig?</label>
           <br />
-          <input type="radio" id="indoor" name="indooroutdoor" value="indoor" />
+          <input type="radio" id="indoor" name="indooroutdoor" value="Indoor" />
           <label for="indoor">Indoor</label>
           <br />
           <input
             type="radio"
             id="outdoor"
             name="indooroutdoor"
-            value="outdoor"
+            value="Outdoor"
           />
           <label for="outdoor">Outdoor</label>
           <br />
@@ -148,7 +146,7 @@
             type="checkbox"
             id="flexibleDate"
             name="flexibleDate"
-            value="flexibleDate"
+            value="Flexible Date"
           />
           <label for="flexibleDate">Flexible Date</label>
           <br />
@@ -156,17 +154,17 @@
           <!--Time-->
           <label for="time">Time of Service:</label>
           <br />
-          <input type="radio" id="amToNoon" name="time" value="amToNoon" />
+          <input type="radio" id="amToNoon" name="time" value="AM To Noon" />
           <label for="amToNoon">AM till Noon</label>
           <br />
-          <input type="radio" id="noonToFour" name="time" value="noonToFour" />
+          <input type="radio" id="noonToFour" name="time" value="Noon To 4PM" />
           <label for="noonToFour">Noon till 4PM</label>
           <br />
           <input
             type="radio"
             id="fourToEight"
             name="time"
-            value="fourToEight"
+            value="4PM To 8PM"
           />
           <label for="fourToEight">4PM till 8PM</label>
           <br />
@@ -175,7 +173,7 @@
             type="checkbox"
             id="flexibleTime"
             name="flexibleTime"
-            value="flexibleTime"
+            value="Flexible Time"
           />
           <label for="flexibleTime">Flexible Time</label>
           <br />
@@ -191,15 +189,17 @@
           <br />
           <br />
           <!--Attach file -->
-          <label for="file" class="custom-file-upload">Attach File or Picture:</label>
+          <label for="file" class="custom-file-upload"
+            >Attach File or Picture:</label
+          >
           <br />
           <input type="file" id="file" name="file" value="file" />
           <br />
           <br />
           <div class="post_button_container">
-          <button type="submit" id="gig_submit">Submit</button>
-          <button type="reset" id="gig_reset">Reset</button>
-        </div>
+            <button type="submit" id="gig_submit">Submit</button>
+            <button type="reset" id="gig_reset">Reset</button>
+          </div>
         </form>
       </div>
     </div>
