@@ -66,34 +66,38 @@
  
     
     <div class="applicationcontainer">
-     <div class="item application1">
-        <span> Application </span> 
+      
+      <div class="items application1">
+        <form id="application1">
+        <h1> Application </h1> 
           <br><br>
 
         <label> Relevant Experience: </label>
           <br>
-          <input id="experience" type="text"/>      
+          <input id="experience" name="experience" type="text"/>      
     <br>
     
     <label>
      <p>I will need supplies from employer?</p> 
     </label>
-    <input type="radio" value="val1" name="yes"/>
+    <input type="radio" value="yes, I will need supplies" name="yes" id="applicationq1"/>
      <label style="width: 50px;">Yes</label>
-     <input type="radio" value="val2" name="yes"/>
+     <input type="radio" value="no, I will not need supplies" name="yes" id="applicationq1"/>
      <label style="width: 50px;">No</label>
      <br><br>
      <p> Accept Offered compensation</p>
-     <input type="checkbox" value="dollars" name="accept"/>
-     or $<input id="monetaryvalue"/> 
+     <input type="checkbox" value="I accept the offered compensation" name="applicationq3" id="applicationq3"/>
+     <span> or $</span><input type="number" id="monetaryvalue" name="monetaryvalue"/> 
      <br><br>
      <label> Questions: </label>
           <br>
-     <input id="questions" type="text"/> 
+     <input id="questions" type="text" name="applicationq4" id="applicationq4"/> 
      <br><br>
-     <input type="submit"/>
-       </div>
-    
+     <input type="submit" id="submit"/>
+     <input type="reset" id="applicationReset"/>  
+    </form>
+    </div>
+  
       </div>
     </div>
 
@@ -102,10 +106,10 @@
 <!---------------------------------------------->
 
 <script src="./scripts/skeleton.js"></script>
-<script src="./scripts/firebaseAPI_BBY16"></script>
+<script src="./scripts/firebaseAPI_BBY16.js"></script>
+<script src="./scripts/application.js"></script>
 
 
-</div>
 </body>
 
 </html>
