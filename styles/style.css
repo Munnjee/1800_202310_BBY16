@@ -64,6 +64,32 @@ html * {
   float: right;
 }
 
+#btn-logout {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.btn-logout {
+  text-decoration: none;
+  padding: 0.5em;
+  background-color: #edf6ff;
+  color: #437fc7;
+  margin: 0.5em;
+  border-radius: 10px;
+}
+
+.btn-logout:hover {
+  background-color: #437fc7;
+  color: #edf6ff;
+}
+
+.btn-logout:active {
+  background-color: #b9732f;
+  color: #ffffff;
+}
+
 /* Null Navbar Login Prompt button */
 .loginprompt {
   width: 100%;
