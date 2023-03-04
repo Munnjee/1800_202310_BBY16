@@ -7,20 +7,33 @@ const postForm = document.querySelector("#gig-form");
 postForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // Create a new document in Firestore
-  db.collection("giglisting").add({
-    jobTitle: postForm.gig_title.value,
-    description: postForm.description.value,
-    compensation: postForm.compensation.value,
-    location: postForm.location.value,
-    indooroutdoor: postForm.indooroutdoor.value,
-    date: postForm.date.value,
-    flexDate: postForm.flexibleDate.value,
-    time: postForm.time.value,
-    flexTime: postForm.flexibleTime.value,
-    file: postForm.file.value,
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      // User Signed In
+      // Create a new document in Firestore
+      db.collection("giglisting").add({
+        owner: user.uid,
+        jobTitle: postForm.gig_title.value,
+        description: postForm.description.value,
+        compensation: postForm.compensation.value,
+        location: postForm.location.value,
+        indooroutdoor: postForm.indooroutdoor.value,
+        date: postForm.date.value,
+        flexDate: postForm.flexibleDate.value,
+        time: postForm.time.value,
+        flexTime: postForm.flexibleTime.value,
+        file: postForm.file.value,
+      }).then(doc=> {
+        alert("Your Gig Post is Successful!");
+        console.log("Gig Post Document Added!");
+        console.log(doc.id);
+      });
+      //Clears the form
+      postForm.reset();
+    } else {
+      // No User Signed In
+      alert("Please Sign-in to Post a Gig")
+      console.log("Error, No user signed in")
+    }
   });
-
-  //Clears the form
-  postForm.reset();
 });
