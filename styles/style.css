@@ -454,21 +454,21 @@ li .compensation{
 /****** application.html *******/
 /********************************/
 .applicationcontainer {
-  margin: 20vw;
+  margin: 3.5vw;
   padding: 0px;
   display: grid;
   grid-template-columns: 20vw, 60vw, 20vw;
   grid-template-rows: 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh;
   background: none;
-
-  width: 50%;
+  color: #437fc7;
+  width: 93%;
   height: 50vh;
   text-align: center;
   border-radius: 10px;
 }
 
-.item.application1 {
-  font-size: 20pt;
+.items.application1 {
+  font-size: clamp(10px, 2vw, 25px);
   grid-column: 1 / span 3;
   grid-row: 1 / span 7;
   background-color: #bfcddbf0;
@@ -484,12 +484,11 @@ li .compensation{
   height: 7vh;
   width: 30vw;
 }
-
 /********************************/
 /****** confirmation.html *******/
 /********************************/
 .confirmationcontainer {
-  margin: 20vw;
+  margin: 24vw;
   padding: 0px;
   display: grid;
   grid-template-columns: 20vw, 60vw, 20vw;
@@ -502,7 +501,7 @@ li .compensation{
   border-radius: 10px;
 }
 
-.item.confirmation1 {
+.items.confirmation1 {
   font-size: 20pt;
   grid-column: 1 / span 3;
   grid-row: 1 / span 7;
