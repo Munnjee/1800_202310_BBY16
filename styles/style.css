@@ -64,6 +64,16 @@ html * {
   float: right;
 }
 
+/* Null Navbar Login Prompt button */
+.loginprompt {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+
+
 /********************************/
 /********** login.html **********/
 /********************************/
