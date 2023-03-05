@@ -20,10 +20,10 @@ function displayGigDescription() {
             thisLocation = doc.data().location;
             thisCompensation = doc.data().compensation;
             thisDescription = doc.data().description;
-
-
-
-            
+            let CADDollar = new Intl.NumberFormat('en-CA', {
+                style: 'currency',
+                currency: 'CAD',
+              });
 
             
             // populate the giglisting data to gigDescription.html 
@@ -34,7 +34,7 @@ function displayGigDescription() {
             document.getElementById("gigFlexTime").innerHTML = thisFlexTime;
             document.getElementById("gigIndoorOutdoor").innerHTML = thisIndoorOutdoor;
             document.getElementById("gigLocation").innerHTML = thisLocation;
-            document.getElementById("gigCompensation").innerHTML = thisCompensation;
+            document.getElementById("gigCompensation").innerHTML = CADDollar.format(thisCompensation);;
             document.getElementById("descriptionGig").innerHTML = thisDescription;
             
 
