@@ -317,10 +317,10 @@ html * {
   display: grid;
   height: 10em;
   grid-template-columns: 1fr 0.5fr 1fr 0.5fr;
-  grid-template-rows: 1fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
   grid-template-areas:
-    "card-image title title indooroutdoor"
-    "card-image date flexDate compensation"
+    "card-image title title title"
+    "card-image date flexDate indooroutdoor"
     "card-image time flexTime compensation";
 }
 #gig-card > * {
@@ -370,7 +370,8 @@ li .flexTime {
 li .compensation{
   grid-area: compensation;
   text-align: center;
-  font-size: xx-large;
+  display: grid;
+  font-size: clamp(20px, 3vw, 50px);
   font-weight: 500;
 }
 /********************************/
@@ -658,8 +659,8 @@ li .compensation{
     grid-template-columns: 1.5fr 1fr 1fr;
     grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas:
-      "card-image title indooroutdoor"
-      "card-image date compensation"
+      "card-image title title"
+      "card-image date indooroutdoor"
       "card-image flexDate compensation"
       "card-image time compensation"
       "card-image flexTime compensation";
