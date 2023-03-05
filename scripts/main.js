@@ -31,7 +31,7 @@ accordion.addEventListener("click", function () {
 });
 
 //Pull data from Firestore to display as listings
-function displayCardsDynamically(collection) {
+function displayDescriptionsDynamically(collection) {
   let gigTemplate = document.querySelector("#gigCardTemplate");
 
   db.collection(collection)
@@ -46,6 +46,7 @@ function displayCardsDynamically(collection) {
         var flexDate = doc.data().flexDate;
         var time = doc.data().time;
         var flexTime = doc.data().flexTime;
+        var docID = doc.id;
         let newcard = gigCardTemplate.content.cloneNode(true);
 
         let CADDollar = new Intl.NumberFormat('en-CA', {
@@ -61,9 +62,10 @@ function displayCardsDynamically(collection) {
         newcard.querySelector(".flexDate").innerHTML = flexDate;
         newcard.querySelector(".time").innerHTML = time;
         newcard.querySelector(".flexTime").innerHTML = flexTime;
+        newcard.querySelector('a').href = "gigDescription.html?docID="+docID;
 
         document.getElementById(collection + "-go-here").appendChild(newcard);
       });
     });
 }
-displayCardsDynamically("giglisting");  //input param is the name of the collection
+displayDescriptionsDynamically("giglisting");  //input param is the name of the collection

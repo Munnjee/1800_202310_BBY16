@@ -13,7 +13,7 @@ postForm.addEventListener("submit", (event) => {
       // Create a new document in Firestore
       db.collection("giglisting").add({
         owner: user.uid,
-        time: FieldValue.serverTimestamp(),
+       // time: FieldValue.serverTimestamp(),
         jobTitle: postForm.gig_title.value,
         description: postForm.description.value,
         compensation: postForm.compensation.value,
