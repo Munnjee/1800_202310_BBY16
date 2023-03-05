@@ -634,6 +634,67 @@ li .compensation{
 /********************************/
 /********** gigDescription.html ***********/
 /********************************/
+.description-container {
+width: 80%;
+background-color: #edf6ff85;
+padding: 2em;
+margin: auto;
+border-radius: 15px;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr; 
+grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr;
+text-align: center;
+/* justify-items: center; */
+}
+
+.title {
+  /* background-color: #b9732f; */
+  grid-column: 1/4;
+  grid-row: 1; 
+}
+
+#gigTitle{
+  font-weight: bold;
+}
+
+.gigDetails{
+  /* background-color: #8c7156; */
+  grid-column: 1/2;
+  grid-row: 2/3;
+
+}
+.gigDetails > p {
+  font-weight: bold;
+
+}
+
+.compensation{
+  /* background-color: #744a20; */
+  grid-column: 3/4;
+  grid-row: 2/3;
+  
+}
+
+#gigCompensation{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.location{
+  /* background-color: #db8024; */
+  grid-column: 1/4;
+  grid-row: 3/4
+
+}
+
+.description{
+  /* background-color: #605142; */
+  grid-column: 1/4;
+  grid-row:4/5;
+}
+
+
+
 
 /* Media Queries */
 
