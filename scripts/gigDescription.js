@@ -1,11 +1,12 @@
 
-function displayGigDescription() {
+function displayGigDescription(collect) {
     let params = new URL( window.location.href ); //get URL of search bar
     let ID = params.searchParams.get( "docID" ); //get value for key "id"
     console.log( ID );
-
+    
+    
     // doublecheck: is your collection called "Reviews" or "reviews"?
-    db.collection( "giglisting" )
+    db.collection( collect )
         .doc( ID )
         .get()
         .then( doc => {
@@ -20,6 +21,7 @@ function displayGigDescription() {
             thisLocation = doc.data().location;
             thisCompensation = doc.data().compensation;
             thisDescription = doc.data().description;
+            
             let CADDollar = new Intl.NumberFormat('en-CA', {
                 style: 'currency',
                 currency: 'CAD',
@@ -34,9 +36,9 @@ function displayGigDescription() {
             document.getElementById("gigFlexTime").innerHTML = thisFlexTime;
             document.getElementById("gigIndoorOutdoor").innerHTML = thisIndoorOutdoor;
             document.getElementById("gigLocation").innerHTML = thisLocation;
-            document.getElementById("gigCompensation").innerHTML = CADDollar.format(thisCompensation);;
+            document.getElementById("gigCompensation").innerHTML = CADDollar.format(thisCompensation);
             document.getElementById("descriptionGig").innerHTML = thisDescription;
-            
+            document.getElementById('link').href = "application.html?docID="+doc.id;
 
 
 
@@ -45,5 +47,5 @@ function displayGigDescription() {
         } );
 }
 
-displayGigDescription();
+displayGigDescription("giglisting");
    
