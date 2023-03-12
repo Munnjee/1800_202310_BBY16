@@ -298,6 +298,25 @@ html * {
   color: #ffffff;
 }
 
+#clear-button {
+  width: 100%;
+  background-color: #437fc7;
+  color: #edf6ff;
+  border: 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+#clear-button:hover {
+  background-color: #edf6ff;
+  color: #437fc7;
+}
+
+#clear-button:active {
+  background-color: #b9732f;
+  color: #ffffff;
+}
+
 /* CSS for Listing Div */
 .listing {
   grid-area: listing;

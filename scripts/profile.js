@@ -1,19 +1,22 @@
-function insertName() {
-  firebase.auth().onAuthStateChanged((user) => {
-    // Check if a user is signed in:
-    if (user) {
-      console.log(user.uid); //print the uid in the browser console
-      console.log(user.displayName); //print the user name in the browser console
-      user_Name = user.displayName;
 
-      //insert name using jquery
-      $("#name-goes-here").text(user_Name); //using jquery
-    } else {
-      // No user is signed in.
-    }
-  });
-}
-insertName(); //run the function
+// var currentUser;         
+// function insertNameFromFirestore(){
+//   // to check if the user is logged in:
+//   firebase.auth().onAuthStateChanged(user =>{
+//       if (user){
+//          console.log(user.uid); // let me to know who is the user that logged in to get the UID
+//          currentUser = db.collection("users").doc(user.uid); // will to to the firestore and go to the document of the user
+//          currentUser.get().then(userDoc=>{
+//              //get the user name
+//              var userDisplayName= userDoc.data().displayName;
+//              console.log(userDisplayName);
+//             //  $("#name-goes-here").text(userDisplayName); //jquery
+//              document.getElementById("name-goes-here").innerText=userDisplayName;
+//          })    
+//      }    
+//   })
+// }
+// insertNameFromFirestore();
 
 function populateUserInfo() {
   firebase.auth().onAuthStateChanged(user => {
@@ -27,6 +30,7 @@ function populateUserInfo() {
               .then(userDoc => {
                   //get the data fields of the user
                   var userName = userDoc.data().name;
+                  var displayName = userDoc.data().displayName;
                   var userAboutMe = userDoc.data().aboutme;
                   var userBirthDate = userDoc.data().birthdate;
 
@@ -34,6 +38,9 @@ function populateUserInfo() {
                   if (userName != null) {
                       document.getElementById("nameInput").value = userName;
                   }
+                  if (displayName != null) {
+                    document.getElementById("displayNameInput").value = displayName;
+                }
                   if (userAboutMe != null) {
                       document.getElementById("aboutMeInput").value = userAboutMe;
                   }
@@ -62,12 +69,14 @@ editButton.addEventListener("click", function editUserInfo() {
 function saveUserInfo() {
   //get user entered values
   userName = document.getElementById("nameInput").value; //get the value of the field with id="nameInput"
+  displayName = document.getElementById("displayNameInput").value; //get the value of user requested display name with id="displayNameInput"
   userAboutMe = document.getElementById("aboutMeInput").value; //get the value of the field with id="schoolInput"
   userBirthDate = document.getElementById("birthDateInput").value; //get the value of the field with id="cityInput"
   //update user's document in Firestore
   currentUser
     .update({
       name: userName,
+      displayName: displayName,
       aboutme: userAboutMe,
       birthdate: userBirthDate,
     })

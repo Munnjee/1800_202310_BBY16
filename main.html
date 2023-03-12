@@ -88,8 +88,8 @@
             <label for="indoor-outdoor-select">Indoor/Outdoor:</label>
             <select id="indoor-outdoor-select" name="indoor-outdoor-select">
               <option value="all">All</option>
-              <option value="indoor">Indoor</option>
-              <option value="outdoor">Outdoor</option>
+              <option value="Indoor">Indoor</option>
+              <option value="Outdoor">Outdoor</option>
             </select>
 
             <br />
@@ -121,8 +121,8 @@
             <select id="time-of-day-select" name="time-of-day-select">
               <option value="all">All</option>
               <option value="before-noon">Before Noon</option>
-              <option value="noon-to-6pm">Noon to 4pm</option>
-              <option value="6pm-to-9pm">4pm to 8pm</option>
+              <option value="noon-to-4pm">Noon to 4pm</option>
+              <option value="4pm-to-8pm">4pm to 8pm</option>
             </select>
 
             <br />
@@ -149,6 +149,11 @@
 
             <button id="filter-button" type="button" onclick="search()">
               Search
+            </button>
+            <br />
+            <br />
+            <button id="clear-button" type="button" onclick="clearFields()">
+              Clear
             </button>
           </div>
         </div>
