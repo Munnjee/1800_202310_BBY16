@@ -48,4 +48,11 @@ function displayGigDescription(collect) {
 }
 
 displayGigDescription("giglisting");
-   
+
+// saves docID from url and redirects to refviewform.html
+function saveHikeDocumentIDAndRedirect(){
+    let params = new URL(window.location.href) //get the url from the search bar
+    let ID = params.searchParams.get("docID");
+    localStorage.setItem('Giglisting', ID);
+    window.location.href = 'reviewform.html';
+}  
