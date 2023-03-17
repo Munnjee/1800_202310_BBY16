@@ -4,9 +4,9 @@ function getHikeName(id) {
     db.collection("giglisting")
       .doc(id)
       .get()
-      .then((thislisting) => {
-        var hikeName = thislisting.data().jobTitle;
-        document.getElementById("hikeName").innerHTML = hikeName;
+      .then((thisGig) => {
+        var GigName = thisGig.data().jobTitle;
+        document.getElementById("gigName").innerHTML = GigName;
           });
 }
 
@@ -18,9 +18,9 @@ function writeReview() {
     let Level = document.getElementById("level").value;
     let Season = document.getElementById("season").value;
     let Description = document.getElementById("description").value;
-    let Flooded = document.querySelector('input[name="flooded"]:checked').value;
-    let Scrambled = document.querySelector('input[name="scrambled"]:checked').value;
-    console.log(Title, Level, Season, Description, Flooded, Scrambled);
+    let RedoGig = document.querySelector('input[name="redoGig"]:checked').value;
+    let WorkWithEmployerAgain = document.querySelector('input[name="workWithEmployerAgain"]:checked').value;
+    console.log(Title, Level, Season, Description, RedoGig, WorkWithEmployerAgain);
 
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
@@ -37,8 +37,8 @@ function writeReview() {
                         level: Level,
                         season: Season,
                         description: Description,
-                        flooded: Flooded,
-                        scrambled: Scrambled,
+                        redoGig: RedoGig,
+                        workWithEmployerAgain: WorkWithEmployerAgain,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
                         window.location.href = "thanks.html"; //new line added
