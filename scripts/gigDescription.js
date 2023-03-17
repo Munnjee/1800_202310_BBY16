@@ -48,4 +48,13 @@ function displayGigDescription(collect) {
 }
 
 displayGigDescription("giglisting");
+
+
+//event handler for write review buttton
+function saveGigDocumentIDAndRedirect(){
+    let params = new URL(window.location.href) //get the url from the search bar
+    let ID = params.searchParams.get("docID");
+    localStorage.setItem('gigDocID', ID);
+    window.location.href = 'reviewform.html';
+}
    
