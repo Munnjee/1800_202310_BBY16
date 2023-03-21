@@ -1,15 +1,3 @@
-  // toggle accordion
-  var accordion = document.querySelector(".accordion");
-  accordion.addEventListener("click", function () {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-
 function search() {
   const searchBar = document.getElementById("search-bar");
   const indoorOutdoorSelect = document.getElementById("indoor-outdoor-select");
@@ -29,31 +17,23 @@ function search() {
   // }
 
   if (searchBar.value !== "") {
-    const startValue = searchBar.value;
+    const startValue = searchBar.value.toLowerCase();
     const endValue = startValue + "\uf8ff";
     query = query
       .where("jobTitle", ">=", startValue)
-      .where("jobTitle", "<=", endValue);
+      .where("jobTitle", "<=", endValue)
+      .orderBy("jobTitle");
   }
-
   if (indoorOutdoorSelect.value !== "all") {
     query = query.where("indooroutdoor", "==", indoorOutdoorSelect.value);
   }
   if (compensationSelect.value !== "all") {
-    const [minCompensation, maxCompensation] =
-      compensationSelect.value.split("-");
-    query = query.where(
-      parseInt("compensation"),
-      ">=",
-      parseInt(minCompensation.slice(1))
-    );
-    if (maxCompensation !== "$200+") {
-      query = query.where(
-        parseInt("compensation"),
-        "<=",
-        parseInt(maxCompensation.slice(1))
-      );
-    }
+    const [minCompensation, maxCompensation] = compensationSelect.value.split("-");
+    const minCompensationValue = parseInt(minCompensation.slice(1));
+    const maxCompensationValue =
+      maxCompensation !== "$200+" ? parseInt(maxCompensation.slice(1)) : Infinity;
+    query = query.where("compensation", ">=", minCompensationValue)
+                 .where("compensation", "<=", maxCompensationValue);
   }
   if (imagesCheckbox.checked) {
     query = query.where("file", "!=", "");
@@ -118,3 +98,4 @@ function clearFields() {
 
   search();
 }
+

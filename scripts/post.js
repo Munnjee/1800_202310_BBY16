@@ -11,12 +11,13 @@ postForm.addEventListener("submit", (event) => {
     if (user) {
       // User Signed In
       // Create a new document in Firestore
+      const compensationValue = parseFloat(postForm.compensation.value.replace(/\$/g, ''));
       db.collection("giglisting").add({
         owner: user.uid,
-       // time: FieldValue.serverTimestamp(),
+        postTime: firebase.firestore.FieldValue.serverTimestamp(),
         jobTitle: postForm.gig_title.value,
         description: postForm.description.value,
-        compensation: postForm.compensation.value,
+        compensation: compensationValue,
         location: postForm.location.value,
         indooroutdoor: postForm.indooroutdoor.value,
         date: postForm.date.value,

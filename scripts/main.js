@@ -1,11 +1,10 @@
-//Pull data from Firestore to display as listings
 function displayDescriptionsDynamically(collection) {
   let gigTemplate = document.querySelector("#gigCardTemplate");
 
   db.collection(collection)
+    .orderBy("postTime", "desc")
     .get()
     .then((allGigs) => {
-      var i = 1; // Allows unique id for each gig post
       allGigs.forEach((doc) => {
         var title = doc.data().jobTitle;
         var compensation = doc.data().compensation;
