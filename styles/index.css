@@ -1,0 +1,58 @@
+/* Jumbotron */
+.carousel {
+  position: absolute;
+  top: 0%;
+  left: center;
+}
+.d-block {
+  height: 80vh;
+  width: 100vw;
+  object-fit: cover;
+  object-position: top;
+}
+.carousel-caption {
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+}
+.carousel-caption h5 {
+  font-size: clamp(16px, 5vw, 60px);
+  font-weight: 600;
+}
+.carousel-caption p {
+  font-size: clamp(12px, 2vw, 30px);
+}
+
+/* Call to Action Buttons*/
+.button-container {
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.calltoaction {
+  font-size: clamp(16px, 3vw, 30px) !important;
+}
+
+.btn-primary {
+  padding: 15px;
+  background-color: #edf6ff;
+  color: #437fc7;
+  margin: 2vw;
+}
+
+.btn-primary:hover {
+  padding: 15px;
+  background-color: #437fc7;
+  color: #edf6ff;
+  margin: 2vw;
+}
+
+.btn-primary:active {
+  padding: 15px;
+  background-color: #b9732f;
+  color: #ffffff;
+  margin: 2vw;
+}

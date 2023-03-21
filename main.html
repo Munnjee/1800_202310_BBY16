@@ -35,6 +35,9 @@
 
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/mediaqueries.css" />
+    <link rel="stylesheet" href="./styles/filter.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -74,89 +77,8 @@
 
       <!--Grid layout for Filter and Gig Listings-->
       <div class="main-container">
-        <div class="filter">
-          <button class="accordion">
-            <h1>Search for Gigs</h1>
-          </button>
-          <div class="panel">
-            <label for="search-bar">Search:</label>
-            <input type="text" id="search-bar" name="search-bar" />
-
-            <br />
-            <br />
-
-            <label for="indoor-outdoor-select">Indoor/Outdoor:</label>
-            <select id="indoor-outdoor-select" name="indoor-outdoor-select">
-              <option value="all">All</option>
-              <option value="Indoor">Indoor</option>
-              <option value="Outdoor">Outdoor</option>
-            </select>
-
-            <br />
-            <br />
-
-            <label for="compensation-select">Compensation:</label>
-            <select id="compensation-select" name="compensation-select">
-              <option value="all">All</option>
-              <option value="$0-$50">$0-$50</option>
-              <option value="$50-$100">$50-$100</option>
-              <option value="$100-$200">$100-$200</option>
-              <option value="$200+">$200+</option>
-            </select>
-
-            <br />
-            <br />
-
-            <label for="images-checkbox">Include Images:</label>
-            <input
-              type="checkbox"
-              id="images-checkbox"
-              name="images-checkbox"
-            />
-
-            <br />
-            <br />
-
-            <label for="time-of-day-select">Time of Day:</label>
-            <select id="time-of-day-select" name="time-of-day-select">
-              <option value="all">All</option>
-              <option value="before-noon">Before Noon</option>
-              <option value="noon-to-4pm">Noon to 4pm</option>
-              <option value="4pm-to-8pm">4pm to 8pm</option>
-            </select>
-
-            <br />
-            <br />
-
-            <label for="date-input">Date of Service:</label>
-            <input type="date" id="date-input" name="date-input" />
-
-            <br />
-            <br />
-
-            <label for="time-input">Approximate Time Needed (in hours):</label>
-            <input
-              type="number"
-              id="time-input"
-              name="time-input"
-              step="0.25"
-              min="0.5"
-              max="24"
-            />
-
-            <br />
-            <br />
-
-            <button id="filter-button" type="button" onclick="search()">
-              Search
-            </button>
-            <br />
-            <br />
-            <button id="clear-button" type="button" onclick="clearFields()">
-              Clear
-            </button>
-          </div>
-        </div>
+        <div id="filterPlaceholder" class="filter"></div>
+        
         <div class="listing">
           <h1>Active Gigs</h1>
           <p>

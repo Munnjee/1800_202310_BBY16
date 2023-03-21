@@ -1,0 +1,31 @@
+.applicationcontainer {
+  margin: 3.5vw;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 20vw, 60vw, 20vw;
+  grid-template-rows: 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh;
+  background: none;
+  color: #437fc7;
+  width: 93%;
+  height: 50vh;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.items.application1 {
+  font-size: clamp(10px, 2vw, 25px);
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 7;
+  background-color: #bfcddbf0;
+  border-radius: 10px;
+}
+
+#experience {
+  height: 7vh;
+  width: 30vw;
+}
+
+#questions {
+  height: 7vh;
+  width: 30vw;
+}

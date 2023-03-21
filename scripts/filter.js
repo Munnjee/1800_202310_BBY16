@@ -1,3 +1,15 @@
+  // toggle accordion
+  var accordion = document.querySelector(".accordion");
+  accordion.addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+
 function search() {
   const searchBar = document.getElementById("search-bar");
   const indoorOutdoorSelect = document.getElementById("indoor-outdoor-select");

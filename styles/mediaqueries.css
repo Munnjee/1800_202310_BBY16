@@ -1,0 +1,46 @@
+
+/* Mobile/Tablet Size */
+@media only screen and (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 5fr;
+    grid-template-areas:
+      "filter"
+      "listing";
+  }
+
+  .panel {
+    display: none;
+  }
+  #gig-list {
+    display: block;
+  }
+  #gig-list p {
+    display: inline-block !important;
+  }
+
+  #gig-card {
+    display: grid;
+    height: 10em;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "card-image title title"
+      "card-image date indooroutdoor"
+      "card-image flexDate compensation"
+      "card-image time compensation"
+      "card-image flexTime compensation";
+  }
+
+  /*Labtops*/
+  @media only screen and (max-width: 1080px) {
+  }
+
+  /*Large Screen*/
+  @media only screen and (max-width: 1600px) {
+  }
+
+  /*X-large Screen*/
+  @media only screen and (min-width: 1601px) {
+  }
+}
