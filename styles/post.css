@@ -1,0 +1,90 @@
+.form-field {
+  width: 90%;
+  background-color: #edf6ff85;
+  padding: 2em;
+  margin: auto;
+  border-radius: 15px;
+}
+
+#gig-form h1 {
+  text-align: center;
+  color: #437fc7;
+  font-weight: 500;
+}
+
+#gig-form label {
+  color: #437fc7;
+  font-weight: 400;
+}
+
+#gig_title {
+  width: 100%;
+}
+
+#gig_title,
+#description,
+#location,
+#indooroutdoor,
+#date,
+#time,
+#compensation {
+  background-color: #ffffff95;
+  border-radius: 5px;
+  color: #6daffe;
+  border: 1px;
+  padding: 0.5em;
+}
+
+#file{
+  color: #6daffe;
+  padding: 0.5em;
+}
+
+#description {
+  width: 100%;
+  height: 20%;
+}
+
+.post_button_container {
+  display: flex;
+  justify-content: center;
+}
+#gig_submit {
+  width: 45%;
+  background-color: #437fc7;
+  color: #edf6ff;
+  border: 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 2.5%;
+}
+
+#gig_submit:hover {
+  background-color: #edf6ff;
+  color: #6daffe;
+}
+
+#gig_submit:active {
+  background-color: #b9732f;
+  color: #ffffff;
+}
+
+#gig_reset {
+  width: 45%;
+  background-color: #6daffe;
+  color: #edf6ff;
+  border: 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 2.5%;
+}
+
+#gig_reset:hover {
+  background-color: #edf6ff;
+  color: #6daffe;
+}
+
+#gig_reset:active {
+  background-color: #b9732f;
+  color: #ffffff;
+}

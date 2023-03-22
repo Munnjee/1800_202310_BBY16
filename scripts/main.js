@@ -1,23 +1,10 @@
-// toggle accordion
-var accordion = document.querySelector(".accordion");
-accordion.addEventListener("click", function () {
-  this.classList.toggle("active");
-  var panel = this.nextElementSibling;
-  if (panel.style.display === "block") {
-    panel.style.display = "none";
-  } else {
-    panel.style.display = "block";
-  }
-});
-
-//Pull data from Firestore to display as listings
 function displayDescriptionsDynamically(collection) {
   let gigTemplate = document.querySelector("#gigCardTemplate");
 
   db.collection(collection)
+    .orderBy("postTime", "desc")
     .get()
     .then((allGigs) => {
-      var i = 1; // Allows unique id for each gig post
       allGigs.forEach((doc) => {
         var title = doc.data().jobTitle;
         var compensation = doc.data().compensation;

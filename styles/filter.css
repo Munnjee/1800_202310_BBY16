@@ -1,0 +1,61 @@
+/* CSS for Filter fields */
+#search-bar {
+  opacity: 60%;
+  border-radius: 5px;
+  border: 1px;
+  padding: 0.5em;
+}
+
+#indoor-outdoor-select,
+#compensation-select,
+#time-of-day-select,
+#date-input,
+#time-input {
+  background-color: #ffffff95;
+  border-radius: 5px;
+  color: #6daffe;
+  border: 1px;
+  padding: 0.5em;
+}
+
+#images-checkbox {
+  margin-left: 10px;
+}
+
+#filter-button {
+  width: 100%;
+  background-color: #437fc7;
+  color: #edf6ff;
+  border: 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+#filter-button:hover {
+  background-color: #edf6ff;
+  color: #437fc7;
+}
+
+#filter-button:active {
+  background-color: #b9732f;
+  color: #ffffff;
+}
+
+#clear-button {
+  width: 100%;
+  background-color: #437fc7;
+  color: #edf6ff;
+  border: 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+#clear-button:hover {
+  background-color: #edf6ff;
+  color: #437fc7;
+}
+
+#clear-button:active {
+  background-color: #b9732f;
+  color: #ffffff;
+}

@@ -6,24 +6,34 @@ function search() {
   const timeOfDaySelect = document.getElementById("time-of-day-select");
   const dateInput = document.getElementById("date-input");
   const timeInput = document.getElementById("time-input");
-  
+
   const gigListingGoHere = document.getElementById("giglisting-go-here");
   gigListingGoHere.innerHTML = ""; // Clear previous search results
-  
+
   // Build Firestore query based on filter options
   let query = firebase.firestore().collection("giglisting");
+  // if (searchBar.value !== "") {
+  //   query = query.where("jobTitle", "==", searchBar.value);
+  // }
+
   if (searchBar.value !== "") {
-    query = query.where("jobTitle", "==", searchBar.value);
+    const startValue = searchBar.value.toLowerCase();
+    const endValue = startValue + "\uf8ff";
+    query = query
+      .where("jobTitle", ">=", startValue)
+      .where("jobTitle", "<=", endValue)
+      .orderBy("jobTitle");
   }
   if (indoorOutdoorSelect.value !== "all") {
     query = query.where("indooroutdoor", "==", indoorOutdoorSelect.value);
   }
   if (compensationSelect.value !== "all") {
     const [minCompensation, maxCompensation] = compensationSelect.value.split("-");
-    query = query.where(parseInt("compensation"), ">=", parseInt(minCompensation.slice(1)));
-    if (maxCompensation !== "$200+") {
-      query = query.where(parseInt("compensation"), "<=", parseInt(maxCompensation.slice(1)));
-    }
+    const minCompensationValue = parseInt(minCompensation.slice(1));
+    const maxCompensationValue =
+      maxCompensation !== "$200+" ? parseInt(maxCompensation.slice(1)) : Infinity;
+    query = query.where("compensation", ">=", minCompensationValue)
+                 .where("compensation", "<=", maxCompensationValue);
   }
   if (imagesCheckbox.checked) {
     query = query.where("file", "!=", "");
@@ -47,28 +57,34 @@ function search() {
   if (timeInput.value !== "") {
     query = query.where("flexTime", ">=", parseFloat(timeInput.value));
   }
-  
+
   // Execute query and display search results
-  query.get().then((querySnapshot) => {
-    if (querySnapshot.empty) {
-      gigListingGoHere.innerHTML = "No results found.";
-    } else {
-      querySnapshot.forEach((doc) => {
-        const gigCardTemplate = document.getElementById("gigCardTemplate");
-        const gigCard = gigCardTemplate.content.cloneNode(true);
-        gigCard.querySelector(".title").textContent = doc.data().jobTitle;
-        gigCard.querySelector(".compensation").textContent = `$${doc.data().compensation}`;
-        gigCard.querySelector(".indooroutdoor").textContent = doc.data().indooroutdoor;
-        gigCard.querySelector(".date").textContent = doc.data().flexDate;
-        gigCard.querySelector(".flexDate").textContent = doc.data().flexDate;
-        gigCard.querySelector(".time").textContent = doc.data().time;
-        gigCard.querySelector(".flexTime").textContent = doc.data().flexTime;
-        gigListingGoHere.appendChild(gigCard);
-      });
-    }
-  }).catch((error) => {
-    console.error("Error executing Firestore query: ", error);
-  });
+  query
+    .get()
+    .then((querySnapshot) => {
+      if (querySnapshot.empty) {
+        gigListingGoHere.innerHTML = "No results found.";
+      } else {
+        querySnapshot.forEach((doc) => {
+          const gigCardTemplate = document.getElementById("gigCardTemplate");
+          const gigCard = gigCardTemplate.content.cloneNode(true);
+          gigCard.querySelector(".title").textContent = doc.data().jobTitle;
+          gigCard.querySelector(".compensation").textContent = `$${
+            doc.data().compensation
+          }`;
+          gigCard.querySelector(".indooroutdoor").textContent =
+            doc.data().indooroutdoor;
+          gigCard.querySelector(".date").textContent = doc.data().flexDate;
+          gigCard.querySelector(".flexDate").textContent = doc.data().flexDate;
+          gigCard.querySelector(".time").textContent = doc.data().time;
+          gigCard.querySelector(".flexTime").textContent = doc.data().flexTime;
+          gigListingGoHere.appendChild(gigCard);
+        });
+      }
+    })
+    .catch((error) => {
+      console.error("Error executing Firestore query: ", error);
+    });
 }
 
 function clearFields() {
@@ -82,3 +98,4 @@ function clearFields() {
 
   search();
 }
+
