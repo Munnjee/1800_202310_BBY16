@@ -1,11 +1,9 @@
-
 function displayGigDescription(collect) {
     let params = new URL( window.location.href ); //get URL of search bar
     let ID = params.searchParams.get( "docID" ); //get value for key "id"
     console.log( ID );
     
     
-    // doublecheck: is your collection called "Reviews" or "reviews"?
     db.collection( collect )
         .doc( ID )
         .get()
@@ -26,7 +24,6 @@ function displayGigDescription(collect) {
                 style: 'currency',
                 currency: 'CAD',
               });
-
             
             // populate the giglisting data to gigDescription.html 
             document.getElementById("gigTitle").innerHTML = thisTitle;
@@ -40,13 +37,10 @@ function displayGigDescription(collect) {
             document.getElementById("descriptionGig").innerHTML = thisDescription;
             document.getElementById('link').href = "application.html?docID="+doc.id;
 
-
-
             // let imgEvent = document.querySelector( ".hike-img" );
             // imgEvent.src = "../images/" + hikeCode + ".jpg";
         } );
 }
-
 displayGigDescription("giglisting");
 
 
@@ -57,5 +51,3 @@ function saveGigDocumentIDAndRedirect(){
     localStorage.setItem('gigDocID', ID);
     window.location.href = 'reviewform.html';
 }
-   
-

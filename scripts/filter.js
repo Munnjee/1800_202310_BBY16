@@ -12,9 +12,6 @@ function search() {
 
   // Build Firestore query based on filter options
   let query = firebase.firestore().collection("giglisting");
-  // if (searchBar.value !== "") {
-  //   query = query.where("jobTitle", "==", searchBar.value);
-  // }
 
   if (searchBar.value !== "") {
     const startValue = searchBar.value.toLowerCase();
@@ -52,10 +49,7 @@ function search() {
     }
   }
   if (dateInput.value !== "") {
-    query = query.where("flexDate", "==", dateInput.value);
-  }
-  if (timeInput.value !== "") {
-    query = query.where("flexTime", ">=", parseFloat(timeInput.value));
+    query = query.where("date", "==", dateInput.value);
   }
 
   // Execute query and display search results
@@ -94,8 +88,6 @@ function clearFields() {
   document.getElementById("images-checkbox").checked = false;
   document.getElementById("time-of-day-select").value = "all";
   document.getElementById("date-input").value = "";
-  document.getElementById("time-input").value = "";
-
   search();
 }
 
