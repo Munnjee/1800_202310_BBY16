@@ -1,14 +1,14 @@
 # Project Title
+GIGaNet
 
 ## 1. Project Description
-State your app in a nutshell, or one-sentence pitch. Give some elaboration on what the core features are.  
-This browser based web application to ... 
+Due to the lack of available resources to find assistance during extreme weather events, we are developing a community networking application to help connect people seeking assistance with those in the community willing to fulfill that task. Users are able to post "gigs" that they need assistance with and people in the community can apply to the "gig" listings. 
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
-* Hi, my name is Min Ji. I am extremely worried about this project because I have no previous coding knowledge
-* hello, my name is parin
-* Hi, my name is EKjot.
+* Min Ji S
+* Parin R
+* EKjot K
 
 * ...
 	
@@ -17,24 +17,23 @@ List technologies (with version numbers), API's, icons, fonts, images, media or 
 * HTML, CSS, JavaScript
 * Bootstrap 5.0 (Frontend library)
 * Firebase 8.0 (BAAS - Backend as a Service)
-* ...
+* Google Font API
+*
+
 
 ## 4. Complete setup/installion/usage
-State what a user needs to do when they come to your project.  How do others start using your code or application?
-Here are the steps ...
-* ...
-* ...
-* ...
+* Open with Live Server the index.html and click "Access GIGaNet"
+* Create an account or login using your email address and password and you will be redirected to the main.html page
 
 ## 5. Known Bugs and Limitations
 Here are some known bugs:
-* ...
-* ...
+* Filter does not allow for both the key word search and the compensation function as the both require inequality filters. Firestore does not allow inequality filters on multiple fields in the same query. 
+* 
 * ...
 
 ## 6. Features for Future
 What we'd like to build in the future:
-* ...
+* Messaging system so users can communicate within the application.
 * ...
 * ...
 	
@@ -59,5 +58,4 @@ It has the following subfolders and files:
 
 
 ```
-
 
