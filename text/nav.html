@@ -128,11 +128,22 @@
         currentUser.get().then((userDoc) => {
           //get the user name
           var userDisplayName = userDoc.data().displayName;
+          let picUrl = userDoc.data().profilePic; 
           console.log(userDisplayName);
           //$("#name-goes-here").text(userName); //jquery
           document.getElementById("name-goes-here").innerText = userDisplayName;
+          if (picUrl != null) {
+          console.log(picUrl);
+          // use this line if "mypicdiv" is a "div"
+          //$("#mypicdiv").append("<img src='" + picUrl + "'>")
+          $("#mypic-goes-here").attr("src", picUrl);
+        } else console.log("picURL is null");
+      
         });
-      }
+      }else {
+      // No user is signed in.
+      console.log("No user is signed in");
+    }
     });
   }
   insertNameFromFirestore();

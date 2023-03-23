@@ -56,11 +56,7 @@ postForm.addEventListener("submit", (event) => {
     }
   });
 
-
-
-
 //function that pull url from the website
-
 function uploadPic(giglistingDocID) {
   console.log("inside uploadPic " + giglistingDocID);
   var storageRef = storage.ref("images/" + giglistingDocID + ".jpg");
@@ -83,8 +79,6 @@ function uploadPic(giglistingDocID) {
           console.log("error uploading to cloud storage");
       })
 }
-
-
 });
 
 
