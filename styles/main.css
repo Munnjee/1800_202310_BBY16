@@ -70,6 +70,10 @@
   width: 100%;
 }
 
+#gigCardButton{
+  text-decoration: none;
+}
+
 #gig-card {
   background-color: #edf6ff;
   display: grid;
@@ -84,6 +88,17 @@
 
 #gig-card > * {
   margin-bottom: 0 !important;
+  color: black;
+}
+
+#gig-card:hover{
+  padding: none;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#gig-card:active{
+  background-color:#a6c3e6;
 }
 
 .card-image {

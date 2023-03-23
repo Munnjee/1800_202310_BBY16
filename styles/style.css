@@ -49,11 +49,7 @@ html * {
   font-weight: 600;
   font-size: clamp(16px, 3vw, 40px);
 }
-.btn {
-  border: 2px;
-  border-bottom-style: groove;
-  background-color: #e8dfe0;
-}
+
 .profilepic {
   width: 100px;
   background-size: cover;

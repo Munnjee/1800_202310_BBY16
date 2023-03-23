@@ -2,12 +2,17 @@
 function populateReviews() {
     let gigCardTemplate = document.getElementById("reviewCardTemplate");
     let gigCardGroup = document.getElementById("reviewCardGroup");
-    var GiglistingID = localStorage.getItem("Giglisting");
-   // let params = new URL(window.location.href) //get the url from the searbar
+    var GiglistingID = localStorage.getItem("GiglistDocID");
+    //var userid = localStorage.getItem("UserDocID");
+    // let params = new URL(window.location.href) //get the url from the searbar
    // let hikeID = params.searchParams.get("docID")
-    
+  
     // doublecheck: is your collection called "Reviews" or "reviews"?
-    db.collection("reviews").where( "GiglistDocID", "==", GiglistingID).get()
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            //id of user
+            var userid = user.uid;
+            db.collection("reviews").where( "userID", "==", userid).get()
         .then(allReviews => {
             reviews = allReviews.docs;
             console.log(reviews);
@@ -32,6 +37,12 @@ function populateReviews() {
                 gigCardGroup.appendChild(reviewCard);
             })
         })
+
+    
+    } else{  console.log("No user is signed in");
+    
+
+    }
+});
 }
 populateReviews();
-

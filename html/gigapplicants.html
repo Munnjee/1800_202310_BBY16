@@ -49,7 +49,8 @@
     />
 
     <!-- Link to styles of your own -->
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/gigapplicants.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -57,60 +58,57 @@
       rel="stylesheet"
     />
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
   </head>
 
   <body>
     <div class="bg-image"></div>
     <div class="float">
-    
-    <!--NavBar-->
-    <nav id="navbarPlaceholder"></nav>
-
-    <div class="container">
-      <h2>Reviews:</h2>
-      <div id="details-go-here"></div>
-      <!-- Here is container for cards  -->
-      <div class="container">
-          <div id="reviewCardGroup" class="row row-cols-auto">
-          </div>
-      </div>
-</div>
-
-<template id="reviewCardTemplate">
-      <div class="card bg-secondary">
-          <img class="card-img-top">
-          <div class="card-body bg-light">
-              <h5 class="title">placeholder</h5>
-              <p class="time">placeholder</p>
-              <p class="level">placeholder</p>
-              <p class="season">placeholder</p>
-              <p class="redoGig">placeholder</p>
-              <p class="workWithEmployerAgain">placeholder</p>
-              <br>
-              <p class="description">This card has supporting text below as a natural lead-in to additional content.
-              </p>
-          </div>
-      </div>
-</template>
-
-
-    </div>
   
+      <!--NavBar-->
+      <nav id="navbarPlaceholder"></nav>
+  
+      <!--ChatBox-->
+      <h1><b>Applicants</b></h1> 
+      <input type="text" id="searchgigapplicants" name ="name" placeholder="search..."/>
+    
+      
+      <div class="containergigapplicants">
+        
+        <h1>List of applicants</h1>
+          <!-- Here is the container for cards  -->
+              <div id="gigapplicants-go-here" class="row row-cols-auto">
+              </div>
+            </div>
+  
+      <template id="ApplicantCardsTemplate">
+        <div class="card py-2 mx-2" style="width: 18rem">
+            
+            <div class="card-body">
+                <h5 class="card-title">Applicant name</h5>            
+                <br/>
+                <p class="card-text">
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                </p>
+                <a class="btn btn-primary card-href">Read more ...</a>
+            </div>
+        </div>
+        </template>
 
-    <!---------------------------------------------->
+      </div>
+
+
+  
+      <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
+    <script src="../scripts/firebaseAPI_BBY16.js"></script>
+    <script src="../scripts/skeleton.js"></script>
+    <script src="../scripts/gigapplicants.js"></script>
 
-    <script src="./scripts/firebaseAPI_BBY16.js"></script>
-    <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/review.js"></script>
-
-
-    </div>
-
+   
   </body>
 </html>

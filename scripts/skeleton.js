@@ -6,11 +6,11 @@ function loadSkeleton() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       // User Signed In
-      console.log($("#navbarPlaceholder").load("./text/nav.html"));
-      console.log($("#filterPlaceholder").load("./text/filter.html"));
+      console.log($("#navbarPlaceholder").load("../text/nav.html"));
+      console.log($("#filterPlaceholder").load("../text/filter.html"));
     } else {
       console.log($("#navbarPlaceholder").load("./text/navNull.html"));
-      console.log($("#filterPlaceholder").load("./text/filter.html"));
+      console.log($("#filterPlaceholder").load("../text/filter.html"));
     }
   });
 }

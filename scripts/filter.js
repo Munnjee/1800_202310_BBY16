@@ -62,6 +62,7 @@ function search() {
         querySnapshot.forEach((doc) => {
           const gigCardTemplate = document.getElementById("gigCardTemplate");
           const gigCard = gigCardTemplate.content.cloneNode(true);
+          var docID = doc.id;
           gigCard.querySelector(".title").textContent = doc.data().jobTitle;
           gigCard.querySelector(".compensation").textContent = `$${
             doc.data().compensation
@@ -72,6 +73,7 @@ function search() {
           gigCard.querySelector(".flexDate").textContent = doc.data().flexDate;
           gigCard.querySelector(".time").textContent = doc.data().time;
           gigCard.querySelector(".flexTime").textContent = doc.data().flexTime;
+          gigCard.querySelector('a').href = "gigDescription.html?docID="+ docID;
           gigListingGoHere.appendChild(gigCard);
         });
       }
@@ -90,4 +92,5 @@ function clearFields() {
   document.getElementById("date-input").value = "";
   search();
 }
+
 
