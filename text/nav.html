@@ -35,12 +35,35 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../html/post.html"
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="../html/post.html"
               >Post Gigs</a
             >
           </li>
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="offcanvasNavbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            My Gigs
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+            <li><a class="dropdown-item" href="#">Pending Gigs</a></li>
+            <li><a class="dropdown-item" href="#">Confirmed Gigs</a></li>
+            <li><a class="dropdown-item" href="#">Past Gigs</a></li>
+            <li>
+              <a class="dropdown-item" href="../html/mypost.html">My Posts</a>
+            </li>
+          </ul>
           <li class="nav-item">
-            <a class="nav-link" href="../html/notification.html">Notification</a>
+            <a class="nav-link" href="../html/notification.html"
+              >Notification</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../html/inbox.html">Inbox</a>
@@ -57,15 +80,20 @@
               Profile
             </a>
             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-              <li><a class="dropdown-item" href="../html/profile.html">Profile Settings</a></li>
-              <li><a class="dropdown-item" href="#">Pending Gigs</a></li>
-              <li><a class="dropdown-item" href="#">Confirmed Gigs</a></li>
-              <li><a class="dropdown-item" href="#">Past Gigs</a></li>
-              <li><a class="dropdown-item" href="../html/mypost.html">My Posts</a></li>
+              <li>
+                <a class="dropdown-item" href="../html/profile.html"
+                  >Profile Settings</a
+                >
+              </li>
+
               <li>
                 <hr class="dropdown-divider" />
               </li>
-              <li><a class="dropdown-item" href="../html/review.html">My Reviews</a></li>
+              <li>
+                <a class="dropdown-item" href="../html/review.html"
+                  >My Reviews</a
+                >
+              </li>
               <li><a class="dropdown-item" href="#">Reviews About Me</a></li>
               <li>
                 <hr class="dropdown-divider" />
@@ -79,7 +107,7 @@
                 <hr class="dropdown-divider" />
               </li>
               <li id="btn-logout">
-                  <a class="btn-logout" href="../index.html">Logout</a>
+                <a class="btn-logout" href="../index.html">Logout</a>
               </li>
             </ul>
           </li>
@@ -91,21 +119,21 @@
 <div class="offset"></div>
 
 <script>
-  function insertNameFromFirestore(){
-  // to check if the user is logged in:
-  firebase.auth().onAuthStateChanged(user =>{
-      if (user){
-         console.log(user.uid); // let me to know who is the user that logged in to get the UID
-         currentUser = db.collection("users").doc(user.uid); // will to to the firestore and go to the document of the user
-         currentUser.get().then(userDoc=>{
-             //get the user name
-             var userDisplayName= userDoc.data().displayName;
-             console.log(userDisplayName);
-             //$("#name-goes-here").text(userName); //jquery
-             document.getElementById("name-goes-here").innerText=userDisplayName;
-         })    
-     }    
-  })
-}
-insertNameFromFirestore();
+  function insertNameFromFirestore() {
+    // to check if the user is logged in:
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        console.log(user.uid); // let me to know who is the user that logged in to get the UID
+        currentUser = db.collection("users").doc(user.uid); // will to to the firestore and go to the document of the user
+        currentUser.get().then((userDoc) => {
+          //get the user name
+          var userDisplayName = userDoc.data().displayName;
+          console.log(userDisplayName);
+          //$("#name-goes-here").text(userName); //jquery
+          document.getElementById("name-goes-here").innerText = userDisplayName;
+        });
+      }
+    });
+  }
+  insertNameFromFirestore();
 </script>
