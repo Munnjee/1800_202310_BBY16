@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Confirmation</title>
+  <title>Application</title>
   <meta name="comp1800 bby16" content="My 1800 App" />
 
   <!-- Required meta tags -->
@@ -35,8 +35,8 @@
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
   <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="./styles/style.css" />
-  <link rel="stylesheet" href="./styles/confirmation.css">
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/application.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800&display=swap"
@@ -55,26 +55,55 @@
     <!--NavBar-->
     <nav id="navbarPlaceholder"></nav>
 
-    <div class="confirmationcontainer">
-      <div class="items confirmation1">
-        <h1> Submission 
-          <br> Confirmation </h1> 
-        <br>
-          Successful!
-          <br><br><br>
-        Click here to see
-        <br>
-        <input type="button" value="Pending List of Gigs"/>
-        </div>
+    <!--ChatBox-->
+
+
+    <div class="applicationcontainer">
+
+      <div class="items application1">
+        <form id="application1">
+          <h1> Application </h1>
+          <br><br>
+
+          <label> Applicant Name: </label>
+          <br>
+          <input id="applicantname" name="applicantname" type="text" />
+          <br>
+          <label> Relevant Experience: </label>
+          <br>
+          <input id="experience" name="experience" type="text" />
+          <br>
+
+          <label>
+            <p>I will need supplies from employer?</p>
+          </label>
+          <input type="radio" value="yes, I will need supplies" name="yes" id="applicationq1" />
+          <label style="width: 50px;">Yes</label>
+          <input type="radio" value="no, I will not need supplies" name="yes" id="applicationq1" />
+          <label style="width: 50px;">No</label>
+          <br><br>
+          <p> Accept Offered compensation</p>
+          <input type="checkbox" value="I accept the offered compensation" name="applicationq3" id="applicationq3" />
+          <span> or $</span><input type="number" id="monetaryvalue" name="monetaryvalue" />
+          <br><br>
+          <label> Questions: </label>
+          <br>
+          <input id="questions" type="text" name="applicationq4" id="applicationq4" />
+          <br><br>
+          <input type="submit" id="submit" />
+          <input type="reset" id="applicationReset" />
+        </form>
+      </div>
+
     </div>
   </div>
 
-<!---------------------------------------------->
-<!-- Your own JavaScript functions go here    -->
-<!---------------------------------------------->
-
-<script src="./scripts/firebaseAPI_BBY16.js"></script>
-<script src="./scripts/skeleton.js"></script>
+  <!---------------------------------------------->
+  <!-- Your own JavaScript functions go here    -->
+  <!---------------------------------------------->
+  <script src="../scripts/firebaseAPI_BBY16.js"></script>
+  <script src="../scripts/skeleton.js"></script>
+  <script src="../scripts/application.js"></script>
 
 </body>
 

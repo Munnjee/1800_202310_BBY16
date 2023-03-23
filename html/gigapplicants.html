@@ -49,7 +49,8 @@
     />
 
     <!-- Link to styles of your own -->
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/gigapplicants.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -66,50 +67,49 @@
   <body>
     <div class="bg-image"></div>
     <div class="float">
+  
+      <!--NavBar-->
+      <nav id="navbarPlaceholder"></nav>
+  
+      <!--ChatBox-->
+      <h1><b>Applicants</b></h1> 
+      <input type="text" id="searchgigapplicants" name ="name" placeholder="search..."/>
     
-    <!--NavBar-->
-    <nav id="navbarPlaceholder"></nav>
-    
-    <div class="container">
-      <h1>Profile Settings</h1>
-      <form>
-          <fieldset class="mb-3" id="personalInfoFields" disabled>
-              <div class="form-group">
-                  <label >Full Name</label>
-                  <input type="text" id="nameInput" class="form-control" placeholder="Full Name">
+      
+      <div class="containergigapplicants">
+        
+        <h1>List of applicants</h1>
+          <!-- Here is the container for cards  -->
+              <div id="gigapplicants-go-here" class="row row-cols-auto">
               </div>
-              <div class="form-group">
-                <label >Display Name</label>
-                <input type="text" id="displayNameInput" class="form-control" placeholder="Display name">
             </div>
-              <div class="form-group">
-                  <label >About Me</label>
-                  <input type="text" id="aboutMeInput" class="form-control" placeholder="Enter a brief intro about yourself">
-              </div>
-              <div class="form-group">
-                  <label >Birth Date</label>
-                  <input type="date" id="birthDateInput"/>              
-                </div>
-          </fieldset>
-          <div class="d-flex justify-content-end mt-5">
-              <button type="button" class="btn btn-secondary" id="edit-button">Edit</button>
-              <span style="width: 10px"></span>
-              <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
-          </div>
-      </form>
-</div>
+  
+      <template id="ApplicantCardsTemplate">
+        <div class="card py-2 mx-2" style="width: 18rem">
+            
+            <div class="card-body">
+                <h5 class="card-title">Applicant name</h5>            
+                <br/>
+                <p class="card-text">
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                </p>
+                <a class="btn btn-primary card-href">Read more ...</a>
+            </div>
+        </div>
+        </template>
 
-    </div>
-  </body>
+      </div>
 
-    <!---------------------------------------------->
+
+  
+      <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
+    <script src="../scripts/firebaseAPI_BBY16.js"></script>
+    <script src="../scripts/skeleton.js"></script>
+    <script src="../scripts/gigapplicants.js"></script>
 
-    <script src="./scripts/firebaseAPI_BBY16.js"></script>
-    <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/profile.js"></script>
-
-    </div>
+   
   </body>
 </html>

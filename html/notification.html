@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Inbox</title>
+    <title>Notification</title>
     <meta name="comp1800 bby16" content="My 1800 App" />
 
     <!-- Required meta tags -->
@@ -23,7 +23,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Boostrap Library JS CDN  go here -->
+    <!-- JS CDN  go here -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -49,8 +49,7 @@
     />
 
     <!-- Link to styles of your own -->
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/inbox.css">
+    <link rel="stylesheet" href="../styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -58,60 +57,29 @@
       rel="stylesheet"
     />
     <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon_io/favicon-16x16.png"
-    />
-    <link rel="manifest" href="images/favicon_io/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
   </head>
 
-<body>
-  <div class="bg-image"></div>
-  <div class="float">
-
+  <body>
+    <div class="bg-image"></div>
+    <div class="float">
+    
     <!--NavBar-->
     <nav id="navbarPlaceholder"></nav>
 
-    <!--ChatBox-->
-    <h1><b>Inbox</b></h1> 
-    <input type="text" id="search" name ="name" placeholder="search..."/>
-  
+    </div>
+  </body>
+
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+
+    <script src="../scripts/firebaseAPI_BBY16.js"></script>
+    <script src="../scripts/skeleton.js"></script>
     
-    <div class="containerinbox">
-      <div class="item content1"><span> Email1 </span> </div>
-      <div class="item content2"><span> Email2</span> </div>
-      <div class="item content3"><span> Email3</span> </div>
-      <div class="item content4"><span> Email4</span> </div>
-      <div class="item content5"><span> Email5</span> </div>
-      <div class="item content6"><span> Email6</span> </div>
-      <div class="item content7"><span> Email7</span> </div>
-      <div class="item content8"><span> Email8</span> </div>
-      <div class="item content9"><span> Email9</span> </div>
-      <div class="item content10"><span>Email10</span> </div>
     </div>
-    </div>
-
-  
-
-<!---------------------------------------------->
-<!-- Your own JavaScript functions go here    -->
-<!---------------------------------------------->
-<script src="./scripts/firebaseAPI_BBY16.js"></script>
-<script src="./scripts/skeleton.js"></script>
-
-</body>
-
+  </body>
 </html>
