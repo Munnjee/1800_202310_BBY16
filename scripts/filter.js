@@ -92,5 +92,3 @@ function clearFields() {
   document.getElementById("date-input").value = "";
   search();
 }
-
-

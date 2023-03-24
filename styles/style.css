@@ -50,10 +50,16 @@ html * {
   font-size: clamp(16px, 3vw, 40px);
 }
 
+.profilepic_holder{
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
 .profilepic {
   width: 100px;
   background-size: cover;
-  border-radius: 50%;
   position: center;
 }
 .btn-close {
