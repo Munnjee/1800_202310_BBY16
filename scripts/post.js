@@ -57,37 +57,6 @@ postForm.addEventListener("submit", (event) => {
 
 });
 
-
-// function savePost() {
-//   alert ("SAVE POST is triggered");
-//   firebase.auth().onAuthStateChanged(function (user) {
-//       if (user) {
-//           // User is signed in.
-//           // Do something for the user here. 
-//          // var desc = document.getElementById("description").value;
-
-
-
-//           db.collection("giglisting").add({
-//              // owner: user.uid,
-//              // description: desc,
-
-
-//               last_updated: firebase.firestore.FieldValue
-//                   .serverTimestamp() //current system time
-//           }).then(doc => {
-//               console.log("Post document added!");
-//               console.log(doc.id);
-//               uploadPic(doc.id);
-//           })
-//       } else {
-//           // No user is signed in.
-//           console.log("Error, no user signed in");
-//       }
-//   });
-// }
-
-
 //function that pull url from the website
 function uploadPic(giglistingDocID) {
   console.log("inside uploadPic " + giglistingDocID);
@@ -111,5 +80,9 @@ function uploadPic(giglistingDocID) {
       console.log("error uploading to cloud storage");
     })
 }
+
+
+
+
 
 
