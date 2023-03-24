@@ -1,4 +1,4 @@
-/*
+
 function populateReviews() {
     let gigCardTemplate = document.getElementById("reviewCardTemplate");
     let gigCardGroup = document.getElementById("reviewCardGroup");
@@ -8,7 +8,6 @@ function populateReviews() {
    // let hikeID = params.searchParams.get("docID")
   
     // doublecheck: is your collection called "Reviews" or "reviews"?
-   
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             //id of user
@@ -48,7 +47,7 @@ function populateReviews() {
 }
 populateReviews();
 
-*/
+
 
 
 
@@ -60,7 +59,7 @@ populateReviews();
 
 
 // copy paste my reviews
-
+/*
 function populateReviews() {
     let gigCardTemplate = document.getElementById("reviewCardTemplate");
     let gigCardGroup = document.getElementById("reviewCardGroup");
@@ -111,3 +110,4 @@ populateReviews();
 
 
 
+*/
