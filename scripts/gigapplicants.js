@@ -32,6 +32,7 @@ function displayGigDescription(collect) {
           newcard.querySelector('.card-hrefs').onclick = () => deleteFromMyPosts(applicantid);
           newcard.querySelector('.card-hrefss').onclick = () => displayGigActivefield(giglistid,userapplicantid);
           document.getElementById("gigapplicants-go-here").appendChild(newcard);
+          document.querySelector('.card-href').onclick = () => deletePost(giglistid);
         });
       });
     } else{  console.log("No user is signed in");
@@ -40,12 +41,14 @@ function displayGigDescription(collect) {
   }
 });     
 }
-
-// delete giglisting document
   displayGigDescription(); 
 
+
+
+// delete giglisting document
+
   function deletePost(gigid) {
-    var result = confirm("Do you want to hire?");
+    var result = confirm("Do you want to delete post?");
     if (result) {
         //Logic to delete the item
         db.collection("giglisting").doc(gigid)
@@ -58,6 +61,12 @@ function displayGigDescription(collect) {
         });
     }
 }
+
+
+
+
+
+
  // delete all gig applicants related to posting
 function deleteFromMyPosts(applicantid) {
   var result = confirm("Do you want to delete this applciant?");
@@ -79,6 +88,10 @@ function deleteFromMyPosts(applicantid) {
         
              
 
+
+
+
+
              function displayGigActivefield(gigid,userapplicantid) {
               firebase.auth().onAuthStateChanged(user => {
                 var userid = user.uid;
@@ -93,9 +106,6 @@ function deleteFromMyPosts(applicantid) {
 
             }
           });     
-
-
-
            }     
           
 
