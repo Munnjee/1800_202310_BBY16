@@ -24,6 +24,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 
   <!-- Link to styles of your own -->
   <link rel="stylesheet" href="../styles/style.css" />
@@ -66,7 +67,9 @@
         <p id="gigCompensation"></p>
         <p class="total" style="display:inline-block">Total</p class="total">
       </div>
-      
+
+
+
       <!-- location is going to change to display map  -->
       <div class="location">
         <p id="gigLocation"></p>
@@ -80,20 +83,26 @@
       <a id = "link" ><button type="button" onclick="saveGigDocumentandOwnerAndRedirect()">Pick up a gig!</button></a>
 
 
-      
-      </div>
-      <!-- will add js function to display the photo later  -->
 
-       <!-- <img id="gigPhoto">photos placeholder </img>  -->
-    
-      </div>
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
+    </div>
+    <!-- will add js function to display the photo later  -->
+
+
+    <!-- <img id="gigPhoto">photos placeholder </img>  -->
+
+  </div>
+
+  <div class="imageUser">
+    <img id="images-goes-here">
+  </div>
+  <!---------------------------------------------->
+  <!-- Your own JavaScript functions go here    -->
+  <!---------------------------------------------->
 
     <script src="../scripts/firebaseAPI_BBY16.js"></script>
     <script src="../scripts/skeleton.js"></script>
     <script src="../scripts/gigDescription.js"></script>
+
 </body>
 
 </html>

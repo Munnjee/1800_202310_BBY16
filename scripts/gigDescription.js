@@ -19,6 +19,7 @@ function displayGigDescription(collect) {
             thisLocation = doc.data().location;
             thisCompensation = doc.data().compensation;
             thisDescription = doc.data().description;
+            thisFile = doc.data().file;
             thisowner= doc.data().owner;
             let CADDollar = new Intl.NumberFormat('en-CA', {
                 style: 'currency',
@@ -35,8 +36,11 @@ function displayGigDescription(collect) {
             document.getElementById("gigLocation").innerHTML = thisLocation;
             document.getElementById("gigCompensation").innerHTML = CADDollar.format(thisCompensation);
             document.getElementById("descriptionGig").innerHTML = thisDescription;
+          //  document.getElementById("images-goes-here").innerHTML = thisFile;
+          const imgTag = document.getElementById('images-goes-here');
+          imgTag.src = thisFile;
             document.getElementById('link').href = "application.html?docID="+doc.id;
-
+          
             // let imgEvent = document.querySelector( ".hike-img" );
             // imgEvent.src = "../images/" + hikeCode + ".jpg";
         } );
