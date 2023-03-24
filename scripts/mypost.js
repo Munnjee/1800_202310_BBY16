@@ -1,7 +1,10 @@
 function displayDescriptionsDynamically(collection) {
     let gigTemplate = document.querySelector("#gigCardTemplate");
-  
-    db.collection(collection)
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+          //id of user
+          var userid = user.uid;
+    db.collection(collection).where("owner", "==", userid)
       .get()
       .then((allGigs) => {
         var i = 1; // Allows unique id for each gig post
@@ -33,7 +36,18 @@ function displayDescriptionsDynamically(collection) {
   
           document.getElementById(collection + "-go-here").appendChild(newcard);
         });
+     
+     
+     
       });
+    } else{  console.log("No user is signed in");
+    
+
   }
+});
+    
+ 
+ 
+    }
   displayDescriptionsDynamically("giglisting");  //input param is the name of the collection
   

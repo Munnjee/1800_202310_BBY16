@@ -19,7 +19,7 @@ function displayGigDescription(collect) {
             thisLocation = doc.data().location;
             thisCompensation = doc.data().compensation;
             thisDescription = doc.data().description;
-            
+            thisowner= doc.data().owner;
             let CADDollar = new Intl.NumberFormat('en-CA', {
                 style: 'currency',
                 currency: 'CAD',
@@ -48,6 +48,17 @@ displayGigDescription("giglisting");
 function saveGigDocumentIDAndRedirect(){
     let params = new URL(window.location.href) //get the url from the search bar
     let ID = params.searchParams.get("docID");
-    localStorage.setItem('gigDocID', ID);
+    localStorage.setItem('Giglisting', ID);
+    localStorage.setItem('ownerid',thisowner);
     window.location.href = 'reviewform.html';
+}
+
+function saveGigDocumentandOwnerAndRedirect(){
+    let params = new URL(window.location.href) //get the url from the search bar
+    let ID = params.searchParams.get("docID");
+    localStorage.setItem('Giglistings', ID);
+    localStorage.setItem('ownerids',thisowner);
+    window.location.href = 'application.html';
+
+
 }

@@ -1,7 +1,9 @@
-
+var GiglistingDocid = localStorage.getItem("Giglistings"); 
+var owneriD = localStorage.getItem("ownerids");
 function displayGigDescription(collect) {
   let params = new URL( window.location.href ); //get URL of search bar
   let ID = params.searchParams.get( "docID" ); //get value for key "id"
+  
   console.log( ID );
 
 
@@ -19,18 +21,34 @@ applicationForm.addEventListener("submit", (event) => {
 
  //creates a collection under an giglisting document called gigapplicants,
 
-  db.collection(collect).doc(ID).collection("gigapplicants").add({
+ firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    var userid = user.uid;
+  db.collection("gigapplicants").add({
   ApplicantName: applicationForm.applicantname.value,
   Experience: applicationForm.experience.value,
   AgreeorDisagree: applicationForm.applicationq1.value,
   Accept: applicationForm.applicationq3.value,
   Myprice: applicationForm.monetaryvalue.value,
   Questions: applicationForm.applicationq4.value,
+  ownerid: owneriD,
+  GiglistingDocID: GiglistingDocid,
+  userID: userid
+
+}).then(doc=> {
+  alert("Your Gig Application is Successful!");
+  console.log("Gig applicant collection Added!");
+  
  
 });
-
-  //Clears the form
-  applicationForm.reset();
+//Clears the form
+applicationForm.reset();
+} else {
+// No User Signed In
+alert("Please Sign-in to Post a Gig")
+console.log("Error, No user signed in")
+}
+});
 });
 }
 displayGigDescription("giglisting");
