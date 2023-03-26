@@ -49,7 +49,10 @@ function displayGigDescription(collect) {
             // imgTag.src = thisFile;
             
             document.getElementById('link').href = "application.html?docID=" + doc.id;
-
+            AddressString = doc.data().location;
+            console.log(AddressString);
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    
          
             
         });
