@@ -1,3 +1,4 @@
+
 //--------------------------------------
 // map global variables
 //---------------------------------------
@@ -10,8 +11,6 @@ function displayGigDescription(collect) {
     let params = new URL(window.location.href); //get URL of search bar
     let ID = params.searchParams.get("docID"); //get value for key "id"
     console.log(ID);
-
-
     db.collection(collect)
         .doc(ID)
         .get()
@@ -27,8 +26,8 @@ function displayGigDescription(collect) {
             thisLocation = doc.data().location;
             thisCompensation = doc.data().compensation;
             thisDescription = doc.data().description;
-            thisFile = doc.data().file;
             thisowner = doc.data().owner;
+            let picUrl = doc.data().image;
             let CADDollar = new Intl.NumberFormat('en-CA', {
                 style: 'currency',
                 currency: 'CAD',
@@ -44,16 +43,20 @@ function displayGigDescription(collect) {
             document.getElementById("gigLocation").innerHTML = thisLocation;
             document.getElementById("gigCompensation").innerHTML = CADDollar.format(thisCompensation);
             document.getElementById("descriptionGig").innerHTML = thisDescription;
+            $("#images-goes-here").attr("src", picUrl);
             //  document.getElementById("images-goes-here").innerHTML = thisFile;
             // const imgTag = document.getElementById('images-goes-here');
             // imgTag.src = thisFile;
+            
             document.getElementById('link').href = "application.html?docID=" + doc.id;
 
-            // let imgEvent = document.querySelector( ".hike-img" );
-            // imgEvent.src = "../images/" + hikeCode + ".jpg";
+         
+            
         });
 }
 displayGigDescription("giglisting");
+
+
 
 
 //event handler for write review buttton
@@ -71,24 +74,7 @@ function saveGigDocumentandOwnerAndRedirect() {
     localStorage.setItem('Giglistings', ID);
     localStorage.setItem('ownerids', thisowner);
     window.location.href = 'application.html';
-
-
 }
-
-// read location data from fire store
-function readPost(){
-    db.collection("giglisting").doc("K3vCxjxQKsek8S9AL9fF")
-    .get()
-    .then(function(doc){
-        // do whatever else you want with the data...
-        console.log(doc.data());  
-        //show address on a map
-        AddressString = doc.data().location;
-        console.log(AddressString);
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    })
-}
-readPost();
 
 
  //-----------------------------------------

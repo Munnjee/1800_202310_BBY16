@@ -36,3 +36,14 @@ function displayDescriptionsDynamically(collection) {
     });
 }
 displayDescriptionsDynamically("giglisting");  //input param is the name of the collection
+
+
+
+// function saveCardDocumentIDAndRedirect(){
+//   let params = new URL(window.location.href) //get the url from the search bar
+//   let ID = params.searchParams.get("docID");
+//   localStorage.setItem('cardDocID', ID);
+//   window.location.href = 'gigDescription.html';
+// }
+
+
