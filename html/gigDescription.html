@@ -16,6 +16,17 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
+  <!-- Lealflet libraries -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin="">
+  </script>
+
+  <!--GeoApify plugin -->
+  <link rel="stylesheet" href="https://unpkg.com/@geoapify/leaflet-address-search-plugin@^1/dist/L.Control.GeoapifyAddressSearch.min.css" />
+  <script src="https://unpkg.com/@geoapify/leaflet-address-search-plugin@^1/dist/L.Control.GeoapifyAddressSearch.min.js"></script>
+
+
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -68,8 +79,6 @@
         <p class="total" style="display:inline-block">Total</p class="total">
       </div>
 
-
-
       <!-- location is going to change to display map  -->
       <div class="location">
         <p id="gigLocation"></p>
@@ -80,8 +89,7 @@
         <!-- review button -->
         <button class="btn btn-primary" onclick="saveGigDocumentIDAndRedirect()">Write Review</button>
       </div>
-      <a id = "link" ><button type="button" onclick="saveGigDocumentandOwnerAndRedirect()">Pick up a gig!</button></a>
-
+      <a id="link"><button type="button" onclick="saveGigDocumentandOwnerAndRedirect()">Pick up a gig!</button></a>
 
 
     </div>
@@ -98,9 +106,9 @@
   <!-- Your own JavaScript functions go here    -->
   <!---------------------------------------------->
 
-    <script src="../scripts/firebaseAPI_BBY16.js"></script>
-    <script src="../scripts/skeleton.js"></script>
-    <script src="../scripts/gigDescription.js"></script>
+  <script src="../scripts/firebaseAPI_BBY16.js"></script>
+  <script src="../scripts/skeleton.js"></script>
+  <script src="../scripts/gigDescription.js"></script>
 
 </body>
 
