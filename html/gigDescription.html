@@ -20,11 +20,13 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin="">
-  </script>
+    </script>
 
   <!--GeoApify plugin -->
-  <link rel="stylesheet" href="https://unpkg.com/@geoapify/leaflet-address-search-plugin@^1/dist/L.Control.GeoapifyAddressSearch.min.css" />
-  <script src="https://unpkg.com/@geoapify/leaflet-address-search-plugin@^1/dist/L.Control.GeoapifyAddressSearch.min.js"></script>
+  <link rel="stylesheet"
+    href="https://unpkg.com/@geoapify/leaflet-address-search-plugin@^1/dist/L.Control.GeoapifyAddressSearch.min.css" />
+  <script
+    src="https://unpkg.com/@geoapify/leaflet-address-search-plugin@^1/dist/L.Control.GeoapifyAddressSearch.min.js"></script>
 
 
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
@@ -48,6 +50,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon_io/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_io/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon_io/favicon-16x16.png" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -67,11 +75,11 @@
       </div>
 
       <div class="gigDetails">
-        <p id="gigDate"></p>
-        <p id="gigFlexDate"></p>
-        <p id="gigTime"></p>
-        <p id="gigFlexTime"></p>
-        <p id="gigIndoorOutdoor"></p>
+        <p class="bi bi-calendar-check" id="gigDate"></p>
+        <p class="bi bi-calendar" id="gigFlexDate"></p>
+        <p class="bi bi-clock" id="gigTime"></p>
+        <p class="bi bi-clock-history" id="gigFlexTime"></p>
+        <p class="bi bi-geo-alt" id="gigIndoorOutdoor"></p>
       </div>
 
       <div class="compensation">
@@ -82,36 +90,37 @@
       <!-- location is going to change to display map  -->
       <div class="location">
         <p id="gigLocation"></p>
+        <div class="container">
+          <div id="message"></div>
+          <div id="map"></div>
+        </div>
       </div>
 
       <div class="description">
         <P id="descriptionGig"></P>
-        <!-- review button -->
-        <button class="btn btn-primary" onclick="saveGigDocumentIDAndRedirect()">Write Review</button>
       </div>
-      <a id="link"><button type="button" onclick="saveGigDocumentandOwnerAndRedirect()">Pick up a gig!</button></a>
 
+      <div class="imageUser">
+        <h5 class="photoHeading"; style=" float: left;">Gig photo:</h5>
+        <img id="images-goes-here" src=" " alt="GigPic">
+      </div>
+
+      <div class="button">
+        <div class="reviewButton">
+          <button class="btn btn-primary btn-sm" onclick="saveGigDocumentIDAndRedirect()">Write Review</button>
+        </div>
+
+        <div class="pickupGigButton">
+          <a id="link"><button class="btn btn-primary btn-sm" onclick="saveGigDocumentandOwnerAndRedirect()">Pick up a
+              gig!</button></a>
+        </div>
+      </div>
 
     </div>
-    <!-- will add js function to display the photo later  -->
-    <div class="container">
-      <div id="message"></div>
-      <div id="map"></div>
-    </div>
 
-    <style type="text/css">
-      #map {
-          width: 250px;
-          height: 200px;
-      }
-</style>
-
-    <!-- <img id="gigPhoto">photos placeholder </img>  -->
-    <div class="imageUser">
-      <img id="images-goes-here" src=" "
-      alt="GigPic" style="height: 300px; width: 300px;">
-    </div>
   </div>
+  <!-- will add js function to display the photo later  -->
+
 
   <!---------------------------------------------->
   <!-- Your own JavaScript functions go here    -->

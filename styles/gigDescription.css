@@ -6,8 +6,9 @@
   border-radius: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
   text-align: center;
+  font-size: clamp(12px, 1vw, 30px);
   /* justify-items: center; */
   }
   
@@ -18,7 +19,8 @@
   }
   
   #gigTitle{
-    font-weight: bold;
+    /* font-weight:bold; */
+    font-size: 60px;
   }
   
   .gigDetails{
@@ -28,7 +30,8 @@
   
   }
   .gigDetails > p {
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-size: 20px;
   
   }
   
@@ -41,12 +44,12 @@
   
   #gigCompensation{
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 50px;
   }
   
   .location{
     /* background-color: #db8024; */
-    grid-column: 1/4;
+    grid-column: 2/3;
     grid-row: 3/4
   
   }
@@ -55,5 +58,145 @@
     /* background-color: #605142; */
     grid-column: 1/4;
     grid-row:4/5;
+    margin-top: 20px;
+  }
+
+.imageUser{
+  grid-column: 1/4;
+    grid-row:5/6;
+}
+
+.button{
+  grid-column: 2/3;
+    grid-row:6/7;
+    margin: 20px;
+}
+.reviewButton{
+  float: right;
+}
+.pickupGigButton{
+  float: left;
+}
+
+
+  #images-goes-here{
+    height:200px; 
+    width:250px;
   }
   
+  #map {
+    width: 500px;
+    height: 250px;
+    border-radius: 15px;
+  }
+
+  /********media query**********/
+  @media only screen and (max-width: 768px) {
+    .description-container{
+      grid-template-columns: 1fr 1fr 1fr 1fr; 
+      grid-template-rows: 0.1fr 0.6fr 0.1fr 0.2fr 0.5fr;
+    }
+
+    .title {
+      /* background-color: #b9732f; */
+      grid-column: 1/5;
+      grid-row: 1/1; 
+     
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    #gigTitle{
+      /* font-weight:bold; */
+      font-size: 40px;
+      padding-left: 20px;
+    }
+    
+    
+    .gigDetails{
+      /* background-color: #8c7156; */
+      grid-column: 1/3;
+      grid-row: 2/3;
+      padding-top: 10px;
+      margin: 0cm;
+    
+    }
+    .gigDetails > p {
+      /* font-weight: bold; */
+      font-size: 15px;
+    }
+    
+    .compensation{
+      /* background-color: #744a20; */
+      grid-column: 3/5;
+      grid-row: 2/3;
+      padding-top: 40%;
+      margin-left: 30px;
+     
+    }
+    .compensation > p{
+      float: right;
+      font-size: 20px;
+      
+    }
+    
+    #gigCompensation{
+      font-size: 30px;
+      font-weight: 50px;
+      font-size: 25px;
+    }
+    
+    .location{
+      grid-column: 1/5;
+      grid-row: 3/4;
+     padding-left: px;
+
+    }
+    #map{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height:180px;
+      width:250px;
+    }
+    .description{
+      grid-column: 1/4;
+      grid-row:4/5;
+      margin-top: 10px;
+    }
+    .description > p {
+    font-size: 12px;
+    }
+  
+  .imageUser{
+    grid-column: 1/5;
+      grid-row:5/6;
+  }
+  .imageUser > h5{
+    font-size: 13px;
+  }
+
+  #images-goes-here{
+    border-radius: 10px;
+    height:150px; 
+    width:150px;
+    display: flex;
+    object-fit: cover;
+    align-items: center;
+    margin: 20px;
+  }
+
+
+  .button{
+    grid-column: 1/5;
+      grid-row:6/7;
+      margin: 1px;  
+  }
+  .reviewButton{
+    float: right;
+    
+  }
+
+
+  }

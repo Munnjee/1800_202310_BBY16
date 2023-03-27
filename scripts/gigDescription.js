@@ -22,7 +22,7 @@ function displayGigDescription(collect) {
       thisFlexDate = doc.data().flexDate;
       thisTime = doc.data().time;
       thisFlexTime = doc.data().flexTime;
-      thisIndoorOutdoor = doc.data().indoorOutdoor;
+      thisIndoorOutdoor = doc.data().indooroutdoor;
       thisLocation = doc.data().location;
       thisCompensation = doc.data().compensation;
       thisDescription = doc.data().description;
@@ -40,7 +40,7 @@ function displayGigDescription(collect) {
       document.getElementById("gigTime").innerHTML = thisTime;
       document.getElementById("gigFlexTime").innerHTML = thisFlexTime;
       document.getElementById("gigIndoorOutdoor").innerHTML = thisIndoorOutdoor;
-      document.getElementById("gigLocation").innerHTML = thisLocation;
+    //  document.getElementById("gigLocation").innerHTML = "Location: ";
       document.getElementById("gigCompensation").innerHTML = CADDollar.format(thisCompensation);
       document.getElementById("descriptionGig").innerHTML = thisDescription;
       $("#images-goes-here").attr("src", picUrl);
@@ -91,8 +91,8 @@ function onSuccess(position) { //callback function
 
   //print helpful messages about current location
   //to help us debug, you can comment out these 2 lines later
-  message.classList.add('success');
-  message.textContent = `Your location: (${latitude},${longitude})`;
+  // message.classList.add('success');
+  // message.textContent = `Your location: (${latitude},${longitude})`;
 
   //set map to be around current location
   //set a marker at the current location
