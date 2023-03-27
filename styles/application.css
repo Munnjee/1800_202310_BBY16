@@ -1,17 +1,18 @@
-.applicationcontainer {
-  margin: 3.5vw;
-  padding: 0px;
+ .applicationcontainer {
+  width: 80%;
+  background-color: #edf6ff85;
+  padding: 2em;
+  margin: auto;
+  border-radius: 15px;
   display: grid;
-  grid-template-columns: 20vw, 60vw, 20vw;
-  grid-template-rows: 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh;
-  background: none;
-  color: #437fc7;
-  width: 93%;
-  height: 50vh;
+  grid-template-columns: 1fr, 1fr, 1fr; 
+  /* grid-template-rows: 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh, 10vh; */
   text-align: center;
   border-radius: 10px;
-}
+  color:  #4389df;
 
+}
+/*
 .items.application1 {
   font-size: clamp(10px, 2vw, 25px);
   grid-column: 1 / span 3;
@@ -28,4 +29,57 @@
 #questions {
   height: 7vh;
   width: 30vw;
+} */
+input{
+  border-radius: 10px;
+  background-color: #ffffff95;
+  border: #ffffff95;
+}
+@media only screen and (max-width: 768px) {
+  .container-application {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  }
+  .heading{
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .applicant-name{
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .experience{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .supply-need{
+    grid-column: 1/3;
+    grid-row: 4/5;
+    margin: 10px;
+  }
+
+  .offeredCompensation{
+    grid-column: 1/3;
+    grid-row: 5/6;
+    margin: 10px;
+
+  }
+  .question{
+    grid-column: 1/3;
+    grid-row: 6/7;
+  }
+  .question > input{
+    width: 100%;
+    height: 50%;
+  }
+  .buttons{
+    grid-column: 1/3;
+    grid-row: 7/8;
+    padding-top: 20px;
+  }
+  
 }
