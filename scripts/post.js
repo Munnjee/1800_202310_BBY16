@@ -37,17 +37,16 @@ postForm.addEventListener("submit", (event) => {
         location: postForm.location.value,
         indooroutdoor: postForm.indooroutdoor.value,
         date: postForm.date.value,
-        flexDate: postForm.flexibleDate.value,
+        flexDate: postForm.flexibleDate.checked ? postForm.flexibleDate.value : "",
         time: postForm.time.value,
-        flexTime: postForm.flexibleTime.value,
+        flexTime: postForm.flexibleTime.checked ? postForm.flexibleTime.value : "",
       }).then(doc => {
         alert("Your Gig Post is Successful!");
         console.log("Gig Post Document Added!");
         console.log(doc.id);
         uploadPic(doc.id);
+        window.location.href = "main.html";
       });
-      //Clears the form
-      postForm.reset();
     } else {
       // No User Signed In
       alert("Please Sign-in to Post a Gig")

@@ -13,6 +13,7 @@ function displayDescriptionsDynamically(collection) {
         var flexDate = doc.data().flexDate;
         var time = doc.data().time;
         var flexTime = doc.data().flexTime;
+        var picUrl = doc.data().image;
         var docID = doc.id;
         let newcard = gigCardTemplate.content.cloneNode(true);
 
@@ -30,20 +31,17 @@ function displayDescriptionsDynamically(collection) {
         newcard.querySelector(".time").innerHTML = time;
         newcard.querySelector(".flexTime").innerHTML = flexTime;
         newcard.querySelector('a').href = "gigDescription.html?docID="+docID;
+        
+        var img = newcard.querySelector("#images-goes-here");
+        if(picUrl !== "") {
+          img.setAttribute("src", picUrl);
+        } else {
+          img.setAttribute("src", "../images/logo/whitelogo.png");
+        }
+
 
         document.getElementById(collection + "-go-here").appendChild(newcard);
       });
     });
 }
 displayDescriptionsDynamically("giglisting");  //input param is the name of the collection
-
-
-
-// function saveCardDocumentIDAndRedirect(){
-//   let params = new URL(window.location.href) //get the url from the search bar
-//   let ID = params.searchParams.get("docID");
-//   localStorage.setItem('cardDocID', ID);
-//   window.location.href = 'gigDescription.html';
-// }
-
-
