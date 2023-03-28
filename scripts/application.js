@@ -63,7 +63,7 @@ function displayGigDescription(collect) {
             DiplayName: applicationForm.displayNameInput.value,
             Experience: applicationForm.experience.value,
             AgreeorDisagree: applicationForm.applicationq1.value,
-            Accept: applicationForm.applicationq3.value,
+            Accept: applicationForm.applicationq3.checked ? applicationForm.applicationq3.value : "",
             Myprice: applicationForm.monetaryvalue.value,
             Questions: applicationForm.applicationq4.value,
             ownerid: owneriD,

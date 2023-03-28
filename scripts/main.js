@@ -36,8 +36,7 @@ function displayDescriptionsDynamically(collection) {
         if(picUrl !== undefined) {
           img.setAttribute("src", picUrl);
         }
-
-
+        
         document.getElementById(collection + "-go-here").appendChild(newcard);
       });
     });

@@ -5,9 +5,9 @@ function displayDescriptionsDynamically(collection) {
           //id of user
           var userid = user.uid;
     db.collection(collection).where("owner", "==", userid)
+      .orderBy("postTime", "desc")
       .get()
       .then((allGigs) => {
-        var i = 1; // Allows unique id for each gig post
         allGigs.forEach((doc) => {
           var title = doc.data().jobTitle;
           var compensation = doc.data().compensation;
@@ -16,6 +16,7 @@ function displayDescriptionsDynamically(collection) {
           var flexDate = doc.data().flexDate;
           var time = doc.data().time;
           var flexTime = doc.data().flexTime;
+          var picUrl = doc.data().image;
           var docID = doc.id;
           let newcard = gigCardTemplate.content.cloneNode(true);
   
@@ -34,20 +35,17 @@ function displayDescriptionsDynamically(collection) {
           newcard.querySelector(".flexTime").innerHTML = flexTime;
           newcard.querySelector('a').href = "gigapplicants.html?docID="+docID;
   
+          var img = newcard.querySelector("#images-goes-here");
+          if(picUrl !== undefined) {
+            img.setAttribute("src", picUrl);
+          }
+          
           document.getElementById(collection + "-go-here").appendChild(newcard);
         });
-     
-     
-     
       });
     } else{  console.log("No user is signed in");
-    
-
   }
 });
-    
- 
- 
-    }
+}
   displayDescriptionsDynamically("giglisting");  //input param is the name of the collection
   
