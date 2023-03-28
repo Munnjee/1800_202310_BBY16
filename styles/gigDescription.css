@@ -5,7 +5,6 @@
   background-color: #edf6ffbb;
   padding: 1em;
   border-radius: 10px;
-  font-size: clamp(12px, 1vw, 30px);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr, 1fr, 2fr, 1fr 2fr, 1fr;
@@ -21,9 +20,13 @@
 .title {
   grid-area: title;
   text-align: center;
-  font-size: clamp(20px, 3vw, 50px);
   display: grid;
   align-items: center;
+}
+
+.title h1{
+  font-size: clamp(20px, 10vw, 50px);
+  color: #437fc7;
 }
 
 .location {
@@ -33,6 +36,7 @@
 .description {
   grid-area: description;
   word-break: break-all;
+  font-size: clamp(14px, 3vw, 30px);
 }
 
 .imageUser {
@@ -65,7 +69,7 @@
   color: #ffffff;
 }
 
-#reviewButton{
+#reviewButton {
   width: 100%;
   background-color: #6daffe;
   color: #edf6ff;
@@ -76,43 +80,61 @@
 
 /********** Gig Details Grid Layout **********/
 .gigDetails {
+  margin: 1em;
   grid-area: gigDetails;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-  "date_box gigIndoorOutdoor"
-  "gigFlexDate gigCompensation"
-  "time_box gigCompensation"
-  "gigFlexTime gigCompensation"
+    "date_box gigIndoorOutdoor"
+    "gigFlexDate gigCompensation"
+    "time_box gigCompensation"
+    "gigFlexTime gigCompensation";
+}
+.gigDetails > * {
+  font-size: clamp(12px, 4vw, 25px);
 }
 
-#date_box{
+#date_box {
   grid-area: date_box;
-  display:flex;
-
+  display: flex;
 }
 
-#gigFlexDate{
+#gigFlexDate {
   grid-area: gigFlexDate;
+  padding-left: 1.5em;
 }
 
-#time_box{
-  grid-area:time_box;
-  display:flex;
+#time_box {
+  grid-area: time_box;
+  display: flex;
 }
 
-#gigFlexTime{
-  grid-area:gigFlexTime;
+#gigFlexTime {
+  grid-area: gigFlexTime;
+  padding-left: 1.5em;
 }
 
-#gigIndoorOutdoor{
+.bi {
+  color: #437fc7;
+  margin-right: 0.5em;
+}
+
+#gigIndoorOutdoor {
   grid-area: gigIndoorOutdoor;
+  text-align: center;
 }
-#gigCompensation{
+
+#gigCompensation {
   grid-area: gigCompensation;
-  display:flex;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  font-size: clamp(30px, 5vw, 50px);
+  color: #437fc7;
 }
+
+/********** Map **********/
 
 #map {
   width: 500px;
@@ -120,22 +142,22 @@
   border-radius: 15px;
 }
 
-  #map {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 180px;
-    width: 250px;
-  }
+#map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  width: 250px;
+}
 
+/********** Images **********/
 
-  #images-goes-here {
-    border-radius: 10px;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    object-fit: cover;
-    align-items: center;
-    margin: 20px;
-  }
-
+#images-goes-here {
+  border-radius: 10px;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  object-fit: cover;
+  align-items: center;
+  margin: 20px;
+}

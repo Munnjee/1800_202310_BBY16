@@ -45,6 +45,11 @@
   height: 20%;
 }
 
+#location {
+  width: 100% !important;
+  height: 20%;
+}
+
 .post_button_container {
   display: flex;
   justify-content: center;
