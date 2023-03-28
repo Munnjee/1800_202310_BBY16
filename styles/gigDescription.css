@@ -147,18 +147,14 @@
 /********** Map **********/
 
 #map {
-  width: 500px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 15px;
-}
-
-#map {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 180px;
-  width: 250px;
 }
+
 
 /********** Images **********/
 
