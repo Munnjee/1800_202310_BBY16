@@ -38,66 +38,64 @@
 
   <!-- Link to styles of your own -->
   <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/gigapplicants.css">
+  <link rel="stylesheet" href="../styles/gigapplicants.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800&display=swap"
     rel="stylesheet" />
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png" />
 </head>
 
 <body>
   <div class="bg-image"></div>
   <div class="float">
-
     <!--NavBar-->
     <nav id="navbarPlaceholder"></nav>
 
-    <!--ChatBox-->
-    <h1><b>Applicants</b></h1>
-    <a class="btn btn-primary card-href">Delete giglisting</a>
-    <input type="text" id="searchgigapplicants" name="name" placeholder="   search..." />
+    <div class="applicant_container">
+      <h1>Applicants for "<span id="gigName"></span>" Listing</h1>
 
-
-    <div class="containergigapplicants">
-
-      <h1>List of applicants</h1>
-      <!-- Here is the container for cards  -->
-      <div id="gigapplicants-go-here" class="row row-cols-auto">
+      <div class="containergigapplicants">
+        <h2>List of applicants</h2>
+        <!-- Here is the container for cards  -->
+        <div id="gigapplicants-go-here" class="row row-cols-auto"></div>
       </div>
+
+      <a class="btn btn-primary card-href">Delete giglisting</a>
     </div>
+
 
     <template id="ApplicantCardsTemplate">
       <div class="card py-2 mx-2" style="width: 18rem">
-
         <div class="card-body">
-          <h5 class="card-title">Applicant name</h5>
-          <br />
+          <div class="card-title">Applicant name</div>
+          <div class="email">Email</div>
           Relevant Experience:
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
+          <div class="card-text">
+            Sample text
+          </div>
+          <div class="compensation"></div>
+          <div class="requested_compensation"></div>
+          Questions:
+          <div class = "questions">
+            Sample questions
+          </div>
           <a class="btn btn-primary card-hrefss">Hired</a>
           <a class="btn btn-primary card-hrefs">Delete</a>
-
         </div>
       </div>
     </template>
 
-  </div>
 
-
-
-  <!---------------------------------------------->
-  <!-- Your own JavaScript functions go here    -->
-  <!---------------------------------------------->
-  <script src="../scripts/firebaseAPI_BBY16.js"></script>
-  <script src="../scripts/skeleton.js"></script>
-  <script src="../scripts/gigapplicants.js"></script>
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+    <script src="../scripts/firebaseAPI_BBY16.js"></script>
+    <script src="../scripts/skeleton.js"></script>
+    <script src="../scripts/gigapplicants.js"></script>
 </body>
 
 </html>
