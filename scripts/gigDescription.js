@@ -6,6 +6,8 @@ var map;            //for the map to be displayed
 var AddressString;  //for what was read from firestore
 var LocationArea;   //for new circle object
 var radius = 500;   //500 meters, you can change this to your liking
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
 
 function displayGigDescription(collect) {
   let params = new URL(window.location.href); //get URL of search bar
@@ -23,14 +25,18 @@ function displayGigDescription(collect) {
       thisTime = doc.data().time;
       thisFlexTime = doc.data().flexTime;
       thisIndoorOutdoor = doc.data().indooroutdoor;
-      thisLocation = doc.data().location;
+      //thisLocation = doc.data().location;
       thisCompensation = doc.data().compensation;
       thisDescription = doc.data().description;
       thisowner = doc.data().owner;
       let picUrl = doc.data().image;
+      AddressString = doc.data().location;
+      console.log(AddressString);
+     
       let CADDollar = new Intl.NumberFormat('en-CA', {
         style: 'currency',
         currency: 'CAD',
+        
       });
 
       // populate the giglisting data to gigDescription.html 
@@ -40,7 +46,7 @@ function displayGigDescription(collect) {
       document.getElementById("gigTime").innerHTML = thisTime;
       document.getElementById("gigFlexTime").innerHTML = thisFlexTime;
       document.getElementById("gigIndoorOutdoor").innerHTML = thisIndoorOutdoor;
-    //  document.getElementById("gigLocation").innerHTML = "Location: ";
+      //document.getElementById("gigLocation").innerHTML = thisLocation;
       document.getElementById("gigCompensation").innerHTML = CADDollar.format(thisCompensation);
       document.getElementById("descriptionGig").innerHTML = thisDescription;
       $("#images-goes-here").attr("src", picUrl);
@@ -48,18 +54,14 @@ function displayGigDescription(collect) {
       // const imgTag = document.getElementById('images-goes-here');
       // imgTag.src = thisFile;
 
-      document.getElementById('link').href = "application.html?docID=" + doc.id;
-      AddressString = doc.data().location;
-      console.log(AddressString);
-      navigator.geolocation.getCurrentPosition(onSuccess, onError);
-
+      //document.getElementById('link').href = "application.html?docID=" + doc.id;
 
 
     });
 }
 displayGigDescription("giglisting");
 
-
+//AddressString = "3700 Willingdon, BC, Canada";
 
 
 //event handler for write review buttton
@@ -79,7 +81,6 @@ function saveGigDocumentandOwnerAndRedirect() {
   window.location.href = 'application.html';
 }
 
-
 //-----------------------------------------
 // handle success case of getCurrentPosition
 //-----------------------------------------
@@ -88,10 +89,13 @@ function onSuccess(position) { //callback function
     latitude,
     longitude
   } = position.coords;
+  console.log("inside on success");
+  console.log(longitude);
+  console.log(latitude);
 
   //print helpful messages about current location
   //to help us debug, you can comment out these 2 lines later
-  // message.classList.add('success');
+   message.classList.add('success');
   // message.textContent = `Your location: (${latitude},${longitude})`;
 
   //set map to be around current location
@@ -99,9 +103,14 @@ function onSuccess(position) { //callback function
   map = L.map('map').setView([latitude, longitude], 13);
   marker = L.marker([latitude, longitude]).addTo(map);
 
-
   //Show a circle to represent the approximate location
-  geocodeAddressString();
+  //geocodeAddressString();
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+geocodeAddressString();
 }
 
 function geocodeAddressString() {
