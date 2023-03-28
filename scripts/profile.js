@@ -7,6 +7,7 @@ function populateUserInfo() {
       //get the document for current user.
       currentUser.get().then((userDoc) => {
         //get the data fields of the user
+        var email = userDoc.data().email;
         var userName = userDoc.data().name;
         var displayName = userDoc.data().displayName;
         var userAboutMe = userDoc.data().aboutme;
@@ -14,6 +15,9 @@ function populateUserInfo() {
         let picUrl = userDoc.data().profilePic; 
 
         //if the data fields are not empty, then write them in to the form.
+        if (email != null) {
+          document.getElementById("emailInput").value = email;
+        }
         if (userName != null) {
           document.getElementById("nameInput").value = userName;
         }

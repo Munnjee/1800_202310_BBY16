@@ -1,0 +1,63 @@
+form{
+  background-color: #edf6ffbb;
+  border-radius: 10px;
+  padding: 1em;
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+  font-size: clamp(20px, 6vw, 50px);
+  color: #437fc7;
+}
+
+label{
+  width: 100%;;
+  text-align: left;
+  color: #437fc7;
+}
+
+.button {
+  grid-area: button;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#edit-button {
+  width: 100%;
+  background-color: #437fc7;
+  color: #edf6ff;
+  border: 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+#edit-button:hover {
+  background-color: #edf6ff;
+  color: #6daffe;
+}
+
+#edit-button:active {
+  background-color: #b9732f;
+  color: #ffffff;
+}
+
+#save-button {
+  width: 100%;
+  background-color: #6daffe;
+  color: #edf6ff;
+  border: 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+#save-button:hover {
+  background-color: #edf6ff;
+  color: #6daffe;
+}
+
+#save-button:active {
+  background-color: #b9732f;
+  color: #ffffff;
+}

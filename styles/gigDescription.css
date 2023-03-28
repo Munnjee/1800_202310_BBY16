@@ -78,6 +78,16 @@
   padding: 1em;
 }
 
+#reviewButton:hover {
+  background-color: #edf6ff;
+  color: #6daffe;
+}
+
+#reviewButton:active {
+  background-color: #b9732f;
+  color: #ffffff;
+}
+
 /********** Gig Details Grid Layout **********/
 .gigDetails {
   margin: 1em;
