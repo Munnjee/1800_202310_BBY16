@@ -33,10 +33,8 @@ function displayDescriptionsDynamically(collection) {
         newcard.querySelector('a').href = "gigDescription.html?docID="+docID;
         
         var img = newcard.querySelector("#images-goes-here");
-        if(picUrl !== "") {
+        if(picUrl !== undefined) {
           img.setAttribute("src", picUrl);
-        } else {
-          img.setAttribute("src", "../images/logo/whitelogo.png");
         }
 
 

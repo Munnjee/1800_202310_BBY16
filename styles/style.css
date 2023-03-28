@@ -99,11 +99,3 @@ html * {
   align-content: center;
   justify-content: center;
 }
-
-.container_reviewform{
-width: 80%;
-background-color: #edf6ff85;
-padding: 2em;
-margin: auto;
-border-radius: 15px;
-}

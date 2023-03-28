@@ -40,10 +40,10 @@ function search() {
       case "before-noon":
         query = query.where("time", "==", "AM To Noon");
         break;
-      case "noon-to-6pm":
+      case "noon-to-4pm":
         query = query.where("time", "==", "Noon To 4PM");
         break;
-      case "6pm-to-9pm":
+      case "4pm-to-8pm":
         query = query.where("time", "==", "4pm to 8pm");
         break;
     }
@@ -74,6 +74,13 @@ function search() {
           gigCard.querySelector(".time").textContent = doc.data().time;
           gigCard.querySelector(".flexTime").textContent = doc.data().flexTime;
           gigCard.querySelector('a').href = "gigDescription.html?docID="+ docID;
+
+          var img = gigCard.querySelector("#images-goes-here");
+          var picUrl = doc.data().image; // assuming picUrl is defined
+          if (picUrl !== undefined) {
+            img.setAttribute("src", picUrl);
+          }
+
           gigListingGoHere.appendChild(gigCard);
         });
       }

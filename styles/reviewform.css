@@ -1,33 +1,27 @@
-.form-field {
+
+.container_reviewform{
   width: 90%;
   background-color: #edf6ff85;
   padding: 1em;
   margin: auto;
   border-radius: 15px;
-}
+  }
 
-#gig-form h1 {
+
+h1 {
   text-align: center;
   color: #437fc7;
   font-weight: 500;
 }
 
-#gig-form label {
+label {
   color: #437fc7;
   font-weight: 400;
 }
 
-#gig_title {
-  width: 100%;
-}
-
-#gig_title,
-#description,
-#location,
-#indooroutdoor,
-#date,
-#time,
-#compensation {
+#level,
+#comp_fair,
+#description {
   background-color: #ffffff95;
   border-radius: 5px;
   color: #6daffe;
@@ -36,31 +30,16 @@
 }
 
 #description {
-  width: 100%;
-  height: 20%;
+  height: 100px;
 }
 
-#location {
-  width: 100% !important;
-  height: 20%;
-}
 
-#file{
-  color: #6daffe;
-  padding: 0.5em;
-}
-
-#fileinput {
-  width: 100%;
-  color: #6daffe;
-}
-
-.post_button_container {
+.buttons {
   display: flex;
   justify-content: center;
 }
 
-#gig_submit {
+#review_submit {
   width: 45%;
   background-color: #437fc7;
   color: #edf6ff;
@@ -70,17 +49,17 @@
   margin: 2.5%;
 }
 
-#gig_submit:hover {
+#review_submit:hover {
   background-color: #edf6ff;
   color: #6daffe;
 }
 
-#gig_submit:active {
+#review_submit:active {
   background-color: #b9732f;
   color: #ffffff;
 }
 
-#gig_reset {
+#review_reset {
   width: 45%;
   background-color: #6daffe;
   color: #edf6ff;
@@ -90,12 +69,12 @@
   margin: 2.5%;
 }
 
-#gig_reset:hover {
+#review_reset:hover {
   background-color: #edf6ff;
   color: #6daffe;
 }
 
-#gig_reset:active {
+#review_reset:active {
   background-color: #b9732f;
   color: #ffffff;
 }

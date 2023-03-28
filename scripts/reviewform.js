@@ -1,6 +1,6 @@
 var GiglistingDocid = localStorage.getItem("Giglisting"); 
 var owneriD = localStorage.getItem("ownerid");
-function getHikeName(id) {
+function getGigName(id) {
     db.collection("giglisting")
       .doc(id)
       .get()
@@ -9,8 +9,7 @@ function getHikeName(id) {
         document.getElementById("gigName").innerHTML = GigName;
           });
 }
-
-getHikeName(GiglistingDocid);
+getGigName(GiglistingDocid);
 
 function writeReview() {
     console.log("inside write review")

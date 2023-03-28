@@ -108,6 +108,12 @@
   border-radius: 10px;
 }
 
+.card-image2 {
+  width: 95%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
 .title {
   grid-area: title;
   font-size: clamp(20px, 3vw, 50px);

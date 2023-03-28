@@ -53,7 +53,6 @@ postForm.addEventListener("submit", (event) => {
       console.log("Error, No user signed in")
     }
   });
-
 });
 
 //function that pull url from the website
