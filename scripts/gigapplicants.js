@@ -1,6 +1,12 @@
+var params = new URL(window.location.href); //get URL of search bar
+var ID = params.searchParams.get("docID");
+
+document.querySelector(".card-href").onclick = () =>
+deletePost(ID);
+
 function displayGigDescription(collect) {
-  let params = new URL(window.location.href); //get URL of search bar
-  let ID = params.searchParams.get("docID");
+ // let params = new URL(window.location.href); //get URL of search bar
+ // let ID = params.searchParams.get("docID");
   var GiglistingID = localStorage.getItem("Giglistings"); //get value for key "id"
   console.log(GiglistingID);
 
@@ -45,8 +51,7 @@ function displayGigDescription(collect) {
               .getElementById("gigapplicants-go-here")
               .appendChild(newcard);
 
-            document.querySelector(".card-href").onclick = () =>
-              deletePost(giglistid);
+           
           });
         });
     } else {
@@ -109,6 +114,19 @@ function displayGigActivefield(gigid, userapplicantid) {
     }
   });
 }
+
+function getGigName(ID) {
+  db.collection("giglisting")
+    .doc(ID)
+    .get()
+    .then((thisGig) => {
+      var GigName = thisGig.data().jobTitle;
+      document.getElementById("gigName").innerHTML = GigName;
+        });
+}
+getGigName(ID);
+
+
 
 /*
 function populateReviews() {
