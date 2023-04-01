@@ -58,7 +58,7 @@
   overflow: auto;
 }
 
-.cardBody{
+.cardBody {
   margin-bottom: 0.5em;
 }
 
@@ -70,7 +70,7 @@
   width: 100%;
 }
 
-#gigCardButton{
+#gigCardButton {
   text-decoration: none;
 }
 
@@ -91,14 +91,14 @@
   color: black;
 }
 
-#gig-card:hover{
+#gig-card:hover {
   padding: none;
   background-color: white;
   border-radius: 10px;
 }
 
-#gig-card:active{
-  background-color:#a6c3e6;
+#gig-card:active {
+  background-color: #a6c3e6;
 }
 
 .card-image {
@@ -106,12 +106,15 @@
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1em;
 }
 
 .card-image2 {
-  width: 95%;
+  width: 100%;
   overflow: hidden;
-  border-radius: 10px;
 }
 
 .title {
@@ -139,7 +142,6 @@
 .time {
   grid-area: time;
   font-size: clamp(10px, 1.5vw, 25px);
-
 }
 
 .flexTime {
@@ -147,7 +149,7 @@
   font-size: clamp(10px, 1.5vw, 25px);
 }
 
-.compensation{
+.compensation {
   grid-area: compensation;
   text-align: center;
   display: grid;

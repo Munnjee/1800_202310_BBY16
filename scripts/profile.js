@@ -31,8 +31,8 @@ function populateUserInfo() {
           document.getElementById("birthDateInput").value = userBirthDate;
         }
         if (picUrl != null) {
-          $(".mypic-goes-here").attr("src", picUrl);
-        } else $(".mypic-goes-here").attr("src", "../images/profilepic.png");
+          $("#mypic-goes-here").attr("src", picUrl);
+        } else $("#mypic-goes-here").attr("src", "../images/profilepic.png");
       });
     } else {
       // No user is signed in.
@@ -56,15 +56,15 @@ function chooseFileListener() {
   const fileInput = document.getElementById("mypic-input"); // pointer #1
   const image = document.getElementById("mypic-goes-here"); // pointer #2
 
-  //attach listener to input file
   //when this file changes, do something
   fileInput.addEventListener("change", function (e) {
     //the change event returns a file "e.target.files[0]"
     ImageFile = e.target.files[0];
     var blob = URL.createObjectURL(ImageFile);
 
-    //change the DOM img element source to point to this file
-    image.src = blob; //assign the "src" property of the "img" tag
+    // if (image && blob) {
+      image.src = blob; //assign the "src" property of the "img" tag
+    // }
   });
 }
 chooseFileListener();
@@ -75,13 +75,8 @@ function saveUserInfo() {
 
     //Asynch call to put File Object (global variable ImageFile) onto Cloud
     storageRef.put(ImageFile).then(function () {
-      console.log("Uploaded to Cloud Storage.");
-
       //Asynch call to get URL from Cloud
       storageRef.getDownloadURL().then(function (url) {
-        // Get "url" of the uploaded file
-        console.log("Got the download URL.");
-        //get values from the from
         userName = document.getElementById("nameInput").value;
         displayName = document.getElementById("displayNameInput").value;
         userAboutMe = document.getElementById("aboutMeInput").value;
@@ -97,11 +92,11 @@ function saveUserInfo() {
             profilePic: url, // Save the URL into users collection
           })
           .then(function () {
-            console.log("Added Profile Pic URL to Firestore.");
-            console.log("Saved use profile info");
+            console.log("Saved user profile info");
             alert("Your Profile has been updated!");
           });
         document.getElementById("personalInfoFields").disabled = true;
+        document.getElementById("mypic-input").value = "";
       });
     });
   });

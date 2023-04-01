@@ -5,7 +5,6 @@ function search() {
   const imagesCheckbox = document.getElementById("images-checkbox");
   const timeOfDaySelect = document.getElementById("time-of-day-select");
   const dateInput = document.getElementById("date-input");
-  const timeInput = document.getElementById("time-input");
 
   const gigListingGoHere = document.getElementById("giglisting-go-here");
   gigListingGoHere.innerHTML = ""; // Clear previous search results
@@ -33,7 +32,7 @@ function search() {
                  .where("compensation", "<=", maxCompensationValue);
   }
   if (imagesCheckbox.checked) {
-    query = query.where("file", "!=", "");
+    query = query.where("image", "!=", "");
   }
   if (timeOfDaySelect.value !== "all") {
     switch (timeOfDaySelect.value) {
@@ -69,7 +68,7 @@ function search() {
           }`;
           gigCard.querySelector(".indooroutdoor").textContent =
             doc.data().indooroutdoor;
-          gigCard.querySelector(".date").textContent = doc.data().flexDate;
+          gigCard.querySelector(".date").textContent = doc.data().date;
           gigCard.querySelector(".flexDate").textContent = doc.data().flexDate;
           gigCard.querySelector(".time").textContent = doc.data().time;
           gigCard.querySelector(".flexTime").textContent = doc.data().flexTime;

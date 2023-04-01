@@ -1,8 +1,9 @@
-form{
+.form-field {
+  width: 90%;
   background-color: #edf6ffbb;
-  border-radius: 10px;
   padding: 1em;
-  width: 100%;
+  margin: 1em;
+  border-radius: 15px;
 }
 
 h1{
@@ -69,9 +70,12 @@ label{
   height: 100px;
   overflow: hidden;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.mypic-goes-here{
+#mypic-goes-here{
   width: 100px;
   background-size: cover;
   position: center;
