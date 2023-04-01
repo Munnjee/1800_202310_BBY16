@@ -61,3 +61,18 @@ label{
   background-color: #b9732f;
   color: #ffffff;
 }
+
+#profile-container{
+  margin-left:auto;
+  margin-right:auto;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.mypic-goes-here{
+  width: 100px;
+  background-size: cover;
+  position: center;
+}

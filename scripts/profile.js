@@ -31,11 +31,8 @@ function populateUserInfo() {
           document.getElementById("birthDateInput").value = userBirthDate;
         }
         if (picUrl != null) {
-          console.log(picUrl);
-          // use this line if "mypicdiv" is a "div"
-          //$("#mypicdiv").append("<img src='" + picUrl + "'>")
-          $("#mypic-goes-here").attr("src", picUrl);
-        } else console.log("picURL is null");
+          $(".mypic-goes-here").attr("src", picUrl);
+        } else $(".mypic-goes-here").attr("src", "../images/profilepic.png");
       });
     } else {
       // No user is signed in.
