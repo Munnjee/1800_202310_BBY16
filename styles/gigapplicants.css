@@ -1,14 +1,54 @@
+.applicant_container{
+  width: 90%;
+  background-color: #edf6ffbb;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 15px;
+}
 
+h1 {
+  text-align: center;
+  color: #437fc7;
+  font-weight: 500;
+}
 
-
-
-
-.post_button_container {
-  display: flex;
+#gigapplicants-go-here{
   justify-content: center;
 }
 
-#gig_submit {
+.card {
+  border-radius: 10px;
+  padding: 0em !important;
+  margin: 0.5em;
+  width: 20em;
+}
+
+.card-title{
+  text-align: center;
+  font-weight: 600;
+  font-size: clamp(20px, 6vw, 50px);
+}
+
+.email{
+  text-align: center;
+  font-size: clamp(14px, 4vw, 18px);
+  color: #437fc7;
+}
+
+h3 {
+  color: #437fc7;
+  font-size: clamp(14px, 4vw, 18px);
+
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hire {
+  text-decoration: none;
   width: 45%;
   background-color: #437fc7;
   color: #edf6ff;
@@ -18,17 +58,18 @@
   margin: 2.5%;
 }
 
-#gig_submit:hover {
+.hire:hover {
   background-color: #edf6ff;
   color: #6daffe;
 }
 
-#gig_submit:active {
+.hire:active {
   background-color: #b9732f;
   color: #ffffff;
 }
 
-#gig_reset {
+.decline {
+  text-decoration: none;
   width: 45%;
   background-color: #6daffe;
   color: #edf6ff;
@@ -38,12 +79,32 @@
   margin: 2.5%;
 }
 
-#gig_reset:hover {
+.decline:hover {
   background-color: #edf6ff;
   color: #6daffe;
 }
 
-#gig_reset:active {
+.decline:active {
   background-color: #b9732f;
+  color: #ffffff;
+}
+
+.delete_post {
+  text-decoration: none;
+  background-color: #b9732f;
+  color: #edf6ff;
+  border: 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 2.5%;
+}
+
+.delete_post:hover {
+  background-color: #edf6ff;
+  color: #6daffe;
+}
+
+.delete_post:active {
+  background-color: #437fc7;
   color: #ffffff;
 }

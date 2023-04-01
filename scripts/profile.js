@@ -12,7 +12,7 @@ function populateUserInfo() {
         var displayName = userDoc.data().displayName;
         var userAboutMe = userDoc.data().aboutme;
         var userBirthDate = userDoc.data().birthdate;
-        let picUrl = userDoc.data().profilePic; 
+        let picUrl = userDoc.data().profilePic;
 
         //if the data fields are not empty, then write them in to the form.
         if (email != null) {
@@ -62,9 +62,7 @@ function chooseFileListener() {
     ImageFile = e.target.files[0];
     var blob = URL.createObjectURL(ImageFile);
 
-    // if (image && blob) {
-      image.src = blob; //assign the "src" property of the "img" tag
-    // }
+    image.src = blob; //assign the "src" property of the "img" tag
   });
 }
 chooseFileListener();

@@ -44,9 +44,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800&display=swap"
     rel="stylesheet" />
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon_io/favicon-16x16.png" />
 </head>
 
 <body>
@@ -56,35 +56,42 @@
     <nav id="navbarPlaceholder"></nav>
 
     <div class="applicant_container">
-      <h1>Applicants for "<span id="gigName"></span>" Listing</h1>
+      <h1>Applicants for <br>
+        "<span id="gigName"></span>"</h1>
 
       <div class="containergigapplicants">
-        <h2>List of applicants</h2>
         <!-- Here is the container for cards  -->
         <div id="gigapplicants-go-here" class="row row-cols-auto"></div>
       </div>
 
-      <a class="btn btn-primary card-href">Delete giglisting</a>
+      <div class="button_container">
+      <a class="delete_post">Delete giglisting</a>
+    </div>
     </div>
 
 
     <template id="ApplicantCardsTemplate">
-      <div class="card py-2 mx-2" style="width: 18rem">
+      <div class="card py-2 mx-2">
         <div class="card-body">
           <div class="card-title">Applicant name</div>
           <div class="email">Email</div>
-          Relevant Experience:
+          <br>
+          <h3>Relevant Experience:</h3>
           <div class="card-text">
             Sample text
           </div>
-          <div class="compensation"></div>
+          <br>
+          <h3><div class="compensation"></div></h3>
           <div class="requested_compensation"></div>
-          Questions:
+          <br>
+          <h3>Questions:</h3>
           <div class = "questions">
             Sample questions
           </div>
-          <a class="btn btn-primary card-hrefss">Hired</a>
-          <a class="btn btn-primary card-hrefs">Delete</a>
+          <div class = button_container>
+          <a class="hire">Hire</a>
+          <a class="decline">Decline</a>
+        </div>
         </div>
       </div>
     </template>

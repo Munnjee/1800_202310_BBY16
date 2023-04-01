@@ -6,14 +6,14 @@
   border-radius: 15px;
 }
 
-h1{
+h1 {
   text-align: center;
   font-size: clamp(20px, 6vw, 50px);
   color: #437fc7;
 }
 
-label{
-  width: 100%;;
+label {
+  width: 100%;
   text-align: left;
   color: #437fc7;
 }
@@ -63,9 +63,9 @@ label{
   color: #ffffff;
 }
 
-#profile-container{
-  margin-left:auto;
-  margin-right:auto;
+#profile-container {
+  margin-left: auto;
+  margin-right: auto;
   width: 100px;
   height: 100px;
   overflow: hidden;
@@ -75,7 +75,7 @@ label{
   align-items: center;
 }
 
-#mypic-goes-here{
+#mypic-goes-here {
   width: 100px;
   background-size: cover;
   position: center;

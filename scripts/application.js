@@ -9,7 +9,7 @@ function populateUserInfo() {
         //get the data fields of the user
         var email = userDoc.data().email;
         var userName = userDoc.data().name;
-        var displayName = userDoc.data().displayName;       
+        var displayName = userDoc.data().displayName;
 
         //if the data fields are not empty, then write them in to the form.
         if (email != null) {
@@ -31,7 +31,6 @@ function populateUserInfo() {
 }
 //call the function to run it
 populateUserInfo();
-
 
 var GiglistingDocid = localStorage.getItem("Giglistings");
 var owneriD = localStorage.getItem("ownerids");
@@ -61,10 +60,15 @@ function displayGigDescription(collect) {
             Email: applicationForm.emailInput.value,
             ApplicantName: applicationForm.nameInput.value,
             DiplayName: applicationForm.displayNameInput.value,
+            postTime: firebase.firestore.FieldValue.serverTimestamp(),
             Experience: applicationForm.experience.value,
             AgreeorDisagree: applicationForm.applicationq1.value,
-            Accept: applicationForm.applicationq3.checked ? applicationForm.applicationq3.value : "",
-            Myprice: applicationForm.monetaryvalue.value,
+            Accept: applicationForm.applicationq3.checked
+              ? applicationForm.applicationq3.value
+              : "My Requested Compensation:",
+            Myprice: applicationForm.applicationq3.checked
+              ? ""
+              : applicationForm.monetaryvalue.value,
             Questions: applicationForm.applicationq4.value,
             ownerid: owneriD,
             GiglistingDocID: GiglistingDocid,

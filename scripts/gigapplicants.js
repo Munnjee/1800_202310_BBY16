@@ -1,7 +1,7 @@
 var params = new URL(window.location.href); //get URL of search bar
 var ID = params.searchParams.get("docID");
 
-document.querySelector(".card-href").onclick = () =>
+document.querySelector(".delete_post").onclick = () =>
 deletePost(ID);
 
 function displayGigDescription(collect) {
@@ -33,19 +33,26 @@ function displayGigDescription(collect) {
             var userapplicantid = doc.data().userID;
             let newcard = gigTemplate.content.cloneNode(true);
 
+            let CADDollar = new Intl.NumberFormat('en-CA', {
+              style: 'currency',
+              currency: 'CAD',
+            });
+
             //update title and text
             newcard.querySelector(".card-title").innerHTML = applicantname;
             newcard.querySelector(".email").innerHTML = email;
             newcard.querySelector(".card-text").innerHTML = experience;
             newcard.querySelector(".compensation").innerHTML = compensation;
-            newcard.querySelector(".requested_compensation").innerHTML =
-              reqComp;
+            if (reqComp !== "") {
+              newcard.querySelector(".requested_compensation").innerHTML =
+                CADDollar.format(reqComp);
+            }
             newcard.querySelector(".questions").innerHTML = questions;
 
             //  newcard.querySelector('.card-href').onclick = () => deletePost(giglistid);
-            newcard.querySelector(".card-hrefs").onclick = () =>
+            newcard.querySelector(".decline").onclick = () =>
               deleteFromMyPosts(applicantid);
-            newcard.querySelector(".card-hrefss").onclick = () =>
+            newcard.querySelector(".hire").onclick = () =>
               displayGigActivefield(giglistid, userapplicantid);
             document
               .getElementById("gigapplicants-go-here")
@@ -64,7 +71,7 @@ displayGigDescription();
 // delete giglisting document
 
 function deletePost(gigid) {
-  var result = confirm("Do you want to delete post?");
+  var result = confirm("Do you want to delete this post?");
   if (result) {
     //Logic to delete the item
     db.collection("giglisting")
@@ -84,7 +91,7 @@ function deletePost(gigid) {
 
 // delete all gig applicants related to posting
 function deleteFromMyPosts(applicantid) {
-  var result = confirm("Do you want to delete this applciant?");
+  var result = confirm("Do you want to remove this applicant from your list?");
   if (result) {
     //Logic to delete the item
     db.collection("gigapplicants")
