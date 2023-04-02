@@ -65,10 +65,15 @@
       </div>
 
       <div class="button_container">
-      <a class="delete_post">Delete giglisting</a>
+        <a class="delete_post">Delete Listing</a>
+        <button
+          id="reviewButton"
+          onclick="saveGigDocumentIDAndRedirect()"
+        >
+          Write Review
+        </button>
+      </div>
     </div>
-    </div>
-
 
     <template id="ApplicantCardsTemplate">
       <div class="card py-2 mx-2">
@@ -81,17 +86,19 @@
             Sample text
           </div>
           <br>
-          <h3><div class="compensation"></div></h3>
+          <h3>
+            <div class="compensation"></div>
+          </h3>
           <div class="requested_compensation"></div>
           <br>
           <h3>Questions:</h3>
-          <div class = "questions">
+          <div class="questions">
             Sample questions
           </div>
-          <div class = button_container>
-          <a class="hire">Hire</a>
-          <a class="decline">Decline</a>
-        </div>
+          <div class=button_container>
+            <button class="hire" id="hire" enable>Hire</button>
+            <button class="decline">Decline</button>
+          </div>
         </div>
       </div>
     </template>

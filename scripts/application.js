@@ -32,7 +32,7 @@ function populateUserInfo() {
 //call the function to run it
 populateUserInfo();
 
-var GiglistingDocid = localStorage.getItem("Giglistings");
+var GiglistingDocid = localStorage.getItem("gigListingID");
 var owneriD = localStorage.getItem("ownerids");
 function displayGigDescription(collect) {
   let params = new URL(window.location.href); //get URL of search bar

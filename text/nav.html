@@ -4,36 +4,16 @@
       <img src="../images/logo/logo.png" alt="Logo" class="logo_image" />
       GIGaNet
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbar"
-      aria-controls="offcanvasNavbar"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div
-      class="offcanvas offcanvas-end"
-      tabindex="-1"
-      id="offcanvasNavbar"
-      aria-labelledby="offcanvasNavbarLabel"
-    >
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <button
-          type="button"
-          class="btn-close text-reset"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         <br />
         <div class="profilepic_holder">
-          <img
-            id="mypic-goes-here"
-            src=""
-            alt="profilepic"
-            class="profilepic"
-          />
+          <img id="mypic-goes-here" src="" alt="profilepic" class="profilepic" />
         </div>
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
           Hello <span id="name-goes-here"></span>
@@ -42,93 +22,38 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="../html/post.html"
-              >Post Gigs</a
-            >
+            <a class="nav-link active" aria-current="page" href="../html/post.html">Post Gigs</a>
           </li>
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="offcanvasNavbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
+          <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
             My Gigs
           </a>
           <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-            <li><a class="dropdown-item" href="#">Confirmed Gigs</a></li>
-            <li><a class="dropdown-item" href="#">Past Gigs</a></li>
             <li>
               <a class="dropdown-item" href="../html/mypost.html">My Posts</a>
             </li>
+            <li><a class="dropdown-item" href="../html/confirmed.html">Confirmed Gigs</a></li>
           </ul>
-          <li class="nav-item">
-            <a class="nav-link" href="../html/notification.html"
-              >Notification</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../html/inbox.html">Inbox</a>
+          <li>
+            <a class="nav-link active" href="../html/review.html">Reviews</a>
           </li>
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="offcanvasNavbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Profile
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-              <li>
-                <a class="dropdown-item" href="../html/profile.html"
-                  >Profile Settings</a
-                >
-              </li>
-
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li>
-                <a class="dropdown-item" href="../html/review.html"
-                  >My Reviews</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="../html/reviewaboutme.html"
-                  >Reviews About Me</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="../html/gigapplicants.html"
-                  >My Gig applicants</a
-                >
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li><a class="dropdown-item" href="#">Help</a></li>
-              <li><a class="dropdown-item" href="#">FAQ</a></li>
-              <li>
-                <a class="dropdown-item" href="../aboutUs.html"
-                  >About GIGaNet</a
-                >
-              </li>
-              <li><a class="dropdown-item" href="#">Legal Info</a></li>
-              <li><a class="dropdown-item" href="#">Contact Us</a></li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li id="btn-logout">
-                <a class="btn-logout" href="../index.html">Logout</a>
-              </li>
-            </ul>
+          <li>
+            <a class="nav-link active" href="../html/profile.html">Profile Settings</a>
+          </li>
+          <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Help
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+            <li>
+              <a class="dropdown-item" href="../aboutUs.html">About GIGaNet</a>
+            </li>
+            <li><a class="dropdown-item" href="../html/legal.html">Legal Info</a></li>
+          </ul>
+          <li id="btn-logout">
+            <a class="btn-logout" href="../index.html">Logout</a>
+          </li>
           </li>
         </ul>
       </div>

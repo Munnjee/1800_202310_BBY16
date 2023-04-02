@@ -51,6 +51,7 @@
 
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/thanks.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -58,35 +59,47 @@
       rel="stylesheet"
     />
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon_io/favicon-16x16.png"
+    />
   </head>
 
   <body>
     <div class="bg-image"></div>
     <div class="float">
-    
-    <!--NavBar-->
-    <nav id="navbarPlaceholder"></nav>
-   
-    <div class="card text-center">
-      <div class="card-header">
-        Review received successfully!
+      <!--NavBar-->
+      <nav id="navbarPlaceholder"></nav>
+
+      <div class="thankyou-container">
+        <div class="card-header">Review received successfully!</div>
+        <div class="cardbody">
+          <br>
+          <h5 class="card-title">Thank you for submitting your review!</h5>
+          <br>
+          <a href="main.html" class="return-button">See More Gig Postings</a>
+        </div>
       </div>
-      <div class="card-body">
-        <h5 class="card-title">Thanks for submitting your review!</h5>
-        <a href="main.html" class="btn btn-primary">See More Gig postings</a>
-      </div>
-</div>
     </div>
-  
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
 
     <script src="../scripts/firebaseAPI_BBY16.js"></script>
-    <script src="../scripts/skeleton.js"></script>  
+    <script src="../scripts/skeleton.js"></script>
   </body>
 </html>

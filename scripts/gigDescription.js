@@ -1,14 +1,3 @@
-
-//--------------------------------------
-// map global variables
-//---------------------------------------
-var map;            //for the map to be displayed
-var AddressString;  //for what was read from firestore
-var LocationArea;   //for new circle object
-var radius = 500;   //500 meters, you can change this to your liking
-navigator.geolocation.getCurrentPosition(onSuccess, onError);
-
-
 function displayGigDescription(collect) {
   let params = new URL(window.location.href); //get URL of search bar
   let ID = params.searchParams.get("docID"); //get value for key "id"
@@ -61,25 +50,33 @@ function displayGigDescription(collect) {
 }
 displayGigDescription("giglisting");
 
-//AddressString = "3700 Willingdon, BC, Canada";
-
 
 //event handler for write review buttton
 function saveGigDocumentIDAndRedirect() {
   let params = new URL(window.location.href) //get the url from the search bar
   let ID = params.searchParams.get("docID");
-  localStorage.setItem('Giglisting', ID);
-  localStorage.setItem('ownerid', thisowner);
+  localStorage.setItem('gigListingID', ID);
+  localStorage.setItem('reviewerID', thisowner);
   window.location.href = 'reviewform.html';
 }
 
+//event handler for apply buttton
 function saveGigDocumentandOwnerAndRedirect() {
   let params = new URL(window.location.href) //get the url from the search bar
   let ID = params.searchParams.get("docID");
-  localStorage.setItem('Giglistings', ID);
-  localStorage.setItem('ownerids', thisowner);
+  localStorage.setItem('gigListingID', ID);
+  localStorage.setItem('applicantID', thisowner);
   window.location.href = 'application.html';
 }
+
+//--------------------------------------
+// map global variables
+//---------------------------------------
+var map;            //for the map to be displayed
+var AddressString;  //for what was read from firestore
+var LocationArea;   //for new circle object
+var radius = 500;   //500 meters, you can change this to your liking
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 //-----------------------------------------
 // handle success case of getCurrentPosition

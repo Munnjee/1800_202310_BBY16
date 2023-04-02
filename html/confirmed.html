@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>GIGaNet</title>
+    <title>Myposts</title>
     <meta name="comp1800 bby16" content="My 1800 App" />
 
     <!-- Required meta tags -->
@@ -51,6 +51,9 @@
 
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/filter.css" />
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/mediaqueries.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -64,51 +67,66 @@
   </head>
 
   <body>
+    <!------------------------------>
+    <!-- Your HTML Layout go here -->
+    <!------------------------------>
+
     <div class="bg-image"></div>
     <div class="float">
-    
-    <!--NavBar-->
-    <nav id="navbarPlaceholder"></nav>
+      <!--NavBar-->
+      <nav id="navbarPlaceholder"></nav>
 
-    <div class="container">
-      <h2>Reviews:</h2>
-      <div id="details-go-here"></div>
-      <!-- Here is container for cards  -->
-      <div class="container">
-          <div id="reviewCardGroup" class="row row-cols-auto">
+      <!--Grid layout for Filter and Gig Listings-->
+      <div class="main-container">
+
+        <div id="filterPlaceholder" class="filter"></div>
+
+        <div class="listing">
+          <h1>My Confirmed Gigs</h1>
+          <p>
+             Below you will find a list of gigs you've been hired for.
+          </p>
+
+          <div class="container">
+            <div id="giglisting-go-here" class="row row-cols-auto"></div>
           </div>
-      </div>
-</div>
 
-<template id="reviewCardTemplate">
-      <div class="card bg-secondary">
-          <img class="card-img-top">
-          <div class="card-body bg-light">
-              <h5 class="title">placeholder</h5>
-              <p class="time">placeholder</p>
-              <p class="level">placeholder</p>
-              <p class="season">placeholder</p>
-              <p class="redoGig">placeholder</p>
-              <p class="workWithEmployerAgain">placeholder</p>
-              <br>
-              <p class="description">This card has supporting text below as a natural lead-in to additional content.
-              </p>
+         <!-- Templates for general use, not displayed -->
+         <template id="gigCardTemplate">
+          <div class="gigCard" style="width: 100%">
+            <a id="gigCardButton">
+              <div class="cardBody" id="gig-list">
+                <div id="gig-card">
+                  <div class="card-image">
+                    <img
+                      class="card-image2 card-img-right"
+                      id="images-goes-here"
+                      src="../images/logo/whitelogo.png"
+                      alt="GigPic"
+                    />
+                  </div>
+                  <h3 class="title"></h3>
+                  <p class="compensation"></p>
+                  <p class="indooroutdoor"></p>
+                  <p class="date"></p>
+                  <p class="flexDate"></p>
+                  <p class="time"></p>
+                  <p class="flexTime"></p>
+                </div>
+              </div>
+            </a>
           </div>
+        </template>
+        </div>
       </div>
-</template>
-
-
     </div>
-  
-
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
 
     <script src="../scripts/firebaseAPI_BBY16.js"></script>
     <script src="../scripts/skeleton.js"></script>
-    <script src="../scripts/reviewaboutme.js"></script>
-    </div>
-
+    <script src="../scripts/confirmed.js"></script>
+    <script src="../scripts/filter.js"></script>
   </body>
 </html>

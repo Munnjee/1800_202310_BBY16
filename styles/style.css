@@ -23,6 +23,11 @@ html * {
   overflow: auto;
 }
 
+/* General Nav */
+#offcanvasNavbar {
+  width: 60%;
+}
+
 /* Null NavBar */
 .offcanvas_null {
   margin-top: 1rem;

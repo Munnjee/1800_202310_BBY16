@@ -1,0 +1,51 @@
+.review-container{
+  width: 90%;
+  background-color: #edf6ffbb;
+  padding: 1em;
+  border-radius: 15px;
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#reviewCardGroup1{
+  justify-content: center;
+}
+
+#reviewCardGroup2{
+  justify-content: center;
+}
+
+.card{
+  border-radius: 15px;
+  padding: 0;
+  margin: 0.5em;
+}
+
+.cardbody{
+  padding: 1em;
+  margin: 0;
+
+}
+
+h1{
+  text-align: center;
+  color: #437fc7;
+  font-weight: 500;
+}
+
+h2{
+  color: #437fc7;
+  text-align: center;
+  font-size: clamp(25px, 5vw, 50px);
+}
+
+h3{
+  color: #437fc7;
+  font-size: clamp(15px, 2vw, 40px);
+  margin: 0;
+}
+
+p{
+  font-size: clamp(15px, 2vw, 40px);
+}

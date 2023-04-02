@@ -1,113 +1,103 @@
-/*
 function populateReviews() {
-    let gigCardTemplate = document.getElementById("reviewCardTemplate");
-    let gigCardGroup = document.getElementById("reviewCardGroup");
-    var GiglistingID = localStorage.getItem("GiglistDocID");
-    //var userid = localStorage.getItem("UserDocID");
-    // let params = new URL(window.location.href) //get the url from the searbar
-   // let hikeID = params.searchParams.get("docID")
-  
-    // doublecheck: is your collection called "Reviews" or "reviews"?
-   
-    firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-            //id of user
-            var userid = user.uid;
-            db.collection("reviews").where( "Ownerid", "==", userid).get()
-        .then(allReviews => {
-            reviews = allReviews.docs;
-            console.log(reviews);
-            reviews.forEach(doc => {
-                var title = doc.data().title; //gets the name field
-                var level = doc.data().level; //gets the unique ID field
-                var season = doc.data().season;
-                var description = doc.data().description; //gets the length field
-                var redoGig = doc.data().redoGig;
-                var workWithEmployerAgain = doc.data().workWithEmployerAgain;
-                var time = doc.data().timestamp.toDate();
-                console.log(time)
+  let gigCardTemplate = document.getElementById("reviewCardTemplate");
+  let gigCardGroup = document.getElementById("reviewCardGroup1");
 
-                let reviewCard = gigCardTemplate.content.cloneNode(true);
-                reviewCard.querySelector('.title').innerHTML = title;     //equiv getElementByClassName
-                reviewCard.querySelector('.time').innerHTML = new Date(time).toLocaleString();    //equiv getElementByClassName
-                reviewCard.querySelector('.level').innerHTML = `level: ${level}`;
-                reviewCard.querySelector('.season').innerHTML = `season: ${season}`;
-                reviewCard.querySelector('.workWithEmployerAgain').innerHTML = `workWithEmployerAgain: ${workWithEmployerAgain}`;  //equiv getElementByClassName
-                reviewCard.querySelector('.redoGig').innerHTML = `redoGig: ${redoGig}`;  //equiv getElementByClassName
-                reviewCard.querySelector('.description').innerHTML = `Description: ${description}`;
-                gigCardGroup.appendChild(reviewCard);
-            })
-        })
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      var userid = user.uid;
+      db.collection("reviews")
+        .where("targetUserID", "==", userid)
+        .orderBy("timestamp", "desc")
+        .get()
+        .then((allReviews) => {
+          reviews = allReviews.docs;
+          reviews.forEach((doc) => {
+            var title = doc.data().gigTitle;
+            var level = doc.data().level;
+            var description = doc.data().description;
+            var compensation = doc.data().compensation;
+            var redoGig = doc.data().redoGig;
+            var workWithEmployerAgain = doc.data().workWithEmployerAgain;
+            var time = doc.data().timestamp.toDate();
+            var reviewerName = doc.data().reviewerName;
 
-    
-    } else{  console.log("No user is signed in");
-    
-
+            let reviewCard = gigCardTemplate.content.cloneNode(true);
+            reviewCard.querySelector(".title").innerHTML = title;
+            reviewCard.querySelector(".level").innerHTML = level;
+            reviewCard.querySelector(
+              ".description"
+            ).innerHTML = description;
+            reviewCard.querySelector(
+              ".compensation"
+            ).innerHTML = compensation;
+            reviewCard.querySelector(
+              ".redoGig"
+            ).innerHTML = redoGig;
+            reviewCard.querySelector(
+              ".workWithEmployerAgain"
+            ).innerHTML = workWithEmployerAgain;
+            reviewCard.querySelector(".time").innerHTML = new Date(
+              time
+            ).toLocaleString();
+            reviewCard.querySelector(".reviewerName").innerHTML = reviewerName;
+            gigCardGroup.appendChild(reviewCard);
+          });
+        });
+    } else {
+      console.log("No user is signed in");
     }
-});
+  });
 }
 populateReviews();
 
-*/
+function populateReviews2() {
+  let gigCardTemplate = document.getElementById("reviewCardTemplate");
+  let gigCardGroup2 = document.getElementById("reviewCardGroup2");
 
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      var userid = user.uid;
+      db.collection("reviews")
+        .where("reviewerID", "==", userid)
+        .orderBy("timestamp", "desc")
+        .get()
+        .then((allReviews) => {
+          reviews = allReviews.docs;
+          reviews.forEach((doc) => {
+            var title = doc.data().gigTitle;
+            var level = doc.data().level;
+            var description = doc.data().description;
+            var compensation = doc.data().compensation;
+            var redoGig = doc.data().redoGig;
+            var workWithEmployerAgain = doc.data().workWithEmployerAgain;
+            var time = doc.data().timestamp.toDate();
+            var reviewerName = doc.data().reviewerName;
 
-
-
-
-
-
-
-
-
-// copy paste my reviews
-
-function populateReviews() {
-    let gigCardTemplate = document.getElementById("reviewCardTemplate");
-    let gigCardGroup = document.getElementById("reviewCardGroup");
-    var GiglistingID = localStorage.getItem("GiglistDocID");
-    //var userid = localStorage.getItem("UserDocID");
-    // let params = new URL(window.location.href) //get the url from the searbar
-   // let hikeID = params.searchParams.get("docID")
-  
-    // doublecheck: is your collection called "Reviews" or "reviews"?
-    firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-            //id of user
-            var userid = user.uid;
-            db.collection("reviews").where( "userID", "==", userid).get()
-        .then(allReviews => {
-            reviews = allReviews.docs;
-            console.log(reviews);
-            reviews.forEach(doc => {
-                var title = doc.data().title; //gets the name field
-                var level = doc.data().level; //gets the unique ID field
-                var season = doc.data().season;
-                var description = doc.data().description; //gets the length field
-                var redoGig = doc.data().redoGig;
-                var workWithEmployerAgain = doc.data().workWithEmployerAgain;
-                var time = doc.data().timestamp.toDate();
-                console.log(time)
-
-                let reviewCard = gigCardTemplate.content.cloneNode(true);
-                reviewCard.querySelector('.title').innerHTML = title;     //equiv getElementByClassName
-                reviewCard.querySelector('.time').innerHTML = new Date(time).toLocaleString();    //equiv getElementByClassName
-                reviewCard.querySelector('.level').innerHTML = `level: ${level}`;
-                reviewCard.querySelector('.season').innerHTML = `season: ${season}`;
-                reviewCard.querySelector('.workWithEmployerAgain').innerHTML = `workWithEmployerAgain: ${workWithEmployerAgain}`;  //equiv getElementByClassName
-                reviewCard.querySelector('.redoGig').innerHTML = `redoGig: ${redoGig}`;  //equiv getElementByClassName
-                reviewCard.querySelector('.description').innerHTML = `Description: ${description}`;
-                gigCardGroup.appendChild(reviewCard);
-            })
-        })
-
-    
-    } else{  console.log("No user is signed in");
-    
-
+            let reviewCard = gigCardTemplate.content.cloneNode(true);
+            reviewCard.querySelector(".title").innerHTML = title;
+            reviewCard.querySelector(".level").innerHTML = level;
+            reviewCard.querySelector(
+              ".description"
+            ).innerHTML = description;
+            reviewCard.querySelector(
+              ".compensation"
+            ).innerHTML = compensation;
+            reviewCard.querySelector(
+              ".redoGig"
+            ).innerHTML = redoGig;
+            reviewCard.querySelector(
+              ".workWithEmployerAgain"
+            ).innerHTML = workWithEmployerAgain;
+            reviewCard.querySelector(".time").innerHTML = new Date(
+              time
+            ).toLocaleString();
+            reviewCard.querySelector(".reviewerName").innerHTML = reviewerName;
+            gigCardGroup2.appendChild(reviewCard);
+          });
+        });
+    } else {
+      console.log("No user is signed in");
     }
-});
+  });
 }
-populateReviews();
-
-
-
+populateReviews2();

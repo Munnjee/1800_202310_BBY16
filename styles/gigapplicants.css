@@ -90,13 +90,14 @@ h3 {
 }
 
 .delete_post {
+  width: 100%;
   text-decoration: none;
-  background-color: #b9732f;
-  color: #edf6ff;
   border: 1px;
+  background-color: #437fc7;
+  color: #ffffff;
   border-radius: 5px;
   padding: 0.5em;
-  margin: 2.5%;
+  margin: 0.5em;
 }
 
 .delete_post:hover {
@@ -105,6 +106,27 @@ h3 {
 }
 
 .delete_post:active {
-  background-color: #437fc7;
+  
+  background-color: #b9732f;
+  color: #edf6ff;
+}
+
+#reviewButton {
+  width: 100%;
+  background-color: #6daffe;
+  color: #edf6ff;
+  border: 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+#reviewButton:hover {
+  background-color: #edf6ff;
+  color: #6daffe;
+}
+
+#reviewButton:active {
+  background-color: #b9732f;
   color: #ffffff;
 }

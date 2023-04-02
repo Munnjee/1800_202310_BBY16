@@ -1,0 +1,39 @@
+.thankyou-container {
+  width: 90%;
+  background-color: #edf6ffbb;
+  padding: 1em;
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+}
+
+.cardbody {
+  text-align: center;
+}
+
+.return-button {
+  text-decoration: none;
+  width: 45%;
+  background-color: #437fc7;
+  color: #edf6ff;
+  border: 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 2.5%;
+}
+
+.return-button:hover {
+  background-color: #edf6ff;
+  color: #6daffe;
+}
+
+.return-button:active {
+  background-color: #b9732f;
+  color: #ffffff;
+}
