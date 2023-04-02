@@ -39,12 +39,6 @@ function displayGigDescription(collect) {
       document.getElementById("gigCompensation").innerHTML = CADDollar.format(thisCompensation);
       document.getElementById("descriptionGig").innerHTML = thisDescription;
       $("#images-goes-here").attr("src", picUrl);
-      //  document.getElementById("images-goes-here").innerHTML = thisFile;
-      // const imgTag = document.getElementById('images-goes-here');
-      // imgTag.src = thisFile;
-
-      //document.getElementById('link').href = "application.html?docID=" + doc.id;
-
 
     });
 }
