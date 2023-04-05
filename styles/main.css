@@ -119,7 +119,7 @@
 
 .title {
   grid-area: title;
-  font-size: clamp(20px, 3vw, 50px);
+  font-size: clamp(20px, 3vw, 40px);
   display: grid;
   align-items: center;
 }

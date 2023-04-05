@@ -24,12 +24,16 @@ function search() {
     query = query.where("indooroutdoor", "==", indoorOutdoorSelect.value);
   }
   if (compensationSelect.value !== "all") {
-    const [minCompensation, maxCompensation] = compensationSelect.value.split("-");
+    const [minCompensation, maxCompensation] =
+      compensationSelect.value.split("-");
     const minCompensationValue = parseInt(minCompensation.slice(1));
     const maxCompensationValue =
-      maxCompensation !== "$200+" ? parseInt(maxCompensation.slice(1)) : Infinity;
-    query = query.where("compensation", ">=", minCompensationValue)
-                 .where("compensation", "<=", maxCompensationValue);
+      maxCompensation !== "$200+"
+        ? parseInt(maxCompensation.slice(1))
+        : Infinity;
+    query = query
+      .where("compensation", ">=", minCompensationValue)
+      .where("compensation", "<=", maxCompensationValue);
   }
   if (imagesCheckbox.checked) {
     query = query.where("image", "!=", "");
@@ -72,7 +76,8 @@ function search() {
           gigCard.querySelector(".flexDate").textContent = doc.data().flexDate;
           gigCard.querySelector(".time").textContent = doc.data().time;
           gigCard.querySelector(".flexTime").textContent = doc.data().flexTime;
-          gigCard.querySelector('a').href = "gigDescription.html?docID="+ docID;
+          gigCard.querySelector("a").href =
+            "gigDescription.html?docID=" + docID;
 
           var img = gigCard.querySelector("#images-goes-here");
           var picUrl = doc.data().image; // assuming picUrl is defined

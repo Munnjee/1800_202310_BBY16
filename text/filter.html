@@ -1,82 +1,74 @@
-  <button class="accordion">
-    <h1>Search for Gigs</h1>
-  </button>
-  <div class="panel">
-    <label for="search-bar">Search:</label>
-    <input type="text" id="search-bar" name="search-bar" />
+<button class="accordion">
+  <h1>Search for Gigs</h1>
+</button>
+<div class="panel">
+  <label for="search-bar">Search:</label>
+  <input type="text" id="search-bar" name="search-bar" />
 
-    <br />
-    <br />
+  <br />
+  <br />
 
-    <label for="indoor-outdoor-select">Indoor/Outdoor:</label>
-    <select id="indoor-outdoor-select" name="indoor-outdoor-select">
-      <option value="all">All</option>
-      <option value="Indoor">Indoor</option>
-      <option value="Outdoor">Outdoor</option>
-    </select>
+  <label for="indoor-outdoor-select">Indoor/Outdoor:</label>
+  <select id="indoor-outdoor-select" name="indoor-outdoor-select">
+    <option value="all">All</option>
+    <option value="Indoor">Indoor</option>
+    <option value="Outdoor">Outdoor</option>
+  </select>
 
-    <br />
-    <br />
+  <br />
+  <br />
 
-    <label for="compensation-select">Compensation:</label>
-    <select id="compensation-select" name="compensation-select">
-      <option value="all">All</option>
-      <option value="$0-$50">$0-$50</option>
-      <option value="$50-$100">$50-$100</option>
-      <option value="$100-$200">$100-$200</option>
-      <option value="$200+">$200+</option>
-    </select>
+  <label for="compensation-select">Compensation:</label>
+  <select id="compensation-select" name="compensation-select">
+    <option value="all">All</option>
+    <option value="$0-$50">$0-$50</option>
+    <option value="$50-$100">$50-$100</option>
+    <option value="$100-$200">$100-$200</option>
+    <option value="$200+">$200+</option>
+  </select>
 
-    <br />
-    <br />
+  <br />
+  <br />
 
-    <label for="images-checkbox">Include Images:</label>
-    <input
-      type="checkbox"
-      id="images-checkbox"
-      name="images-checkbox"
-    />
+  <label for="images-checkbox">Include Images:</label>
+  <input type="checkbox" id="images-checkbox" name="images-checkbox" />
 
-    <br />
-    <br />
+  <br />
+  <br />
 
-    <label for="time-of-day-select">Time of Day:</label>
-    <select id="time-of-day-select" name="time-of-day-select">
-      <option value="all">All</option>
-      <option value="before-noon">Before Noon</option>
-      <option value="noon-to-4pm">Noon to 4pm</option>
-      <option value="4pm-to-8pm">4pm to 8pm</option>
-    </select>
+  <label for="time-of-day-select">Time of Day:</label>
+  <select id="time-of-day-select" name="time-of-day-select">
+    <option value="all">All</option>
+    <option value="before-noon">Before Noon</option>
+    <option value="noon-to-4pm">Noon to 4pm</option>
+    <option value="4pm-to-8pm">4pm to 8pm</option>
+  </select>
 
-    <br />
-    <br />
+  <br />
+  <br />
 
-    <label for="date-input">Date of Service:</label>
-    <input type="date" id="date-input" name="date-input" />
+  <label for="date-input">Date of Service:</label>
+  <input type="date" id="date-input" name="date-input" />
 
-    <br />
-    <br />
+  <br />
+  <br />
 
-    <button id="filter-button" type="button" onclick="search()">
-      Search
-    </button>
-    <br />
-    <br />
-    <button id="clear-button" type="button" onclick="clearFields()">
-      Clear
-    </button>
-  </div>
+  <button id="filter-button" type="button" onclick="search()">Search</button>
+  <br />
+  <br />
+  <button id="clear-button" type="button" onclick="clearFields()">Clear</button>
+</div>
 
 <script>
-// toggle accordion
-var accordion = document.querySelector(".accordion");
-accordion.addEventListener("click", function () {
-  this.classList.toggle("active");
-  var panel = this.nextElementSibling;
-  if (panel.style.display === "block") {
-    panel.style.display = "none";
-  } else {
-    panel.style.display = "block";
-  }
-});
+  // toggle accordion (included in this doc to improve function)
+  var accordion = document.querySelector(".accordion");
+  accordion.addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 </script>

@@ -1,9 +1,11 @@
 .form-field {
   width: 90%;
+  height:88vh;
   background-color: #edf6ffbb;
   padding: 1em;
   margin: 1em;
   border-radius: 15px;
+  overflow-y: auto;
 }
 
 #gig-form h1 {

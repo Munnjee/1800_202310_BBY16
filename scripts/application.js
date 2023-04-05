@@ -46,7 +46,6 @@ function displayGigDescription(collect) {
   const applicationForm = document.querySelector("#application1");
 
   // Form submission
-
   applicationForm.addEventListener("submit", (event) => {
     event.preventDefault();
 

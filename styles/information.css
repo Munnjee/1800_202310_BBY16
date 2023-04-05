@@ -1,9 +1,11 @@
 .paragraph {
   width: 90%;
+  height: 88vh;
   background-color: #edf6ff85;
   padding: 1em;
   margin: 1em;
   border-radius: 15px;
+  overflow-y: auto;
 }
 
 h1 {

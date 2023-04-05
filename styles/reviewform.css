@@ -3,10 +3,11 @@
   width: 90%;
   background-color: #edf6ff85;
   padding: 1em;
-  margin: auto;
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 15px;
   }
-
 
 h1 {
   text-align: center;
@@ -32,7 +33,6 @@ label {
 #description {
   height: 100px;
 }
-
 
 .buttons {
   display: flex;

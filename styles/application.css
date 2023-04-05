@@ -4,6 +4,7 @@
   color: #437fc7;
   margin-top:1em;
 }
+
 .container-application{
   width: 90%;
   background-color: #edf6ff85;
@@ -29,7 +30,6 @@
 #questions {
   height: 8em;
 }
-
 
 .apply_buttons {
   display: flex;

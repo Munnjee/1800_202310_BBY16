@@ -17,28 +17,29 @@ function displayDescriptionsDynamically(collection) {
         var docID = doc.id;
         let newcard = gigCardTemplate.content.cloneNode(true);
 
-        let CADDollar = new Intl.NumberFormat('en-CA', {
-          style: 'currency',
-          currency: 'CAD',
+        let CADDollar = new Intl.NumberFormat("en-CA", {
+          style: "currency",
+          currency: "CAD",
         });
 
         //update title and text
         newcard.querySelector(".title").innerHTML = title;
-        newcard.querySelector(".compensation").innerHTML = CADDollar.format(compensation);
+        newcard.querySelector(".compensation").innerHTML =
+          CADDollar.format(compensation);
         newcard.querySelector(".indooroutdoor").innerHTML = indooroutdoor;
         newcard.querySelector(".date").innerHTML = date;
         newcard.querySelector(".flexDate").innerHTML = flexDate;
         newcard.querySelector(".time").innerHTML = time;
         newcard.querySelector(".flexTime").innerHTML = flexTime;
-        newcard.querySelector('a').href = "gigDescription.html?docID="+docID;
-        
+        newcard.querySelector("a").href = "gigDescription.html?docID=" + docID;
+
         var img = newcard.querySelector("#images-goes-here");
-        if(picUrl !== undefined) {
+        if (picUrl !== undefined) {
           img.setAttribute("src", picUrl);
         }
-        
+
         document.getElementById(collection + "-go-here").appendChild(newcard);
       });
     });
 }
-displayDescriptionsDynamically("giglisting");  //input param is the name of the collection
+displayDescriptionsDynamically("giglisting"); //input param is the name of the collection

@@ -1,7 +1,7 @@
 /********** Main Grid Layout **********/
 .description-container {
   margin: 1em;
-  height: 100%;
+  height: 88vh;
   background-color: #edf6ffbb;
   padding: 1em;
   border-radius: 10px;
@@ -15,6 +15,7 @@
     "description"
     "imageUser"
     "button";
+    overflow-y: auto;
 }
 
 .title {
@@ -35,7 +36,7 @@
 
 .description {
   grid-area: description;
-  word-break: break-all;
+  word-break: normal;
   font-size: clamp(14px, 3vw, 30px);
 }
 
@@ -154,7 +155,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 /********** Images **********/
 

@@ -9,7 +9,7 @@ function displayGigDescription(collect) {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       var userid = user.uid;
-      localStorage.setItem('reviewerID', user.uid);
+      localStorage.setItem("reviewerID", user.uid);
 
       db.collection("gigapplicants")
         .where("GiglistingDocID", "==", ID)
@@ -93,7 +93,7 @@ function deleteFromMyPosts(applicantid) {
       .delete()
       .then(() => {
         console.log("Application has been deleted");
-        window.location.href = "gigapplicants.html";
+        window.location.href = "mypost.html"; 
       })
       .catch((error) => {
         console.error("Error removing document: ", error);
@@ -134,11 +134,10 @@ function getGigName(ID) {
 }
 getGigName(ID);
 
-
 //event handler for write review buttton
 function saveGigDocumentIDAndRedirect() {
-  let params = new URL(window.location.href) //get the url from the search bar
+  let params = new URL(window.location.href); //get the url from the search bar
   let ID = params.searchParams.get("docID");
-  localStorage.setItem('gigListingID', ID);
-  window.location.href = 'reviewform2.html';
+  localStorage.setItem("gigListingID", ID);
+  window.location.href = "reviewform2.html";
 }

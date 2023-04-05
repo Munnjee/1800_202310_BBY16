@@ -1,3 +1,4 @@
+// Function to populate Reviews about the logged in user.
 function populateReviews() {
   let gigCardTemplate = document.getElementById("reviewCardTemplate");
   let gigCardGroup = document.getElementById("reviewCardGroup1");
@@ -24,18 +25,11 @@ function populateReviews() {
             let reviewCard = gigCardTemplate.content.cloneNode(true);
             reviewCard.querySelector(".title").innerHTML = title;
             reviewCard.querySelector(".level").innerHTML = level;
-            reviewCard.querySelector(
-              ".description"
-            ).innerHTML = description;
-            reviewCard.querySelector(
-              ".compensation"
-            ).innerHTML = compensation;
-            reviewCard.querySelector(
-              ".redoGig"
-            ).innerHTML = redoGig;
-            reviewCard.querySelector(
-              ".workWithEmployerAgain"
-            ).innerHTML = workWithEmployerAgain;
+            reviewCard.querySelector(".description").innerHTML = description;
+            reviewCard.querySelector(".compensation").innerHTML = compensation;
+            reviewCard.querySelector(".redoGig").innerHTML = redoGig;
+            reviewCard.querySelector(".workWithEmployerAgain").innerHTML =
+              workWithEmployerAgain;
             reviewCard.querySelector(".time").innerHTML = new Date(
               time
             ).toLocaleString();
@@ -50,6 +44,7 @@ function populateReviews() {
 }
 populateReviews();
 
+// Function to populate Reviews written by the logged in user.
 function populateReviews2() {
   let gigCardTemplate = document.getElementById("reviewCardTemplate");
   let gigCardGroup2 = document.getElementById("reviewCardGroup2");
@@ -76,18 +71,11 @@ function populateReviews2() {
             let reviewCard = gigCardTemplate.content.cloneNode(true);
             reviewCard.querySelector(".title").innerHTML = title;
             reviewCard.querySelector(".level").innerHTML = level;
-            reviewCard.querySelector(
-              ".description"
-            ).innerHTML = description;
-            reviewCard.querySelector(
-              ".compensation"
-            ).innerHTML = compensation;
-            reviewCard.querySelector(
-              ".redoGig"
-            ).innerHTML = redoGig;
-            reviewCard.querySelector(
-              ".workWithEmployerAgain"
-            ).innerHTML = workWithEmployerAgain;
+            reviewCard.querySelector(".description").innerHTML = description;
+            reviewCard.querySelector(".compensation").innerHTML = compensation;
+            reviewCard.querySelector(".redoGig").innerHTML = redoGig;
+            reviewCard.querySelector(".workWithEmployerAgain").innerHTML =
+              workWithEmployerAgain;
             reviewCard.querySelector(".time").innerHTML = new Date(
               time
             ).toLocaleString();

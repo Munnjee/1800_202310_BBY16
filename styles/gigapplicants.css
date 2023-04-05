@@ -6,6 +6,11 @@
   border-radius: 15px;
 }
 
+.containergigapplicants{
+  overflow-y: auto;
+  height: 65vh;
+}
+
 h1 {
   text-align: center;
   color: #437fc7;
