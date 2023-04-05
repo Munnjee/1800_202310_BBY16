@@ -10,7 +10,7 @@ List team members and/or short bio's here...
 * Parin R
 * EKjot K
 
-* ...
+
 	
 ## 3. Technologies and Resources Used
 List technologies (with version numbers), API's, icons, fonts, images, media or data sources, and other resources that were used.
@@ -18,7 +18,8 @@ List technologies (with version numbers), API's, icons, fonts, images, media or 
 * Bootstrap 5.0 (Frontend library)
 * Firebase 8.0 (BAAS - Backend as a Service)
 * Google Font API
-*
+* GeoApify
+* Lealflet libraries
 
 
 ## 4. Complete setup/installion/usage
@@ -27,15 +28,16 @@ List technologies (with version numbers), API's, icons, fonts, images, media or 
 
 ## 5. Known Bugs and Limitations
 Here are some known bugs:
-* Filter does not allow for both the key word search and the compensation function as the both require inequality filters. Firestore does not allow inequality filters on multiple fields in the same query. 
-* 
+* Filter does not allow for both the key word search and the compensation function as the both require inequality filters. Firestore does not allow inequality * *     filters on multiple fields in the same query. 
+* sometimes our map glitched due to api address.
 * ...
 
 ## 6. Features for Future
 What we'd like to build in the future:
 * Messaging system so users can communicate within the application.
-* ...
-* ...
+* Having money transaction through the website.
+* implementing AI to help people during posting gigs and gig application
+* having notification system when someone apply for the gig
 	
 ## 7. Contents of Folder
 Content of the project folder:
@@ -43,17 +45,60 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
-└── README.md
+├── main.html               # landing HTML file, this is what users see when you come to url
+    /style.css               # style for all html pages
+└── README.md               # details about the assignment
 
 It has the following subfolders and files:
-├── .git                     # Folder for git repo
+├── .gitignore               # ignores firebase api address so it would not get shared
 ├── images                   # Folder for images
-    /blah.jpg                # Acknowledge source
+    /background1.jpg         # main backgeound image
+    /fooddonation.jpg         #carousel image
+    /groupreview.jpg           #carousel image
+    /help.jpg                 #carousel image
+    /success.jpg               #carousel image
+    /android-chrome.jpg            #fav icon
+    /profilepic.jpg                # default profile pic
+    /logo.jpg                     #logo image
+
+
+
+
 ├── scripts                  # Folder for scripts
-    /blah.js                 # 
+    /application.js           # functionality to apply for the gig
+    /authentication.js        # check the authentication.
+    /confirmed.js             # gig confirmation page
+    /filter.js                # folder to make the filter functional
+    /firebaseAPI_BBY16.js     # api for firebase
+    /gigapplicatns.js         # grab the data from firestore and show the owener who has applied
+    /gigDescription.js        # folder for grabbing data from fire store and displaying in the gigDescription.html
+    /main.js                  # garb the data from firestore and display it in main.html
+    /mypost.js                # functionality to see the gigs user have posted
+    /mypostfilter.js          # Filter the search results based on the user's selections
+    /post.js                  # garb the data from the post.html and save it in firebase under giglisting
+    /profile.js               # functionality to edit the profile
+    /review.js                # grab the data from firebase and display the reviews in the review.html
+    /reviewform.js            # grab the data from reviewform.html and store it in firebase
+    /skeleton.js              # basic skeleton for every page
+
+
+    
+
+
 ├── styles                   # Folder for styles
-    /blah.css                # 
+    /application.css         # style for application.html
+    /filter.css              # style for 
+    /gigapplicants.css       # style for gigapplicants.html
+    / gigDescription.css     # style for gigDescription.html
+    /index.css               # style for index.html
+    /login.css               # style login.html
+    /main.css                # style for main.html
+    /mediaqueries.css        # style for confirmed.html, gigDescription.html, hiredDescription.html, main.html, mypost.html
+    /post.css                # style for post.html
+    /profile.css             # style for profile.html
+    /review.css              # style for review.html
+    /reviewform.css          # style for reviewform.html, reviewform2.html
+    /thanks.css              # style for thanks.html
 
 
 
